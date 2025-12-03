@@ -1,0 +1,34 @@
+[
+  {
+    "id": "t1",
+    "quote": "InfraTech's edge gateway solutions allowed us to process telemetry data locally, reducing our cloud ingress costs by 40% in the first quarter.",
+    "author": "Sarah Chen",
+    "role": "CTO",
+    "company": "Nexus Manufacturing",
+    "avatar": "SC"
+  },
+  {
+    "id": "t2",
+    "quote": "The transition to a Kubernetes-based microservices architecture was seamless. Their DevOps team is world-class.",
+    "author": "Marcus Rodriguez",
+    "role": "VP of Engineering",
+    "company": "FinStream",
+    "avatar": "MR"
+  },
+  {
+    "id": "t3",
+    "quote": "We needed a rugged tablet that could survive extreme field conditions while running heavy AI inference. The RT-10 delivered exactly that.",
+    "author": "David Okonjo",
+    "role": "Field Ops Director",
+    "company": "GeoSurvey Corp",
+    "avatar": "DO"
+  },
+  {
+    "id": "t4",
+    "quote": "Security was our top concern. InfraTech's Zero Trust implementation helped us achieve SOC2 compliance in record time.",
+    "author": "Elena Vostok",
+    "role": "CISO",
+    "company": "HealthSecure",
+    "avatar": "EV"
+  }
+]

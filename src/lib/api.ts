@@ -59,6 +59,15 @@ export interface Product {
     images?: string[];
 }
 
+export interface Testimonial {
+    id: string;
+    quote: string;
+    author: string;
+    role: string;
+    company: string;
+    avatar?: string;
+}
+
 // The generic adapter
 export async function fetchJSON<T>(path: string): Promise<T> {
     const response = await fetch(path);

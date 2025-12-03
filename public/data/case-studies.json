@@ -1,0 +1,41 @@
+[
+  {
+    "id": "cs-1",
+    "title": "Predictive Maintenance for Auto-Manufacturing",
+    "slug": "auto-predictive-maintenance",
+    "client": "Apex Motors",
+    "industry": "Manufacturing",
+    "summary": "Deployed 5,000+ edge IoT sensors to detect machinery anomalies in real-time, reducing downtime significantly.",
+    "kpis": [
+      { "label": "Downtime Reduced", "value": "40%" },
+      { "label": "ROI (Year 1)", "value": "3.5x" }
+    ],
+    "image": "/assets/manufacturing-bg.jpg"
+  },
+  {
+    "id": "cs-2",
+    "title": "Cloud-Native Banking Platform Migration",
+    "slug": "banking-cloud-migration",
+    "client": "Horizon Bank",
+    "industry": "Fintech",
+    "summary": "Migrated legacy core banking to a microservices architecture on Kubernetes with Zero Trust security.",
+    "kpis": [
+      { "label": "Txn Latency", "value": "-60%" },
+      { "label": "Uptime", "value": "99.999%" }
+    ],
+    "image": "/assets/fintech-bg.jpg"
+  },
+  {
+    "id": "cs-3",
+    "title": "Smart City Traffic Orchestration",
+    "slug": "smart-city-traffic",
+    "client": "City of Metroville",
+    "industry": "Government",
+    "summary": "Implemented Edge AI cameras to optimize traffic light intervals dynamically based on congestion levels.",
+    "kpis": [
+      { "label": "Congestion Drop", "value": "25%" },
+      { "label": "Nodes Deployed", "value": "1,200" }
+    ],
+    "image": "/assets/smart-city-bg.jpg"
+  }
+]

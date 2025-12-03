@@ -1,88 +1,144 @@
-import { Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
+import { Link } from "react-router-dom";
+import {
+  Facebook,
+  Twitter,
+  Linkedin,
+  Instagram,
+  CircuitBoard,
+} from "lucide-react";
+import { Badge } from "@/components/ui/badge";
 
 export const Footer = () => {
-  const footerLinks = {
-    Company: [],
-    Services: [],
+  const footerSections = {
+    Solutions: [
+      { name: "Cloud & DevOps", href: "/services/cloud-devops" },
+      { name: "Edge AI & Vision", href: "/services/edge-ai" },
+      { name: "Industrial IoT", href: "/services/iot" },
+      { name: "Cybersecurity", href: "/services/security" },
+      { name: "Embedded Systems", href: "/services/embedded" },
+    ],
+    Products: [
+      { name: "Edge Gateways", href: "/products/hardware" },
+      { name: "Rugged Tablets", href: "/products/hardware" },
+      { name: "InfraLog SIEM", href: "/products/software" },
+      { name: "Industrial Sensors", href: "/products/hardware" },
+      { name: "Pricing", href: "/pricing" },
+    ],
+    Company: [
+      { name: "About Us", href: "/about" },
+      { name: "Careers", href: "/careers", badge: "Hiring" },
+      { name: "Partners", href: "/about#partners" },
+      { name: "Case Studies", href: "/case-studies" },
+      { name: "Contact", href: "/contact" },
+    ],
     Support: [
-      { name: "Help Center", href: "#" },
-      { name: "Contact Us", href: "#contact" },
-      { name: "FAQs", href: "#" },
-      { name: "API Docs", href: "#" },
+      { name: "Help Center", href: "/support" },
+      { name: "API Documentation", href: "/docs" },
+      { name: "System Status", href: "#" },
+      { name: "Trust Center", href: "/security" },
     ],
     Legal: [
       { name: "Privacy Policy", href: "/privacy-policy" },
       { name: "Terms of Service", href: "/terms-of-service" },
-      { name: "Cookie Policy", href: "#" },
-      { name: "Refund Policy", href: "#" },
+      { name: "Cookie Policy", href: "/cookie-policy" },
     ],
   };
 
   const socialLinks = [
-    { icon: Facebook, href: "#", label: "Facebook" },
-    { icon: Twitter, href: "#", label: "Twitter" },
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
-    { icon: Instagram, href: "#", label: "Instagram" },
+    { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
+    { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
+    { icon: Facebook, href: "https://facebook.com", label: "Facebook" },
+    { icon: Instagram, href: "https://instagram.com", label: "Instagram" },
   ];
 
   return (
     <footer className="bg-card border-t border-border">
-      <div className="container mx-auto px-8 py-12">
-        <div className="grid md:grid-cols-2 lg:grid-cols-6 gap-8 mb-12">
-          {/* Brand */}
-          <div className="lg:col-span-2">
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 rounded-lg bg-gradient-primary flex items-center justify-center shadow-glow">
-                <span className="text-white font-bold text-xl">TL</span>
+      <div className="container mx-auto px-4 py-16">
+        {/* Main Footer Content: Flex container to separate Brand from Links */}
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 mb-16">
+          {/* 1. Brand Section - Takes ~30% width on large screens */}
+          <div className="lg:w-[30%] space-y-6">
+            <Link to="/" className="flex items-center space-x-2 group w-fit">
+              <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center border border-primary/20 group-hover:bg-primary group-hover:border-primary transition-all duration-300">
+                <CircuitBoard className="h-6 w-6 text-primary group-hover:text-white transition-colors" />
               </div>
-              <span className="font-heading font-bold text-xl">TenderLink</span>
-            </div>
-            <p className="text-sm text-muted-foreground mb-4 max-w-sm">
-              India's leading AI-powered platform for government, private, and
-              NGO tenders. Find, bid, and win with confidence.
+              <div className="flex flex-col">
+                <span className="font-heading font-bold text-xl leading-none">
+                  InfraTech
+                </span>
+                <span className="text-[10px] text-muted-foreground uppercase tracking-wider font-medium">
+                  Intelligent Systems
+                </span>
+              </div>
+            </Link>
+
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              Building secure, scalable infrastructure for the enterprise. From
+              cloud-native applications to rugged edge hardware, we bridge the
+              physical and digital worlds.
             </p>
-            <div className="flex gap-4">
+
+            <div className="flex gap-3 pt-2">
               {socialLinks.map((social) => (
                 <a
                   key={social.label}
                   href={social.href}
-                  className="w-10 h-10 rounded-full bg-muted hover:bg-gradient-primary transition-all flex items-center justify-center group"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-9 h-9 rounded-full bg-secondary text-muted-foreground hover:bg-primary hover:text-white transition-all flex items-center justify-center border border-border"
                   aria-label={social.label}
                 >
-                  <social.icon className="h-5 w-5 text-muted-foreground group-hover:text-white transition-colors" />
+                  <social.icon className="h-4 w-4" />
                 </a>
               ))}
             </div>
           </div>
 
-          {/* Links */}
-          {Object.entries(footerLinks).map(([category, links]) => (
-            <div key={category}>
-              <h3 className="font-semibold mb-4">{category}</h3>
-              <ul className="space-y-2">
-                {links.map((link) => (
-                  <li key={link.name}>
-                    <a
-                      href={link.href}
-                      className="text-sm text-muted-foreground hover:text-primary transition-colors"
-                    >
-                      {link.name}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+          {/* 2. Links Grid - Takes remaining space, auto-fits 5 columns */}
+          <div className="flex-1 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8">
+            {Object.entries(footerSections).map(([category, links]) => (
+              <div key={category} className="flex flex-col">
+                <h3 className="font-heading font-bold text-foreground mb-4">
+                  {category}
+                </h3>
+                <ul className="space-y-3">
+                  {links.map((link) => (
+                    <li key={link.name}>
+                      <Link
+                        to={link.href}
+                        className="group flex items-center text-sm text-muted-foreground hover:text-primary transition-colors"
+                      >
+                        {link.name}
+                        {link.badge && (
+                          <Badge
+                            variant="secondary"
+                            className="ml-2 h-5 px-1.5 text-[10px] bg-primary/10 text-primary border-primary/20"
+                          >
+                            {link.badge}
+                          </Badge>
+                        )}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
         </div>
 
-        {/* Bottom */}
+        {/* Bottom Section */}
         <div className="border-t border-border pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} TenderLink. All rights reserved.
-          </p>
-          {/* <p className="text-sm text-muted-foreground">
-            Made with ❤️ in India
-          </p> */}
+          <div className="text-sm text-muted-foreground">
+            © {new Date().getFullYear()} InfraTech Systems Inc. All rights
+            reserved.
+          </div>
+
+          <div className="flex items-center gap-6">
+            <div className="flex items-center gap-2 text-sm text-muted-foreground">
+              <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+              All Systems Operational
+            </div>
+          </div>
         </div>
       </div>
     </footer>
