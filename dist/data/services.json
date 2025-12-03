@@ -1,0 +1,34 @@
+[
+  {
+    "id": "svc-cloud",
+    "title": "Cloud Migration & DevOps",
+    "slug": "cloud-devops",
+    "shortDescription": "Modernize legacy infrastructure with Kubernetes, CI/CD automation, and hybrid cloud architectures.",
+    "icon": "Cloud",
+    "features": [
+      "Zero-downtime migration",
+      "Infrastructure as Code",
+      "24/7 SRE Support"
+    ]
+  },
+  {
+    "id": "svc-edge-ai",
+    "title": "Edge AI & Computer Vision",
+    "slug": "edge-ai",
+    "shortDescription": "Deploy real-time inference models on rugged edge devices for manufacturing and smart cities.",
+    "icon": "Cpu",
+    "features": [
+      "On-device Inference",
+      "TensorRT Optimization",
+      "Privacy-first Architecture"
+    ]
+  },
+  {
+    "id": "svc-security",
+    "title": "Cybersecurity & Compliance",
+    "slug": "security",
+    "shortDescription": "End-to-end VAPT, SOC monitoring, and compliance advisory for HIPAA/GDPR/SOC2.",
+    "icon": "ShieldCheck",
+    "features": ["Penetration Testing", "Managed SOC", "Compliance Audits"]
+  }
+]

@@ -1,0 +1,153 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* InfraTech Design System
+  Theme: Deep Indigo (Trust/Software) & Signal Amber (Hardware/Industrial)
+*/
+
+@layer base {
+  :root {
+    /* Light Theme - Industrial Gray background for reduced eye strain */
+    --background: 210 20% 98%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    /* Primary: Deep Indigo */
+    --primary: 226 70% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary: Slate Gray (for "darker" light-mode sections) */
+    --secondary: 210 20% 94%;
+    --secondary-foreground: 222 47% 11%;
+
+    --muted: 215 16% 94%;
+    --muted-foreground: 215 16% 47%;
+
+    /* Accent: Signal Amber (High visibility for hardware/alerts) */
+    --accent: 35 95% 58%;
+    --accent-foreground: 222 47% 11%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Borders: Cool Gray */
+    --border: 215 16% 85%;
+    --input: 215 16% 85%;
+    --ring: 226 70% 55%;
+
+    --radius: 0.5rem; /* Slightly sharper radius for "Hardware" feel */
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(226 70% 55%) 0%, hsl(210 25% 27%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(226 70% 55% / 0.08) 0%, hsl(35 95% 58% / 0.05) 100%);
+    
+    /* Effects */
+    --glass-bg: hsla(0, 0%, 100%, 0.8);
+    --glass-border: hsla(226, 70%, 55%, 0.15);
+    
+    --shadow-sm: 0 1px 2px hsla(222, 47%, 11%, 0.05);
+    --shadow-md: 0 4px 6px -1px hsla(222, 47%, 11%, 0.1);
+    --shadow-lg: 0 10px 15px -3px hsla(222, 47%, 11%, 0.1);
+    --shadow-glow: 0 0 20px hsla(226, 70%, 55%, 0.25);
+  }
+
+  .dark {
+    /* Dark Theme - "Rich Void" Blue-Black */
+    --background: 222 47% 10%;
+    --foreground: 210 40% 98%;
+
+    --card: 222 47% 13%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 47% 13%;
+    --popover-foreground: 210 40% 98%;
+
+    /* Primary: Lighter Indigo for dark mode visibility */
+    --primary: 226 70% 65%;
+    --primary-foreground: 222 47% 11%;
+
+    /* Secondary: Dark Slate */
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+
+    /* Accent: Glowing Amber */
+    --accent: 35 95% 58%;
+    --accent-foreground: 222 47% 11%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217 33% 20%;
+    --input: 217 33% 20%;
+    --ring: 226 70% 65%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(226 70% 65%) 0%, hsl(210 25% 40%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(226 70% 65% / 0.1) 0%, hsl(35 95% 58% / 0.05) 100%);
+    
+    /* Effects */
+    --glass-bg: hsla(222, 47%, 10%, 0.6);
+    --glass-border: hsla(226, 70%, 65%, 0.2);
+    
+    --shadow-sm: 0 1px 2px hsla(0, 0%, 0%, 0.3);
+    --shadow-md: 0 4px 6px -1px hsla(0, 0%, 0%, 0.4);
+    --shadow-lg: 0 10px 15px -3px hsla(0, 0%, 0%, 0.5);
+    --shadow-glow: 0 0 30px hsla(35, 95%, 58%, 0.15);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-body antialiased selection:bg-primary/20 selection:text-primary;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading tracking-tight;
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+  }
+  
+  .gradient-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  /* Micro-interactions (from Doc Section 8) */
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.5s ease-out forwards;
+  }
+  
+  @keyframes slideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+}

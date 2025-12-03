@@ -1,0 +1,35 @@
+[
+  {
+    "sku": "HW-X200",
+    "title": "Edge Gateway X200",
+    "slug": "edge-gateway-x200",
+    "category": "Hardware",
+    "shortDescription": "Rugged industrial gateway with 5G, dual-LAN, and onboard HSM for secure edge computing.",
+    "price": "Contact for Quote",
+    "tags": ["5G", "IP67", "Edge Computing"],
+    "specs": {
+      "CPU": "Quad-core ARM Cortex-A72",
+      "RAM": "8GB LPDDR4",
+      "Connectivity": "5G, Wi-Fi 6, Dual GbE",
+      "Temp": "-40°C to 85°C"
+    }
+  },
+  {
+    "sku": "SW-LOGS",
+    "title": "InfraLog SIEM",
+    "slug": "infralog-siem",
+    "category": "Software",
+    "shortDescription": "Centralized log management and threat detection platform for hybrid cloud environments.",
+    "price": "SaaS Tiered",
+    "tags": ["Security", "SaaS", "Analytics"]
+  },
+  {
+    "sku": "HW-RT10",
+    "title": "Rugged Tablet RT-10",
+    "slug": "rugged-tablet-rt10",
+    "category": "Hardware",
+    "shortDescription": "10-inch field tablet with barcode scanner, swappable battery, and MIL-STD-810G certification.",
+    "price": "$899",
+    "tags": ["Field Ops", "Android 13", "Rugged"]
+  }
+]

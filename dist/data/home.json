@@ -1,0 +1,17 @@
+{
+  "headline": "Intelligent Infrastructure for Mission-Critical Systems",
+  "subhead": "We build secure, scalable cloud-native applications and rugged edge hardware for the enterprise.",
+  "ctas": [
+    { "label": "Request Demo", "href": "/contact" },
+    { "label": "View Products", "href": "/products" }
+  ],
+  "kpis": [
+    { "label": "Devices Deployed", "value": "15k+" },
+    { "label": "Uptime SLA", "value": "99.99%" },
+    { "label": "Enterprise Clients", "value": "200+" }
+  ],
+  "heroStats": {
+    "timeseries": [12, 19, 15, 25, 32, 40, 38],
+    "labels": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+  }
+}

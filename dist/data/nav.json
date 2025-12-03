@@ -1,0 +1,18 @@
+{
+  "primary": [
+    { "label": "Home", "href": "/" },
+    { "label": "Solutions", "href": "/solutions" },
+    { "label": "Products", "href": "/products" },
+    { "label": "Services", "href": "/services" },
+    { "label": "Industries", "href": "/industries" },
+    { "label": "About", "href": "/about" },
+    { "label": "Contact", "href": "/contact" }
+  ],
+  "categories": [
+    { "label": "Cloud & DevOps", "href": "/services/cloud-devops" },
+    { "label": "Edge AI", "href": "/services/edge-ai" },
+    { "label": "Industrial IoT", "href": "/services/iot" },
+    { "label": "Cybersecurity", "href": "/services/security" },
+    { "label": "Hardware", "href": "/products/hardware" }
+  ]
+}
