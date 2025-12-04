@@ -4,9 +4,11 @@
     "title": "Edge Gateway X200",
     "slug": "edge-gateway-x200",
     "category": "Hardware",
+    "purchaseOptions": ["Buy", "HaaS"],
+    "compliance": ["IP67", "CE", "FCC"],
     "shortDescription": "Rugged industrial gateway with 5G, dual-LAN, and onboard HSM for secure edge computing.",
-    "price": "Contact for Quote",
-    "tags": ["5G", "IP67", "Edge Computing"],
+    "price": "$1,299",
+    "tags": ["5G", "Edge Computing", "Industrial"],
     "specs": {
       "CPU": "Quad-core ARM Cortex-A72",
       "RAM": "8GB LPDDR4",
@@ -15,21 +17,65 @@
     }
   },
   {
-    "sku": "SW-LOGS",
-    "title": "InfraLog SIEM",
-    "slug": "infralog-siem",
-    "category": "Software",
-    "shortDescription": "Centralized log management and threat detection platform for hybrid cloud environments.",
-    "price": "SaaS Tiered",
-    "tags": ["Security", "SaaS", "Analytics"]
-  },
-  {
     "sku": "HW-RT10",
     "title": "Rugged Tablet RT-10",
     "slug": "rugged-tablet-rt10",
     "category": "Hardware",
-    "shortDescription": "10-inch field tablet with barcode scanner, swappable battery, and MIL-STD-810G certification.",
+    "purchaseOptions": ["Buy", "Lease"],
+    "compliance": ["MIL-STD-810G", "IP65"],
+    "shortDescription": "10-inch field tablet with barcode scanner, swappable battery, and high-brightness display.",
     "price": "$899",
-    "tags": ["Field Ops", "Android 13", "Rugged"]
+    "tags": ["Field Ops", "Android 13", "Rugged"],
+    "specs": {
+      "Screen": "10.1\" FHD 1000 nits",
+      "Battery": "Hot-swappable 10000mAh",
+      "Scanner": "2D Barcode Engine"
+    }
+  },
+  {
+    "sku": "SW-LOGS",
+    "title": "InfraLog SIEM",
+    "slug": "infralog-siem",
+    "category": "Software",
+    "purchaseOptions": ["Subscription"],
+    "shortDescription": "Centralized log management and threat detection platform for hybrid cloud environments.",
+    "price": "From $200/mo",
+    "tags": ["Security", "SaaS", "Analytics"],
+    "specs": {
+      "Deployment": "Cloud / On-prem",
+      "Retention": "Up to 365 days",
+      "Compliance": "SOC2 Type II"
+    }
+  },
+  {
+    "sku": "SW-FLEET",
+    "title": "FleetOps Command",
+    "slug": "fleetops-command",
+    "category": "Software",
+    "purchaseOptions": ["Subscription"],
+    "shortDescription": "Real-time telemetry and device management dashboard for deployed edge nodes.",
+    "price": "From $5/device",
+    "tags": ["IoT", "Management", "SaaS"],
+    "specs": {
+      "Protocol": "MQTT / HTTP",
+      "Visualization": "Real-time Maps",
+      "Alerts": "SMS / Email / Webhook"
+    }
+  },
+  {
+    "sku": "HW-AI-CAM",
+    "title": "VisionEdge AI Camera",
+    "slug": "visionedge-camera",
+    "category": "Hardware",
+    "purchaseOptions": ["Buy"],
+    "compliance": ["IP67"],
+    "shortDescription": "Smart camera with onboard NPU for object detection and license plate recognition.",
+    "price": "$650",
+    "tags": ["Computer Vision", "AI", "Security"],
+    "specs": {
+      "Sensor": "8MP Sony IMX",
+      "NPU": "2.5 TOPS",
+      "Lens": "Motorized Varifocal"
+    }
   }
 ]

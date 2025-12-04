@@ -1,0 +1,26 @@
+[
+  {
+    "id": "job-1",
+    "title": "Senior Rust Engineer",
+    "department": "Embedded Systems",
+    "location": "Remote / San Francisco",
+    "type": "Full-time",
+    "description": "Building the next generation of our Edge OS firmware."
+  },
+  {
+    "id": "job-2",
+    "title": "Solutions Architect",
+    "department": "Customer Success",
+    "location": "New York, NY",
+    "type": "Full-time",
+    "description": "Helping enterprise clients design cloud-native migrations."
+  },
+  {
+    "id": "job-3",
+    "title": "DevOps Engineer",
+    "department": "Cloud Platform",
+    "location": "Remote",
+    "type": "Contract",
+    "description": "Maintaining our internal Kubernetes clusters and CI/CD pipelines."
+  }
+]

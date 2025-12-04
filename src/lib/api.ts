@@ -44,7 +44,9 @@ export interface Service {
     deliverables?: string[];
     targetAudience?: string[];
     features?: string[];
-    icon?: string; // Icon name from Lucide
+    icon?: string;
+    category: string;
+    industries: string[];
 }
 
 export interface Product {
@@ -54,9 +56,20 @@ export interface Product {
     shortDescription: string;
     price?: string | number;
     tags?: string[];
-    category?: string;
+    category: "Hardware" | "Software";
+    purchaseOptions?: string[];
+    compliance?: string[];
     specs?: Record<string, string>;
     images?: string[];
+}
+
+export interface Industry {
+    id: string;
+    title: string;
+    slug: string;
+    description: string;
+    icon: string;
+    stats: string[];
 }
 
 export interface Testimonial {
@@ -66,6 +79,17 @@ export interface Testimonial {
     role: string;
     company: string;
     avatar?: string;
+}
+
+export interface CaseStudy {
+    id: string;
+    title: string;
+    slug: string;
+    client: string;
+    industry: string;
+    summary: string;
+    kpis: KPI[];
+    image?: string;
 }
 
 // The generic adapter

@@ -18,16 +18,16 @@ export const Footer = () => {
       { name: "Embedded Systems", href: "/services/embedded" },
     ],
     Products: [
-      { name: "Edge Gateways", href: "/products/hardware" },
-      { name: "Rugged Tablets", href: "/products/hardware" },
-      { name: "InfraLog SIEM", href: "/products/software" },
-      { name: "Industrial Sensors", href: "/products/hardware" },
+      { name: "Edge Gateways", href: "/products/edge-gateway-x200" },
+      { name: "Rugged Tablets", href: "/products/rugged-tablet-rt10" },
+      { name: "InfraLog SIEM", href: "/products/infralog-siem" },
+      { name: "Catalog", href: "/products" },
       { name: "Pricing", href: "/pricing" },
     ],
     Company: [
       { name: "About Us", href: "/about" },
       { name: "Careers", href: "/careers", badge: "Hiring" },
-      { name: "Partners", href: "/about#partners" },
+      { name: "Partners", href: "/about" },
       { name: "Case Studies", href: "/case-studies" },
       { name: "Contact", href: "/contact" },
     ],
@@ -54,9 +54,8 @@ export const Footer = () => {
   return (
     <footer className="bg-card border-t border-border">
       <div className="container mx-auto px-4 py-16">
-        {/* Main Footer Content: Flex container to separate Brand from Links */}
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 mb-16">
-          {/* 1. Brand Section - Takes ~30% width on large screens */}
+          {/* Brand */}
           <div className="lg:w-[30%] space-y-6">
             <Link to="/" className="flex items-center space-x-2 group w-fit">
               <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center border border-primary/20 group-hover:bg-primary group-hover:border-primary transition-all duration-300">
@@ -71,13 +70,10 @@ export const Footer = () => {
                 </span>
               </div>
             </Link>
-
             <p className="text-sm text-muted-foreground leading-relaxed">
               Building secure, scalable infrastructure for the enterprise. From
-              cloud-native applications to rugged edge hardware, we bridge the
-              physical and digital worlds.
+              cloud-native applications to rugged edge hardware.
             </p>
-
             <div className="flex gap-3 pt-2">
               {socialLinks.map((social) => (
                 <a
@@ -86,7 +82,6 @@ export const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-9 h-9 rounded-full bg-secondary text-muted-foreground hover:bg-primary hover:text-white transition-all flex items-center justify-center border border-border"
-                  aria-label={social.label}
                 >
                   <social.icon className="h-4 w-4" />
                 </a>
@@ -94,7 +89,7 @@ export const Footer = () => {
             </div>
           </div>
 
-          {/* 2. Links Grid - Takes remaining space, auto-fits 5 columns */}
+          {/* Links */}
           <div className="flex-1 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8">
             {Object.entries(footerSections).map(([category, links]) => (
               <div key={category} className="flex flex-col">
@@ -126,18 +121,15 @@ export const Footer = () => {
           </div>
         </div>
 
-        {/* Bottom Section */}
+        {/* Bottom */}
         <div className="border-t border-border pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="text-sm text-muted-foreground">
             © {new Date().getFullYear()} InfraTech Systems Inc. All rights
             reserved.
           </div>
-
-          <div className="flex items-center gap-6">
-            <div className="flex items-center gap-2 text-sm text-muted-foreground">
-              <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-              All Systems Operational
-            </div>
+          <div className="flex items-center gap-2 text-sm text-muted-foreground">
+            <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />{" "}
+            All Systems Operational
           </div>
         </div>
       </div>

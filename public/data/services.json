@@ -3,18 +3,42 @@
     "id": "svc-cloud",
     "title": "Cloud Migration & DevOps",
     "slug": "cloud-devops",
+    "category": "Cloud & DevOps",
+    "industries": ["Fintech", "Healthcare", "SaaS"],
     "shortDescription": "Modernize legacy infrastructure with Kubernetes, CI/CD automation, and hybrid cloud architectures.",
+    "longDescription": "We help enterprises move from monolithic, on-premise systems to scalable, cloud-native architectures. Our approach minimizes downtime and focuses on observability, security, and cost-optimization from Day 1.",
     "icon": "Cloud",
     "features": [
-      "Zero-downtime migration",
-      "Infrastructure as Code",
-      "24/7 SRE Support"
+      "Zero-downtime migration strategies (Blue/Green)",
+      "Infrastructure as Code (Terraform/Ansible)",
+      "24/7 SRE Support & Monitoring"
+    ],
+    "benefits": [
+      "Reduce operational costs by up to 40%",
+      "Deploy code 10x faster with automated CI/CD",
+      "99.99% Guaranteed Uptime SLA"
+    ],
+    "deliverables": [
+      "Cloud Architecture Blueprint",
+      "Containerized Application (Docker/K8s)",
+      "Automated CI/CD Pipelines",
+      "Security Compliance Report"
+    ],
+    "techStack": [
+      "AWS",
+      "Kubernetes",
+      "Terraform",
+      "Docker",
+      "Prometheus",
+      "GitLab CI"
     ]
   },
   {
     "id": "svc-edge-ai",
     "title": "Edge AI & Computer Vision",
     "slug": "edge-ai",
+    "category": "Edge AI",
+    "industries": ["Manufacturing", "Smart City", "Automotive"],
     "shortDescription": "Deploy real-time inference models on rugged edge devices for manufacturing and smart cities.",
     "icon": "Cpu",
     "features": [
@@ -27,8 +51,34 @@
     "id": "svc-security",
     "title": "Cybersecurity & Compliance",
     "slug": "security",
+    "category": "Cybersecurity",
+    "industries": ["Fintech", "Healthcare", "Government"],
     "shortDescription": "End-to-end VAPT, SOC monitoring, and compliance advisory for HIPAA/GDPR/SOC2.",
     "icon": "ShieldCheck",
     "features": ["Penetration Testing", "Managed SOC", "Compliance Audits"]
+  },
+  {
+    "id": "svc-iot",
+    "title": "Industrial IoT Solutions",
+    "slug": "iot",
+    "category": "IoT",
+    "industries": ["Manufacturing", "Energy", "Logistics"],
+    "shortDescription": "Connect assets, collect telemetry, and visualize operations with our secure IoT stack.",
+    "icon": "Cpu",
+    "features": ["MQTT Broker Setup", "Digital Twins", "Predictive Maintenance"]
+  },
+  {
+    "id": "svc-embedded",
+    "title": "Embedded Firmware Engineering",
+    "slug": "embedded",
+    "category": "Embedded Systems",
+    "industries": ["Automotive", "Medical Devices"],
+    "shortDescription": "Custom RTOS and bare-metal firmware development for mission-critical hardware.",
+    "icon": "Code",
+    "features": [
+      "RTOS Development",
+      "Driver Optimization",
+      "OTA Update Systems"
+    ]
   }
 ]

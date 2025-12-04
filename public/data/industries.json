@@ -1,0 +1,38 @@
+[
+  {
+    "id": "ind-fintech",
+    "title": "Fintech & Banking",
+    "slug": "fintech",
+    "description": "Secure, low-latency infrastructure for high-frequency trading and digital banking.",
+    "icon": "Landmark",
+    "stats": ["< 10ms Latency", "PCI-DSS Level 1"],
+    "relatedServices": ["cloud-devops", "security"]
+  },
+  {
+    "id": "ind-health",
+    "title": "Healthcare & MedTech",
+    "slug": "healthcare",
+    "description": "HIPAA-compliant cloud platforms and edge devices for remote patient monitoring.",
+    "icon": "Stethoscope",
+    "stats": ["HIPAA Compliant", "IoT Integration"],
+    "relatedServices": ["security", "iot"]
+  },
+  {
+    "id": "ind-manuf",
+    "title": "Manufacturing 4.0",
+    "slug": "manufacturing",
+    "description": "Predictive maintenance and computer vision for automated assembly lines.",
+    "icon": "Factory",
+    "stats": ["OEE +15%", "Edge AI Ready"],
+    "relatedServices": ["edge-ai", "embedded"]
+  },
+  {
+    "id": "ind-smartcity",
+    "title": "Smart Cities",
+    "slug": "smart-cities",
+    "description": "Intelligent traffic management and public safety monitoring systems.",
+    "icon": "Building2",
+    "stats": ["5G Connected", "Privacy First"],
+    "relatedServices": ["edge-ai", "iot"]
+  }
+]
