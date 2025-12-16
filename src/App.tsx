@@ -25,6 +25,10 @@ import Careers from "./pages/Careers";
 import Industries from "./pages/Industries";
 import CaseStudies from "./pages/CaseStudies";
 import CaseStudyDetail from "./pages/CaseStudyDetail";
+import BlogIndex from "./pages/BlogIndex";
+import BlogPost from "./pages/BlogPost";
+import ROICalculatorPage from "./pages/resources/ROICalculatorPage";
+import Resources from "./pages/Resources";
 
 // Footer Pages
 import Pricing from "./pages/Pricing";
@@ -32,6 +36,7 @@ import Support from "./pages/Support";
 import Docs from "./pages/Docs";
 import Security from "./pages/Security";
 import { Privacy, Terms, Cookie } from "./pages/legal/LegalPages";
+import { ProductCategory } from "./pages/products/ProductCategory";
 
 import NotFound from "./pages/NotFound";
 // import { FloatingIcons } from "@/components/FloatingIcons";
@@ -47,9 +52,26 @@ const router = createBrowserRouter(
       {/* Catalog Routes */}
       <Route path="/services" element={<Services />} />
       <Route path="/services/:slug" element={<ServiceDetail />} />
+      <Route path="/pricing" element={<Pricing />} />
+      <Route path="/resources/roi-calculator" element={<ROICalculatorPage />} />
       <Route path="/products" element={<Products />} />
       <Route path="/products/:slug" element={<ProductDetail />} />
-      <Route path="/pricing" element={<Pricing />} />
+      <Route
+        path="/products/category/:category"
+        element={<ProductCategory />}
+      />
+      {/* Specific Category Routes (from Mega Menu) */}
+      <Route path="/products/gateways" element={<ProductCategory />} />
+      <Route path="/products/servers" element={<ProductCategory />} />
+      <Route path="/products/sensors" element={<ProductCategory />} />
+      <Route path="/products/hmi" element={<ProductCategory />} />
+      <Route path="/products/infra-os" element={<ProductCategory />} />
+      <Route path="/products/fleet-manager" element={<ProductCategory />} />
+      <Route path="/products/security" element={<ProductCategory />} />
+
+      {/* 2. Specific "New Release" Product (from Mega Menu) */}
+      {/* Assuming "x200" is the slug in your product.json */}
+      <Route path="/products/x200" element={<ProductDetail />} />
 
       {/* Insights Routes */}
       <Route path="/industries" element={<Industries />} />
@@ -60,8 +82,11 @@ const router = createBrowserRouter(
       <Route path="/about" element={<About />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/careers" element={<Careers />} />
+      <Route path="/blog" element={<BlogIndex />} />
+      <Route path="/blog/:slug" element={<BlogPost />} />
 
       {/* Resources & Legal */}
+      <Route path="/resources" element={<Resources />} />
       <Route path="/support" element={<Support />} />
       <Route path="/docs" element={<Docs />} />
       <Route path="/security" element={<Security />} />

@@ -1,8 +1,10 @@
 import { Link } from "react-router-dom";
-import { Menu, X, Sun, Moon, Phone } from "lucide-react";
+import { Menu, X, Sun, Moon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useTheme } from "next-themes";
 import { NavItem } from "@/lib/api";
+import { GlobalSearch } from "@/components/GlobalSearch";
+import { ProductsMegaMenu } from "./ProductsMegaMenu"; // Import the new menu
 
 interface TopNavProps {
   items: NavItem[];
@@ -18,10 +20,10 @@ export const TopNav = ({
   const { theme, setTheme } = useTheme();
 
   return (
-    <div className="border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container mx-auto px-4 h-16 flex items-center justify-between">
+    <div className="border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50">
+      <div className="container mx-auto px-4 h-16 flex items-center justify-between relative">
         {/* Left: Brand */}
-        <Link to="/" className="flex items-center space-x-2 group">
+        <Link to="/" className="flex items-center space-x-2 group shrink-0">
           <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-blue-900 flex items-center justify-center shadow-lg group-hover:shadow-primary/20 transition-all">
             <span className="text-white font-heading font-bold text-xl tracking-tighter">
               IT
@@ -38,22 +40,33 @@ export const TopNav = ({
         </Link>
 
         {/* Center: Primary Nav (Desktop) */}
-        <nav className="hidden md:flex items-center space-x-6">
-          {items.map((item) => (
-            <Link
-              key={item.href}
-              to={item.href}
-              className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors relative group py-2"
-            >
-              {item.label}
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full" />
-            </Link>
-          ))}
+        <nav className="hidden md:flex items-center space-x-8 h-full">
+          {items.map((item) => {
+            // Render Mega Menu for "Products"
+            if (item.label === "Products") {
+              return <ProductsMegaMenu key={item.href} />;
+            }
+
+            // Render Standard Link for others
+            return (
+              <Link
+                key={item.href}
+                to={item.href}
+                className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors relative group py-2"
+              >
+                {item.label}
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full" />
+              </Link>
+            );
+          })}
         </nav>
 
         {/* Right: Actions */}
-        <div className="flex items-center space-x-3">
-          {/* Theme Toggle */}
+        <div className="flex items-center space-x-3 shrink-0">
+          <div className="hidden sm:block">
+            <GlobalSearch />
+          </div>
+
           <Button
             variant="ghost"
             size="icon"
@@ -65,13 +78,7 @@ export const TopNav = ({
             <span className="sr-only">Toggle theme</span>
           </Button>
 
-          {/* Call to Action */}
-          <div className="hidden md:flex gap-3">
-            <Button variant="outline" className="hidden lg:flex gap-2" asChild>
-              <Link to="/contact">
-                <Phone className="w-4 h-4" /> Contact Sales
-              </Link>
-            </Button>
+          <div className="hidden md:flex">
             <Button
               className="bg-primary hover:bg-primary/90 text-white shadow-md shadow-primary/20"
               asChild
@@ -80,7 +87,6 @@ export const TopNav = ({
             </Button>
           </div>
 
-          {/* Mobile Menu Trigger */}
           <Button
             variant="ghost"
             size="icon"

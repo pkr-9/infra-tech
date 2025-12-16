@@ -104,9 +104,9 @@ export const HeroRight = ({ data }: HeroRightProps) => {
           </div>
 
           {/* Status Indicator (Static) */}
-          <div className="absolute -top-1 -right-1 w-6 h-6 bg-background rounded-full flex items-center justify-center border border-border z-10">
+          {/* <div className="absolute -top-1 -right-1 w-6 h-6 bg-background rounded-full flex items-center justify-center border border-border z-10">
             <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
-          </div>
+          </div> */}
         </div>
 
         <div className="mt-4 text-center bg-card/80 backdrop-blur px-4 py-1 rounded-full border border-primary/20 shadow-sm">

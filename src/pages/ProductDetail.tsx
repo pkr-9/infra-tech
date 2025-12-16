@@ -5,8 +5,15 @@ import { ProductSpecs } from "@/components/products/ProductSpecs";
 import { ProductActions } from "@/components/products/ProductActions";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Button } from "@/components/ui/button";
-import { ChevronRight, Home } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb";
 
 const ProductDetail = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -35,19 +42,34 @@ const ProductDetail = () => {
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <main className="flex-grow pt-[110px]">
-        {/* Breadcrumbs */}
+        {/* Standardized Breadcrumbs */}
         <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center text-sm text-muted-foreground">
-            <Link to="/" className="hover:text-primary">
-              <Home className="w-4 h-4" />
-            </Link>
-            <ChevronRight className="w-4 h-4 mx-2" />
-            <Link to="/products" className="hover:text-primary">
-              Products
-            </Link>
-            <ChevronRight className="w-4 h-4 mx-2" />
-            <span className="text-foreground font-medium">{product.title}</span>
-          </div>
+          <Breadcrumb>
+            <BreadcrumbList>
+              <BreadcrumbItem>
+                <BreadcrumbLink asChild>
+                  <Link to="/">Home</Link>
+                </BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbLink asChild>
+                  <Link to="/products">Products</Link>
+                </BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              {/* Optional Category Level */}
+              <BreadcrumbItem>
+                <BreadcrumbLink asChild>
+                  <span className="cursor-default">{product.category}</span>
+                </BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbPage>{product.title}</BreadcrumbPage>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
         </div>
 
         <div className="container mx-auto px-4 py-8">
@@ -80,7 +102,6 @@ const ProductDetail = () => {
                 <p className="text-lg text-muted-foreground leading-relaxed">
                   {product.shortDescription}
                 </p>
-                {/* Placeholder for long description if available */}
               </div>
 
               <ProductSpecs specs={product.specs} />

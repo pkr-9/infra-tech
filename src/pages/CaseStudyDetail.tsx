@@ -4,7 +4,15 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
-import { ArrowLeft, CheckCircle2, TrendingUp } from "lucide-react";
+import { CheckCircle2, TrendingUp } from "lucide-react";
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb";
 
 const CaseStudyDetail = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -15,19 +23,28 @@ const CaseStudyDetail = () => {
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
-
       <main className="flex-grow pt-[110px]">
-        {/* Navigation */}
+        {/* Standardized Breadcrumbs */}
         <div className="container mx-auto px-4 py-6">
-          <Button
-            variant="ghost"
-            className="gap-2 pl-0 hover:pl-2 transition-all"
-            asChild
-          >
-            <Link to="/case-studies">
-              <ArrowLeft className="w-4 h-4" /> Back to Case Studies
-            </Link>
-          </Button>
+          <Breadcrumb>
+            <BreadcrumbList>
+              <BreadcrumbItem>
+                <BreadcrumbLink asChild>
+                  <Link to="/">Home</Link>
+                </BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbLink asChild>
+                  <Link to="/case-studies">Case Studies</Link>
+                </BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbPage>{study.title}</BreadcrumbPage>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
         </div>
 
         {/* Hero Section */}
@@ -143,7 +160,6 @@ const CaseStudyDetail = () => {
           </div>
         </div>
       </main>
-
     </div>
   );
 };

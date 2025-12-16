@@ -1,6 +1,7 @@
 import { Outlet, ScrollRestoration } from "react-router-dom";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { CookieConsent } from "@/components/CookieConsent";
 
 export const InnerPageLayout = () => {
   return (
@@ -20,6 +21,8 @@ export const InnerPageLayout = () => {
 
       {/* 4. Utilities */}
       <ScrollRestoration />
+
+      <CookieConsent />
     </div>
   );
 };

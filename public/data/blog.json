@@ -1,0 +1,47 @@
+[
+  {
+    "id": "1",
+    "slug": "future-of-edge-ai-manufacturing",
+    "title": "The Future of Edge AI in Manufacturing",
+    "excerpt": "How on-device machine learning is reducing latency and bandwidth costs for smart factories in 2025.",
+    "category": "Edge Computing",
+    "author": {
+      "name": "Sarah Chen",
+      "role": "Chief Architect"
+    },
+    "date": "2024-03-15",
+    "readTime": "5 min read",
+    "image": "https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?auto=format&fit=crop&q=80&w=1000",
+    "content": "<p>Edge AI is transforming how manufacturers approach quality control...</p><h2>Why Latency Matters</h2><p>In high-speed assembly lines, a millisecond delay in defect detection can mean thousands of dollars in waste...</p>"
+  },
+  {
+    "id": "2",
+    "slug": "zero-trust-architecture-explained",
+    "title": "Zero Trust Architecture: A CTO's Guide",
+    "excerpt": "Moving beyond the perimeter security model to a strictly identity-based verification system.",
+    "category": "Security",
+    "author": {
+      "name": "David Miller",
+      "role": "Head of Security"
+    },
+    "date": "2024-03-10",
+    "readTime": "8 min read",
+    "image": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1000",
+    "content": "<p>The traditional castle-and-moat security model is obsolete...</p>"
+  },
+  {
+    "id": "3",
+    "slug": "kubernetes-vs-docker-swarm",
+    "title": "Kubernetes vs Docker Swarm for IoT",
+    "excerpt": "Choosing the right orchestration tool for distributed device fleets with limited resources.",
+    "category": "DevOps",
+    "author": {
+      "name": "Alex Rivera",
+      "role": "DevOps Lead"
+    },
+    "date": "2024-02-28",
+    "readTime": "6 min read",
+    "image": "https://images.unsplash.com/photo-1667372393119-c81c0cda0a29?auto=format&fit=crop&q=80&w=1000",
+    "content": "<p>Orchestrating containers on edge devices presents unique challenges...</p>"
+  }
+]

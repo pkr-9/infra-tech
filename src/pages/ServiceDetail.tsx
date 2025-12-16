@@ -5,14 +5,21 @@ import { ServiceProcess } from "@/components/services/ServiceProcess";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ChevronRight, Home, CheckCircle2, Layers } from "lucide-react";
+import { CheckCircle2, Layers } from "lucide-react";
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb";
 
 const ServiceDetail = () => {
   const { slug } = useParams<{ slug: string }>();
   const { data: service, isLoading, isError } = useServiceBySlug(slug);
 
   if (isLoading) return <ServiceDetailSkeleton />;
-
   if (isError || !service) {
     return (
       <div className="min-h-screen bg-background flex flex-col">
@@ -28,24 +35,29 @@ const ServiceDetail = () => {
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
-
       <main className="flex-grow pt-[110px]">
-        {/* Breadcrumbs */}
+        {/* Standardized Breadcrumbs */}
         <div className="bg-secondary/20 border-b border-border">
           <div className="container mx-auto px-4 py-4">
-            <div className="flex items-center text-sm text-muted-foreground">
-              <Link to="/" className="hover:text-primary">
-                <Home className="w-4 h-4" />
-              </Link>
-              <ChevronRight className="w-4 h-4 mx-2" />
-              <Link to="/services" className="hover:text-primary">
-                Services
-              </Link>
-              <ChevronRight className="w-4 h-4 mx-2" />
-              <span className="text-foreground font-medium">
-                {service.title}
-              </span>
-            </div>
+            <Breadcrumb>
+              <BreadcrumbList>
+                <BreadcrumbItem>
+                  <BreadcrumbLink asChild>
+                    <Link to="/">Home</Link>
+                  </BreadcrumbLink>
+                </BreadcrumbItem>
+                <BreadcrumbSeparator />
+                <BreadcrumbItem>
+                  <BreadcrumbLink asChild>
+                    <Link to="/services">Services</Link>
+                  </BreadcrumbLink>
+                </BreadcrumbItem>
+                <BreadcrumbSeparator />
+                <BreadcrumbItem>
+                  <BreadcrumbPage>{service.title}</BreadcrumbPage>
+                </BreadcrumbItem>
+              </BreadcrumbList>
+            </Breadcrumb>
           </div>
         </div>
 
@@ -110,7 +122,6 @@ const ServiceDetail = () => {
           </div>
         </div>
       </main>
-
     </div>
   );
 };

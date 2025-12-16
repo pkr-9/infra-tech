@@ -24,16 +24,22 @@ export const Footer = () => {
       { name: "Catalog", href: "/products" },
       { name: "Pricing", href: "/pricing" },
     ],
+    Resources: [
+      { name: "ROI Calculator", href: "/resources/roi-calculator" }, // Added context
+      { name: "API Documentation", href: "/docs" },
+      { name: "Blog", href: "/blog" },
+      { name: "Case Studies", href: "/case-studies" },
+      { name: "Whitepapers", href: "/whitepapers" },
+    ],
     Company: [
       { name: "About Us", href: "/about" },
       { name: "Careers", href: "/careers", badge: "Hiring" },
       { name: "Partners", href: "/about" },
-      { name: "Case Studies", href: "/case-studies" },
-      { name: "Contact", href: "/contact" },
+      // Removed "Resources" to avoid duplication
     ],
     Support: [
+      { name: "Contact", href: "/contact" },
       { name: "Help Center", href: "/support" },
-      { name: "API Documentation", href: "/docs" },
       { name: "System Status", href: "#" },
       { name: "Trust Center", href: "/security" },
     ],
@@ -53,10 +59,11 @@ export const Footer = () => {
 
   return (
     <footer className="bg-card border-t border-border">
-      <div className="container mx-auto px-4 py-16">
-        <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 mb-16">
-          {/* Brand */}
-          <div className="lg:w-[30%] space-y-6">
+      <div className="container mx-auto px-4 pt-16 pb-8">
+        {/* ROW 1: Brand & Socials */}
+        <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 mb-12 pb-12 border-b border-border">
+          {/* Brand Left */}
+          <div className="max-w-md space-y-4">
             <Link to="/" className="flex items-center space-x-2 group w-fit">
               <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center border border-primary/20 group-hover:bg-primary group-hover:border-primary transition-all duration-300">
                 <CircuitBoard className="h-6 w-6 text-primary group-hover:text-white transition-colors" />
@@ -74,61 +81,67 @@ export const Footer = () => {
               Building secure, scalable infrastructure for the enterprise. From
               cloud-native applications to rugged edge hardware.
             </p>
-            <div className="flex gap-3 pt-2">
-              {socialLinks.map((social) => (
-                <a
-                  key={social.label}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-9 h-9 rounded-full bg-secondary text-muted-foreground hover:bg-primary hover:text-white transition-all flex items-center justify-center border border-border"
-                >
-                  <social.icon className="h-4 w-4" />
-                </a>
-              ))}
-            </div>
           </div>
 
-          {/* Links */}
-          <div className="flex-1 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8">
-            {Object.entries(footerSections).map(([category, links]) => (
-              <div key={category} className="flex flex-col">
-                <h3 className="font-heading font-bold text-foreground mb-4">
-                  {category}
-                </h3>
-                <ul className="space-y-3">
-                  {links.map((link) => (
-                    <li key={link.name}>
-                      <Link
-                        to={link.href}
-                        className="group flex items-center text-sm text-muted-foreground hover:text-primary transition-colors"
-                      >
-                        {link.name}
-                        {link.badge && (
-                          <Badge
-                            variant="secondary"
-                            className="ml-2 h-5 px-1.5 text-[10px] bg-primary/10 text-primary border-primary/20"
-                          >
-                            {link.badge}
-                          </Badge>
-                        )}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+          {/* Socials Right */}
+          <div className="flex gap-3">
+            {socialLinks.map((social) => (
+              <a
+                key={social.label}
+                href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-secondary text-muted-foreground hover:bg-primary hover:text-white hover:-translate-y-1 transition-all flex items-center justify-center border border-border"
+                aria-label={social.label}
+              >
+                <social.icon className="h-4 w-4" />
+              </a>
             ))}
           </div>
         </div>
 
-        {/* Bottom */}
+        {/* ROW 2: Links Grid */}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 mb-16">
+          {Object.entries(footerSections).map(([category, links]) => (
+            <div key={category} className="flex flex-col">
+              <h3 className="font-heading font-bold text-foreground mb-4">
+                {category}
+              </h3>
+              <ul className="space-y-3">
+                {links.map((link) => (
+                  <li key={link.name}>
+                    <Link
+                      to={link.href}
+                      className="group flex items-center text-sm text-muted-foreground hover:text-primary transition-colors"
+                    >
+                      {link.name}
+                      {link.badge && (
+                        <Badge
+                          variant="secondary"
+                          className="ml-2 h-5 px-1.5 text-[10px] bg-primary/10 text-primary border-primary/20"
+                        >
+                          {link.badge}
+                        </Badge>
+                      )}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+
+        {/* ROW 3: Bottom Bar */}
         <div className="border-t border-border pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="text-sm text-muted-foreground">
             © {new Date().getFullYear()} InfraTech Systems Inc. All rights
             reserved.
           </div>
-          <div className="flex items-center gap-2 text-sm text-muted-foreground">
-            <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />{" "}
+          <div className="flex items-center gap-2 text-sm text-muted-foreground bg-secondary/30 px-3 py-1 rounded-full border border-border">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+            </span>
             All Systems Operational
           </div>
         </div>

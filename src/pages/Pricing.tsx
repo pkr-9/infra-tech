@@ -7,8 +7,9 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Check, HelpCircle } from "lucide-react";
+import { Check, HelpCircle, Link, Calculator } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Link as RouterLink } from "react-router-dom";
 
 const saasPlans = [
   {
@@ -119,6 +120,35 @@ const Pricing = () => {
               </div>
             </TabsContent>
           </Tabs>
+
+          {/* ROI Calculator CTA */}
+          <div className="mt-12 text-center">
+            <div className="inline-flex flex-col sm:flex-row items-center gap-4 bg-secondary/30 p-6 rounded-xl border border-primary/10">
+              <div className="flex items-center gap-3">
+                <div className="p-2 bg-primary/10 rounded-full text-primary">
+                  <Calculator className="w-6 h-6" />
+                </div>
+                <div className="text-left">
+                  <h3 className="font-heading font-bold text-foreground">
+                    Unsure about the investment?
+                  </h3>
+                  <p className="text-sm text-muted-foreground">
+                    Calculate your potential savings and break-even point in
+                    seconds.
+                  </p>
+                </div>
+              </div>
+              <Button
+                variant="default"
+                className="w-full sm:w-auto ml-auto"
+                asChild
+              >
+                <RouterLink to="/resources/roi-calculator">
+                  Calculate ROI
+                </RouterLink>
+              </Button>
+            </div>
+          </div>
 
           {/* FAQ Teaser */}
           <div className="mt-20 text-center space-y-4">

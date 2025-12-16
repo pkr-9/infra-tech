@@ -1,5 +1,11 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, CheckCircle2, ShieldCheck, Zap } from "lucide-react";
+import {
+  ArrowRight,
+  CheckCircle2,
+  ShieldCheck,
+  Zap,
+  Phone,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { HomeData } from "@/lib/api";
 
@@ -31,7 +37,7 @@ export const HeroLeft = ({ data }: HeroLeftProps) => {
       <div className="flex flex-col sm:flex-row gap-4">
         <Button
           size="lg"
-          className="bg-primary text-white hover:bg-primary/90 h-12 px-8 text-base shadow-glow"
+          className="bg-primary text-white hover:bg-primary/90 h-12 px-6 text-base shadow-glow"
           asChild
         >
           <Link to={data.ctas[0].href}>
@@ -46,6 +52,30 @@ export const HeroLeft = ({ data }: HeroLeftProps) => {
         >
           <Link to={data.ctas[1].href}>{data.ctas[1].label}</Link>
         </Button>
+
+        {/* New Contact Sales Button */}
+        <Button
+          size="lg"
+          className="bg-primary text-white hover:bg-primary/90 h-12 px-4 text-base shadow-glow"
+          asChild
+        >
+          <Link to="/contact">
+            <Phone className="w-4 h-4" /> Contact Sales
+            <ArrowRight className="ml-2 h-4 w-4" />
+          </Link>
+        </Button>
+        {/* simply updating the json data results in caching issue - avoid hardcoding array indexing*/}
+        {/* {data.ctas?.[2] && (
+          <Button
+            size="lg"
+            className="bg-primary text-white hover:bg-primary/90 h-12 px-8 text-base shadow-glow"
+            asChild
+          >
+            <Link to={data.ctas[2].href}>
+              {data.ctas[2].label} <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </Button>
+        )} */}
       </div>
 
       {/* Quick Features / Trust Badges */}
