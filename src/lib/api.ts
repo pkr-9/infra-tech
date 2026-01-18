@@ -3,6 +3,7 @@
 export interface NavItem {
     label: string;
     href: string;
+    children?: NavItem[]; // optional for future nested menus
 }
 
 export interface NavData {
@@ -30,7 +31,6 @@ export interface HomeData {
     subhead: string;
     ctas: CTA[];
     kpis: KPI[];
-    heroStats: HeroStats;
 }
 
 export interface Service {

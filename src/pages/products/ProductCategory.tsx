@@ -26,6 +26,20 @@ import {
 
 // 1. Configuration: Map URL paths to Page Content
 const CATEGORY_METADATA: Record<string, any> = {
+  hardware: {
+    title: "Hardware Catalog",
+    description: "Ruggedized computing solutions for the edge. Built to last.",
+    icon: Box,
+    filterTag: "Hardware", // Will match product.category === 'Hardware'
+    type: "Category",
+  },
+  software: {
+    title: "Software Platform",
+    description: "Enterprise-grade OS, Security, and Management tools.",
+    icon: Layers,
+    filterTag: "Software",
+    type: "Category",
+  },
   // Hardware
   gateways: {
     title: "Edge Gateways",

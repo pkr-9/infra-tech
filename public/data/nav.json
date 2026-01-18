@@ -2,17 +2,30 @@
   "primary": [
     { "label": "Home", "href": "/" },
     { "label": "Solutions", "href": "/solutions" },
-    { "label": "Products", "href": "/products" },
-    { "label": "Services", "href": "/services" },
+    { "label": "Infrastructure", "href": "/infrastructure" },
     { "label": "Industries", "href": "/industries" },
+    { "label": "Resources", "href": "/resources" },
     { "label": "About", "href": "/about" },
     { "label": "Contact", "href": "/contact" }
   ],
   "categories": [
-    { "label": "Cloud & DevOps", "href": "/services/cloud-devops" },
-    { "label": "Edge AI", "href": "/services/edge-ai" },
-    { "label": "Industrial IoT", "href": "/services/iot" },
-    { "label": "Cybersecurity", "href": "/services/security" },
-    { "label": "Hardware", "href": "/products/hardware" }
+    { "label": "Web & Mobile", "href": "/solutions/web-mobile" },
+    { "label": "AI & Data", "href": "/solutions/ai-data" },
+    {
+      "label": "Document Intelligence",
+      "href": "/solutions/document-intelligence"
+    },
+    { "label": "Cloud & DevOps", "href": "/solutions/cloud-devops" },
+    { "label": "Security & Compliance", "href": "/solutions/security" },
+    { "label": "Integration & APIs", "href": "/solutions/integration" },
+    { "label": "RPA & Automation", "href": "/solutions/automation" },
+    { "label": "Managed Services", "href": "/solutions/managed-services" },
+    { "label": "Edge & IoT Deployments", "href": "/infrastructure/edge-iot" },
+    { "label": "Networking & Wi-Fi", "href": "/infrastructure/networking" },
+    { "label": "Servers & Storage", "href": "/infrastructure/servers-storage" },
+    {
+      "label": "Data Center & Colocation",
+      "href": "/infrastructure/data-center"
+    }
   ]
 }

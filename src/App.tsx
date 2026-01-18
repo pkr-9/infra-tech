@@ -29,6 +29,9 @@ import BlogIndex from "./pages/BlogIndex";
 import BlogPost from "./pages/BlogPost";
 import ROICalculatorPage from "./pages/resources/ROICalculatorPage";
 import Resources from "./pages/Resources";
+import Solutions from "./pages/Solutions";
+import { IndustryDetail } from "./pages/industries/IndustryDetail";
+import { ProductCategory } from "./pages/products/ProductCategory";
 
 // Footer Pages
 import Pricing from "./pages/Pricing";
@@ -36,7 +39,6 @@ import Support from "./pages/Support";
 import Docs from "./pages/Docs";
 import Security from "./pages/Security";
 import { Privacy, Terms, Cookie } from "./pages/legal/LegalPages";
-import { ProductCategory } from "./pages/products/ProductCategory";
 
 import NotFound from "./pages/NotFound";
 // import { FloatingIcons } from "@/components/FloatingIcons";
@@ -60,6 +62,11 @@ const router = createBrowserRouter(
         path="/products/category/:category"
         element={<ProductCategory />}
       />
+      <Route path="/solutions" element={<Solutions />} />
+      <Route path="/industries/:slug" element={<IndustryDetail />} />
+
+      <Route path="/products/hardware" element={<ProductCategory />} />
+      <Route path="/products/software" element={<ProductCategory />} />
       {/* Specific Category Routes (from Mega Menu) */}
       <Route path="/products/gateways" element={<ProductCategory />} />
       <Route path="/products/servers" element={<ProductCategory />} />

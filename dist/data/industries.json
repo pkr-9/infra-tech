@@ -1,38 +1,70 @@
 [
   {
-    "id": "ind-fintech",
-    "title": "Fintech & Banking",
-    "slug": "fintech",
-    "description": "Secure, low-latency infrastructure for high-frequency trading and digital banking.",
-    "icon": "Landmark",
-    "stats": ["< 10ms Latency", "PCI-DSS Level 1"],
-    "relatedServices": ["cloud-devops", "security"]
-  },
-  {
-    "id": "ind-health",
-    "title": "Healthcare & MedTech",
-    "slug": "healthcare",
-    "description": "HIPAA-compliant cloud platforms and edge devices for remote patient monitoring.",
-    "icon": "Stethoscope",
-    "stats": ["HIPAA Compliant", "IoT Integration"],
-    "relatedServices": ["security", "iot"]
-  },
-  {
-    "id": "ind-manuf",
-    "title": "Manufacturing 4.0",
     "slug": "manufacturing",
-    "description": "Predictive maintenance and computer vision for automated assembly lines.",
-    "icon": "Factory",
-    "stats": ["OEE +15%", "Edge AI Ready"],
-    "relatedServices": ["edge-ai", "embedded"]
+    "title": "Industrial Manufacturing",
+    "subtitle": "Industry 4.0 Transformation",
+    "heroImage": "https://images.unsplash.com/photo-1565514020176-892eb5036d80?auto=format&fit=crop&q=80&w=2000",
+    "description": "Achieve zero-downtime operations with predictive maintenance and real-time computer vision at the edge.",
+    "challenges": [
+      {
+        "title": "Unplanned Downtime",
+        "text": "Equipment failure costs manufacturers an estimated $50B annually. Traditional preventative schedules are inefficient and miss critical early warning signs."
+      },
+      {
+        "title": "Data Silos",
+        "text": "Legacy OT protocols (Modbus, Profinet) are incompatible with modern IT cloud analytics, trapping valuable data on the factory floor."
+      },
+      {
+        "title": "Latency",
+        "text": "Cloud-round-trip latency is too high for safety-critical machine control and real-time defect detection on high-speed lines."
+      }
+    ],
+    "solution": {
+      "heading": "The Connected Factory Architecture",
+      "text": "InfraTech deploys a layered edge architecture. Rugged Gateways normalize OT data locally, running lightweight ML models to detect anomalies in milliseconds.",
+      "steps": [
+        "Ingest data from PLCs and sensors via InfraTech Edge Gateways.",
+        "Process telemetry locally using InfraOS containers for immediate insights.",
+        "Securely transmit aggregated data to the cloud for long-term trend analysis."
+      ]
+    },
+    "benefits": [
+      "Reduce maintenance costs by 30%",
+      "Improve OEE (Overall Equipment Effectiveness) by 15%",
+      "Eliminate manual data entry errors"
+    ],
+    "relatedProducts": ["edge-gateway-x200", "vibrasense-pro", "touchpanel-7"]
   },
   {
-    "id": "ind-smartcity",
-    "title": "Smart Cities",
-    "slug": "smart-cities",
-    "description": "Intelligent traffic management and public safety monitoring systems.",
-    "icon": "Building2",
-    "stats": ["5G Connected", "Privacy First"],
-    "relatedServices": ["edge-ai", "iot"]
+    "slug": "energy",
+    "title": "Energy & Utilities",
+    "subtitle": "Smart Grid Modernization",
+    "heroImage": "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&q=80&w=2000",
+    "description": "Secure, distributed monitoring for renewable assets and substation automation.",
+    "challenges": [
+      {
+        "title": "Distributed Assets",
+        "text": "Solar farms and wind turbines are often located in remote areas with poor connectivity, making centralization difficult."
+      },
+      {
+        "title": "Cybersecurity Risks",
+        "text": "Critical infrastructure is a prime target. Legacy SCADA systems lack modern encryption and identity management."
+      }
+    ],
+    "solution": {
+      "heading": "Grid-Edge Intelligence",
+      "text": "Our Rugged Servers act as local substations controllers, aggregating data from thousands of smart meters and verifying grid stability autonomously.",
+      "steps": [
+        "Deploy ZeroTrust Mesh to secure communications between substations.",
+        "Use local AI to balance load and predict demand spikes.",
+        "Enable remote OTA updates to patch vulnerabilities instantly."
+      ]
+    },
+    "benefits": [
+      "99.999% Grid Uptime reliability",
+      "Compliant with NERC CIP standards",
+      "Real-time fraud detection at the meter"
+    ],
+    "relatedProducts": ["rugged-server-r1", "zerotrust-mesh", "infra-os-ent"]
   }
 ]

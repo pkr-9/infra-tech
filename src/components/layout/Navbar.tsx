@@ -85,7 +85,7 @@ export const Navbar = () => {
 
             <div className="pt-2">
               <Button className="w-full bg-primary" asChild>
-                <Link to="/contact">Get Started</Link>
+                <Link to="/get-proposal">Request Proposal</Link>
               </Button>
             </div>
           </div>

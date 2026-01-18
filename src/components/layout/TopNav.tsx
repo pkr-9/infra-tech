@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { useTheme } from "next-themes";
 import { NavItem } from "@/lib/api";
 import { GlobalSearch } from "@/components/GlobalSearch";
-import { ProductsMegaMenu } from "./ProductsMegaMenu"; // Import the new menu
+import { SolutionsMegaMenu } from "./SolutionsMegaMenu";
 
 interface TopNavProps {
   items: NavItem[];
@@ -42,9 +42,9 @@ export const TopNav = ({
         {/* Center: Primary Nav (Desktop) */}
         <nav className="hidden md:flex items-center space-x-8 h-full">
           {items.map((item) => {
-            // Render Mega Menu for "Products"
-            if (item.label === "Products") {
-              return <ProductsMegaMenu key={item.href} />;
+            // Render Mega Menu for "Solutions"
+            if (item.label === "Solutions") {
+              return <SolutionsMegaMenu key={item.href} />;
             }
 
             // Render Standard Link for others
@@ -83,7 +83,7 @@ export const TopNav = ({
               className="bg-primary hover:bg-primary/90 text-white shadow-md shadow-primary/20"
               asChild
             >
-              <Link to="/products">Get Quote</Link>
+              <Link to="/get-proposal">Get Proposal</Link>
             </Button>
           </div>
 
