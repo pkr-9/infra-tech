@@ -1,70 +1,47 @@
-[
-  {
-    "slug": "manufacturing",
-    "title": "Industrial Manufacturing",
-    "subtitle": "Industry 4.0 Transformation",
-    "heroImage": "https://images.unsplash.com/photo-1565514020176-892eb5036d80?auto=format&fit=crop&q=80&w=2000",
-    "description": "Achieve zero-downtime operations with predictive maintenance and real-time computer vision at the edge.",
-    "challenges": [
-      {
-        "title": "Unplanned Downtime",
-        "text": "Equipment failure costs manufacturers an estimated $50B annually. Traditional preventative schedules are inefficient and miss critical early warning signs."
-      },
-      {
-        "title": "Data Silos",
-        "text": "Legacy OT protocols (Modbus, Profinet) are incompatible with modern IT cloud analytics, trapping valuable data on the factory floor."
-      },
-      {
-        "title": "Latency",
-        "text": "Cloud-round-trip latency is too high for safety-critical machine control and real-time defect detection on high-speed lines."
-      }
-    ],
-    "solution": {
-      "heading": "The Connected Factory Architecture",
-      "text": "InfraTech deploys a layered edge architecture. Rugged Gateways normalize OT data locally, running lightweight ML models to detect anomalies in milliseconds.",
-      "steps": [
-        "Ingest data from PLCs and sensors via InfraTech Edge Gateways.",
-        "Process telemetry locally using InfraOS containers for immediate insights.",
-        "Securely transmit aggregated data to the cloud for long-term trend analysis."
-      ]
+{
+  "badge": "Industries Served",
+  "headline": "Technology Solutions Tailored for Every Industry",
+  "subhead": "We deliver sector-specific software and infrastructure solutions for enterprises across critical industries.",
+  "industries": [
+    {
+      "name": "Banking & Finance",
+      "description": "Core banking, digital onboarding, fraud detection, and secure IT infrastructure.",
+      "icon": "Landmark",
+      "href": "/industries/banking"
     },
-    "benefits": [
-      "Reduce maintenance costs by 30%",
-      "Improve OEE (Overall Equipment Effectiveness) by 15%",
-      "Eliminate manual data entry errors"
-    ],
-    "relatedProducts": ["edge-gateway-x200", "vibrasense-pro", "touchpanel-7"]
-  },
-  {
-    "slug": "energy",
-    "title": "Energy & Utilities",
-    "subtitle": "Smart Grid Modernization",
-    "heroImage": "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&q=80&w=2000",
-    "description": "Secure, distributed monitoring for renewable assets and substation automation.",
-    "challenges": [
-      {
-        "title": "Distributed Assets",
-        "text": "Solar farms and wind turbines are often located in remote areas with poor connectivity, making centralization difficult."
-      },
-      {
-        "title": "Cybersecurity Risks",
-        "text": "Critical infrastructure is a prime target. Legacy SCADA systems lack modern encryption and identity management."
-      }
-    ],
-    "solution": {
-      "heading": "Grid-Edge Intelligence",
-      "text": "Our Rugged Servers act as local substations controllers, aggregating data from thousands of smart meters and verifying grid stability autonomously.",
-      "steps": [
-        "Deploy ZeroTrust Mesh to secure communications between substations.",
-        "Use local AI to balance load and predict demand spikes.",
-        "Enable remote OTA updates to patch vulnerabilities instantly."
-      ]
+    {
+      "name": "Insurance",
+      "description": "Claims automation, document intelligence, CRM, and compliance-ready systems.",
+      "icon": "Shield",
+      "href": "/industries/insurance"
     },
-    "benefits": [
-      "99.999% Grid Uptime reliability",
-      "Compliant with NERC CIP standards",
-      "Real-time fraud detection at the meter"
-    ],
-    "relatedProducts": ["rugged-server-r1", "zerotrust-mesh", "infra-os-ent"]
+    {
+      "name": "Healthcare",
+      "description": "EHR systems, medical imaging AI, cloud migration, and data security.",
+      "icon": "HeartPulse",
+      "href": "/industries/healthcare"
+    },
+    {
+      "name": "Education",
+      "description": "LMS platforms, digital classrooms, mobile learning apps, and campus IT.",
+      "icon": "GraduationCap",
+      "href": "/industries/education"
+    },
+    {
+      "name": "Manufacturing",
+      "description": "IoT monitoring, edge computing, ERP systems, and smart factory infrastructure.",
+      "icon": "Factory",
+      "href": "/industries/manufacturing"
+    },
+    {
+      "name": "Retail",
+      "description": "POS systems, analytics, omnichannel commerce, and store networks.",
+      "icon": "ShoppingBag",
+      "href": "/industries/retail"
+    }
+  ],
+  "cta": {
+    "label": "Explore All Industries",
+    "href": "/industries"
   }
-]
+}

@@ -1,6 +1,6 @@
 // src/hooks/use-content.ts
 import { useQuery } from "@tanstack/react-query";
-import { fetchJSON, NavData, HomeData, Service, Product, Industry, Testimonial, CaseStudy } from "@/lib/api";
+import { fetchJSON, NavData, HomeData, TestimonialItem, TrustData, CapabilitiesData, ProcessData, SolutionsData, IndustriesData, CaseStudiesData, CaseStudyItem, PricingData } from "@/lib/api";
 
 export function useNavData() {
     return useQuery({
@@ -17,97 +17,81 @@ export function useHomeData() {
     });
 }
 
-export function useServices() {
-    return useQuery({
-        queryKey: ["services"],
-        queryFn: () => fetchJSON<Service[]>("/data/services.json"),
+export const useTrustData = () => {
+    return useQuery<TrustData>({
+        queryKey: ["trust"],
+        queryFn: () => fetch("/data/trust.json").then(res => res.json())
     });
-}
+};
 
-export function useProducts() {
-    return useQuery({
-        queryKey: ["products"],
-        queryFn: () => fetchJSON<Product[]>("/data/products.json"),
+export const useCapabilitiesData = () => {
+    return useQuery<CapabilitiesData>({
+        queryKey: ["capabilities"],
+        queryFn: () => fetch("/data/capabilities.json").then(res => res.json())
     });
-}
+};
 
-
-
-
-// export interface CaseStudy {
-//     id: string;
-//     title: string;
-//     slug: string;
-//     client: string;
-//     industry: string;
-//     summary: string;
-//     kpis: KPI[];
-//     image?: string;
-// }
-
-
-export function useCaseStudies() {
-    return useQuery({
-        queryKey: ["case-studies"],
-        queryFn: () => fetchJSON<CaseStudy[]>("/data/case-studies.json"),
+export const useProcessData = () => {
+    return useQuery<ProcessData>({
+        queryKey: ["process"],
+        queryFn: () => fetch("/data/process.json").then(res => res.json())
     });
-}
+};
 
-export function useTestimonials() {
-    return useQuery({
-        queryKey: ["testimonials"],
-        queryFn: () => fetchJSON<Testimonial[]>("/data/testimonials.json"),
+export const useIndustriesData = () => {
+    return useQuery<IndustriesData>({
+        queryKey: ["industries"],
+        queryFn: () => fetch("/data/industries.json").then(res => res.json())
     });
-}
+};
+
+
+const caseStudiesQueryOptions = {
+    queryKey: ["case-studies"] as const,
+    queryFn: () => fetchJSON<CaseStudiesData>("/data/case-studies.json"),
+};
+
+export const useCaseStudiesData = () => {
+    return useQuery(caseStudiesQueryOptions);
+};
+
+export const useCaseStudies = () => {
+    return useQuery<CaseStudiesData, Error, CaseStudyItem[]>({
+        ...caseStudiesQueryOptions,
+        select: (data) => data.cases,
+    });
+};
+
+
+export const useSolutionsData = () => {
+    return useQuery<SolutionsData>({
+        queryKey: ["solutions"],
+        queryFn: async () => {
+            const res = await fetch("/data/solutions.json");
+            if (!res.ok) throw new Error("Failed to load solutions.json");
+            return res.json();
+        }
+    });
+};
+
 
 export function useIndustries() {
     return useQuery({
         queryKey: ["industries"],
-        queryFn: () => fetchJSON<Industry[]>("/data/industries.json"),
+        queryFn: () => fetchJSON<IndustriesData>("/data/industries.json"),
     });
 }
 
-export function useProductBySlug(slug: string | undefined) {
-    return useQuery({
-        queryKey: ["product", slug],
-        queryFn: async () => {
-            if (!slug) throw new Error("No slug provided");
-            const products = await fetchJSON<Product[]>("/data/products.json");
-            const product = products.find((p) => p.slug === slug);
-            if (!product) throw new Error("Product not found");
-            return product;
-        },
-        enabled: !!slug,
-        retry: false, // Don't retry if not found
+export const useTestimonialsData = () => {
+    return useQuery<TestimonialItem[]>({
+        queryKey: ["testimonials"],
+        queryFn: () => fetch("/data/testimonials.json").then(res => res.json())
     });
-}
+};
 
-export function useServiceBySlug(slug: string | undefined) {
-    return useQuery({
-        queryKey: ["service", slug],
-        queryFn: async () => {
-            if (!slug) throw new Error("No slug provided");
-            const services = await fetchJSON<Service[]>("/data/services.json");
-            const service = services.find((s) => s.slug === slug);
-            if (!service) throw new Error("Service not found");
-            return service;
-        },
-        enabled: !!slug,
-        retry: false,
+export const usePricingData = () => {
+    return useQuery<PricingData>({
+        queryKey: ["pricing"],
+        queryFn: () => fetch("/data/pricing.json").then(res => res.json())
     });
-}
-
-export function useCaseStudyBySlug(slug: string | undefined) {
-    return useQuery({
-        queryKey: ["case-study", slug],
-        queryFn: async () => {
-            if (!slug) throw new Error("No slug provided");
-            const studies = await fetchJSON<CaseStudy[]>("/data/case-studies.json");
-            const study = studies.find((s) => s.slug === slug);
-            if (!study) throw new Error("Case Study not found");
-            return study;
-        },
-        enabled: !!slug,
-        retry: false,
-    });
-}
+};

@@ -1,41 +1,35 @@
-[
-  {
-    "id": "cs-1",
-    "title": "Predictive Maintenance for Auto-Manufacturing",
-    "slug": "auto-predictive-maintenance",
-    "client": "Apex Motors",
-    "industry": "Manufacturing",
-    "summary": "Deployed 5,000+ edge IoT sensors to detect machinery anomalies in real-time, reducing downtime significantly.",
-    "kpis": [
-      { "label": "Downtime Reduced", "value": "40%" },
-      { "label": "ROI (Year 1)", "value": "3.5x" }
-    ],
-    "image": "/assets/manufacturing-bg.jpg"
+{
+  "badge": "Real World Impact",
+  "headline": "Delivering Measurable Results for Enterprises",
+  "subhead": "See how we design software, deploy infrastructure, and transform operations across industries.",
+  "cta": {
+    "label": "View All Case Studies",
+    "href": "/case-studies"
   },
-  {
-    "id": "cs-2",
-    "title": "Cloud-Native Banking Platform Migration",
-    "slug": "banking-cloud-migration",
-    "client": "Horizon Bank",
-    "industry": "Fintech",
-    "summary": "Migrated legacy core banking to a microservices architecture on Kubernetes with Zero Trust security.",
-    "kpis": [
-      { "label": "Txn Latency", "value": "-60%" },
-      { "label": "Uptime", "value": "99.999%" }
-    ],
-    "image": "/assets/fintech-bg.jpg"
-  },
-  {
-    "id": "cs-3",
-    "title": "Smart City Traffic Orchestration",
-    "slug": "smart-city-traffic",
-    "client": "City of Metroville",
-    "industry": "Government",
-    "summary": "Implemented Edge AI cameras to optimize traffic light intervals dynamically based on congestion levels.",
-    "kpis": [
-      { "label": "Congestion Drop", "value": "25%" },
-      { "label": "Nodes Deployed", "value": "1,200" }
-    ],
-    "image": "/assets/smart-city-bg.jpg"
-  }
-]
+  "cases": [
+    {
+      "id": "cs-01",
+      "industry": "Banking",
+      "title": "AI-Powered KYC Automation Platform",
+      "summary": "Built an OCR + AI pipeline for customer onboarding, reducing manual verification time by 70%.",
+      "metric": "70% Faster Onboarding",
+      "href": "/case-studies/ai-kyc-banking"
+    },
+    {
+      "id": "cs-02",
+      "industry": "Manufacturing",
+      "title": "Edge IoT Monitoring Infrastructure",
+      "summary": "Deployed edge gateways and real-time analytics to monitor production lines across 12 plants.",
+      "metric": "35% Downtime Reduction",
+      "href": "/case-studies/edge-iot-manufacturing"
+    },
+    {
+      "id": "cs-03",
+      "industry": "Healthcare",
+      "title": "Hospital Cloud Migration & EHR System",
+      "summary": "Migrated legacy systems to cloud-native EHR with 99.99% uptime and secure data compliance.",
+      "metric": "99.99% System Uptime",
+      "href": "/case-studies/cloud-ehr-healthcare"
+    }
+  ]
+}

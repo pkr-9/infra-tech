@@ -1,148 +1,192 @@
 import { Link } from "react-router-dom";
 import {
-  Facebook,
-  Twitter,
-  Linkedin,
-  Instagram,
   CircuitBoard,
+  ArrowRight,
+  PhoneCall,
+  Mail,
+  Linkedin,
+  Twitter,
+  Facebook,
+  Instagram,
 } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
+import { useTrustData } from "@/hooks/use-content";
+import { Skeleton } from "@/components/ui/skeleton";
+
+/* Social links */
+const socials = [
+  { icon: Linkedin, href: "https://linkedin.com" },
+  { icon: Twitter, href: "https://twitter.com" },
+  { icon: Facebook, href: "https://facebook.com" },
+  { icon: Instagram, href: "https://instagram.com" },
+];
+
+/* Quick nav blocks */
+const quickLinks = [
+  { title: "Solutions", href: "/solutions" },
+  { title: "Infrastructure", href: "/infrastructure" },
+  { title: "Industries", href: "/industries" },
+  { title: "Case Studies", href: "/case-studies" },
+  { title: "About Us", href: "/about" },
+  { title: "Careers", href: "/careers" },
+];
+
+/* initials fallback */
+const initials = (name?: string) => {
+  if (!name) return "";
+  const p = name.split(" ");
+  return (p[0][0] + (p.length > 1 ? p[p.length - 1][0] : "")).toUpperCase();
+};
 
 export const Footer = () => {
-  const footerSections = {
-    Solutions: [
-      { name: "Cloud & DevOps", href: "/services/cloud-devops" },
-      { name: "Edge AI & Vision", href: "/services/edge-ai" },
-      { name: "Industrial IoT", href: "/services/iot" },
-      { name: "Cybersecurity", href: "/services/security" },
-      { name: "Embedded Systems", href: "/services/embedded" },
-    ],
-    Products: [
-      { name: "Edge Gateways", href: "/products/edge-gateway-x200" },
-      { name: "Rugged Tablets", href: "/products/rugged-tablet-rt10" },
-      { name: "InfraLog SIEM", href: "/products/infralog-siem" },
-      { name: "Catalog", href: "/products" },
-      { name: "Pricing", href: "/pricing" },
-    ],
-    Resources: [
-      { name: "ROI Calculator", href: "/resources/roi-calculator" }, // Added context
-      { name: "API Documentation", href: "/docs" },
-      { name: "Blog", href: "/blog" },
-      { name: "Case Studies", href: "/case-studies" },
-      { name: "Whitepapers", href: "/whitepapers" },
-    ],
-    Company: [
-      { name: "About Us", href: "/about" },
-      { name: "Careers", href: "/careers", badge: "Hiring" },
-      { name: "Partners", href: "/about" },
-      // Removed "Resources" to avoid duplication
-    ],
-    Support: [
-      { name: "Contact", href: "/contact" },
-      { name: "Help Center", href: "/support" },
-      { name: "System Status", href: "#" },
-      { name: "Trust Center", href: "/security" },
-    ],
-    Legal: [
-      { name: "Privacy Policy", href: "/privacy-policy" },
-      { name: "Terms of Service", href: "/terms-of-service" },
-      { name: "Cookie Policy", href: "/cookie-policy" },
-    ],
-  };
-
-  const socialLinks = [
-    { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
-    { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
-    { icon: Facebook, href: "https://facebook.com", label: "Facebook" },
-    { icon: Instagram, href: "https://instagram.com", label: "Instagram" },
-  ];
+  const { data: trustData, isLoading } = useTrustData();
 
   return (
-    <footer className="bg-card border-t border-border">
-      <div className="container mx-auto px-4 pt-16 pb-8">
-        {/* ROW 1: Brand & Socials */}
-        <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 mb-12 pb-12 border-b border-border">
-          {/* Brand Left */}
-          <div className="max-w-md space-y-4">
-            <Link to="/" className="flex items-center space-x-2 group w-fit">
-              <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center border border-primary/20 group-hover:bg-primary group-hover:border-primary transition-all duration-300">
-                <CircuitBoard className="h-6 w-6 text-primary group-hover:text-white transition-colors" />
+    <footer className="bg-background border-t border-border">
+      <div className="container mx-auto px-4 py-14">
+        {/* ===== TOP GRID ===== */}
+        <div className="grid lg:grid-cols-12 gap-10 mb-14">
+          {/* BRAND PANEL */}
+          <div className="lg:col-span-4 space-y-5">
+            <Link to="/" className="flex items-center gap-3">
+              <div className="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center">
+                <CircuitBoard className="w-6 h-6 text-primary" />
               </div>
-              <div className="flex flex-col">
-                <span className="font-heading font-bold text-xl leading-none">
-                  InfraTech
-                </span>
-                <span className="text-[10px] text-muted-foreground uppercase tracking-wider font-medium">
+              <div>
+                <div className="font-heading font-bold text-xl">InfraTech</div>
+                <div className="text-xs text-muted-foreground tracking-wider uppercase">
                   Intelligent Systems
-                </span>
+                </div>
               </div>
             </Link>
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              Building secure, scalable infrastructure for the enterprise. From
-              cloud-native applications to rugged edge hardware.
+
+            <p className="text-sm text-muted-foreground max-w-sm leading-relaxed">
+              Enterprise software engineering and IT infrastructure deployment —
+              delivered through a single accountable partner.
             </p>
+
+            {/* Socials */}
+            <div className="flex gap-3">
+              {socials.map((s, i) => {
+                const Icon = s.icon;
+                return (
+                  <a
+                    key={i}
+                    href={s.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="w-9 h-9 rounded-full border border-border flex items-center justify-center
+                               text-muted-foreground hover:text-primary hover:border-primary transition-colors"
+                  >
+                    <Icon className="w-4 h-4" />
+                  </a>
+                );
+              })}
+            </div>
           </div>
 
-          {/* Socials Right */}
-          <div className="flex gap-3">
-            {socialLinks.map((social) => (
-              <a
-                key={social.label}
-                href={social.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-secondary text-muted-foreground hover:bg-primary hover:text-white hover:-translate-y-1 transition-all flex items-center justify-center border border-border"
-                aria-label={social.label}
+          {/* QUICK LINKS GRID */}
+          <div className="lg:col-span-5 grid grid-cols-2 sm:grid-cols-3 gap-4">
+            {quickLinks.map((l) => (
+              <Link
+                key={l.title}
+                to={l.href}
+                className="group rounded-lg border border-border p-4 text-sm font-medium
+                           hover:border-primary hover:bg-primary/5 transition"
               >
-                <social.icon className="h-4 w-4" />
-              </a>
+                {l.title}
+                <ArrowRight className="w-4 h-4 mt-2 text-muted-foreground group-hover:text-primary transition" />
+              </Link>
             ))}
           </div>
-        </div>
 
-        {/* ROW 2: Links Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 mb-16">
-          {Object.entries(footerSections).map(([category, links]) => (
-            <div key={category} className="flex flex-col">
-              <h3 className="font-heading font-bold text-foreground mb-4">
-                {category}
-              </h3>
-              <ul className="space-y-3">
-                {links.map((link) => (
-                  <li key={link.name}>
-                    <Link
-                      to={link.href}
-                      className="group flex items-center text-sm text-muted-foreground hover:text-primary transition-colors"
-                    >
-                      {link.name}
-                      {link.badge && (
-                        <Badge
-                          variant="secondary"
-                          className="ml-2 h-5 px-1.5 text-[10px] bg-primary/10 text-primary border-primary/20"
-                        >
-                          {link.badge}
-                        </Badge>
-                      )}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
+          {/* ENGAGEMENT PANEL */}
+          <div className="lg:col-span-3">
+            <div className="rounded-xl border border-border bg-muted/20 p-5 space-y-4">
+              <div className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
+                Start Engagement
+              </div>
+
+              <Link
+                to="/get-proposal"
+                className="flex items-center justify-between text-sm font-semibold text-primary"
+              >
+                Request Proposal
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+
+              <Link
+                to="/contact"
+                className="flex items-center justify-between text-sm font-semibold text-primary"
+              >
+                Talk to Architect
+                <PhoneCall className="w-4 h-4" />
+              </Link>
+
+              <Link
+                to="/contact"
+                className="flex items-center justify-between text-sm font-semibold text-primary"
+              >
+                Email Us
+                <Mail className="w-4 h-4" />
+              </Link>
+
+              <p className="text-xs text-muted-foreground">
+                Response within 24 business hours.
+              </p>
             </div>
-          ))}
+          </div>
         </div>
 
-        {/* ROW 3: Bottom Bar */}
-        <div className="border-t border-border pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <div className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} InfraTech Systems Inc. All rights
-            reserved.
-          </div>
-          <div className="flex items-center gap-2 text-sm text-muted-foreground bg-secondary/30 px-3 py-1 rounded-full border border-border">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
-            </span>
-            All Systems Operational
+        {/* ===== TRUST STRIP ===== */}
+        <div className="border-y border-border py-6 mb-8">
+          {isLoading ? (
+            <div className="flex gap-6 justify-center">
+              {Array.from({ length: 6 }).map((_, i) => (
+                <Skeleton key={i} className="h-10 w-20 rounded-md" />
+              ))}
+            </div>
+          ) : (
+            <div className="flex flex-wrap items-center justify-center gap-6">
+              {trustData?.clients?.map((c, i) => (
+                <div key={i} className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full border border-border flex items-center justify-center bg-muted/30">
+                    {c.logo ? (
+                      <img
+                        src={c.logo}
+                        alt={c.name}
+                        className="object-contain w-full h-full p-1"
+                      />
+                    ) : (
+                      <span className="text-xs font-semibold">
+                        {initials(c.name)}
+                      </span>
+                    )}
+                  </div>
+                  <span className="text-xs text-muted-foreground hidden sm:block">
+                    {c.name}
+                  </span>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+
+        {/* ===== BOTTOM BAR ===== */}
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-muted-foreground">
+          <span>
+            © {new Date().getFullYear()} InfraTech Systems. All rights reserved.
+          </span>
+
+          <div className="flex gap-4">
+            <Link to="/privacy-policy" className="hover:text-primary">
+              Privacy
+            </Link>
+            <Link to="/terms-of-service" className="hover:text-primary">
+              Terms
+            </Link>
+            <Link to="/cookie-policy" className="hover:text-primary">
+              Cookies
+            </Link>
           </div>
         </div>
       </div>

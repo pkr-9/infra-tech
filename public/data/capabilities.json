@@ -1,0 +1,61 @@
+{
+  "badge": "Core Capabilities",
+  "headline": "Built for End-to-End Digital Delivery",
+  "subhead": "We design software, deploy IT infrastructure, and manage operations — giving enterprises a single accountable technology partner.",
+  "capabilities": [
+    {
+      "title": "Custom Software Engineering",
+      "description": "Web, mobile, enterprise systems, and SaaS product development tailored to business goals.",
+      "icon": "Code2",
+      "href": "/solutions/web-mobile",
+      "color": "text-blue-500",
+      "bg": "bg-blue-500/10"
+    },
+    {
+      "title": "AI & Data Solutions",
+      "description": "Machine learning, analytics, computer vision, NLP, and intelligent automation systems.",
+      "icon": "Cpu",
+      "href": "/solutions/ai-data",
+      "color": "text-amber-500",
+      "bg": "bg-amber-500/10"
+    },
+    {
+      "title": "Document Intelligence",
+      "description": "OCR, ICR, IDP, eKYC, and automated document processing pipelines.",
+      "icon": "FileText",
+      "href": "/solutions/document-intelligence",
+      "color": "text-emerald-500",
+      "bg": "bg-emerald-500/10"
+    },
+    {
+      "title": "IT Infrastructure Deployment",
+      "description": "Servers, networks, cloud, edge, and data center infrastructure delivered and configured for you.",
+      "icon": "Server",
+      "href": "/infrastructure/servers-storage",
+      "color": "text-indigo-500",
+      "bg": "bg-indigo-500/10"
+    },
+    {
+      "title": "Cloud & DevOps",
+      "description": "Cloud migration, Kubernetes, CI/CD automation, and managed DevOps operations.",
+      "icon": "Cloud",
+      "href": "/solutions/cloud-devops",
+      "color": "text-sky-500",
+      "bg": "bg-sky-500/10"
+    },
+    {
+      "title": "Security & Compliance",
+      "description": "Security audits, VAPT, zero-trust architecture, and compliance consulting.",
+      "icon": "ShieldCheck",
+      "href": "/solutions/security",
+      "color": "text-rose-500",
+      "bg": "bg-rose-500/10"
+    }
+  ],
+  "metrics": [
+    { "label": "Uptime Guarantee", "value": "99.99%" },
+    { "label": "Enterprise Support", "value": "24/7" },
+    { "label": "Compliance Ready", "value": "ISO / SOC2" },
+    { "label": "Typical Deployment", "value": "< 3 Weeks" }
+  ]
+}
