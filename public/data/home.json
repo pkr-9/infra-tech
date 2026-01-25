@@ -1,14 +1,70 @@
 {
-  "headline": "One Partner for Your Entire Digital Transformation",
-  "subhead": "From idea to implementation — we deliver everything under one roof.\nSoftware engineering + IT infrastructure + managed services.",
-  "ctas": [
-    { "label": "Request Proposal", "href": "/get-proposal" },
-    { "label": "Explore Solutions", "href": "/solutions" },
-    { "label": "Contact Sales", "href": "/contact" }
-  ],
-  "kpis": [
-    { "label": "Enterprise Clients", "value": "200+" },
-    { "label": "Countries Served", "value": "15" },
-    { "label": "Nodes Managed", "value": "50k+" }
-  ]
+  "hero": {
+    "headline": "One Partner for Your Entire Digital Transformation",
+    "subhead": "Enterprise software engineering and infrastructure deployment under one accountable engagement.",
+    "primaryCTA": {
+      "label": "Request Proposal",
+      "href": "/get-proposal"
+    },
+    "secondaryCTA": {
+      "label": "Explore Solutions",
+      "href": "/solutions"
+    },
+    "kpis": [
+      { "label": "Enterprise Clients", "value": "120+" },
+      { "label": "Projects Delivered", "value": "350+" },
+      { "label": "Countries Served", "value": "18+" },
+      { "label": "Avg. Deployment Time", "value": "30 Days" }
+    ]
+  },
+
+  "featuredDomains": ["software", "data-ai", "infrastructure"],
+
+  "capabilitiesSection": {
+    "badge": "Core Capabilities",
+    "headline": "What We Deliver",
+    "subhead": "End-to-end technology execution — from software to physical infrastructure."
+  },
+
+  "processSection": {
+    "badge": "Engagement Model",
+    "headline": "How We Work",
+    "subhead": "A structured, transparent, and accountable delivery process."
+  },
+
+  "solutionsShowcase": {
+    "headline": "Solutions Built for Enterprise Scale",
+    "subhead": "Outcome-driven engagements that modernize technology and operations.",
+    "viewAllCTA": {
+      "label": "View All Solutions",
+      "href": "/solutions"
+    }
+  },
+
+  "industriesSection": {
+    "badge": "Industries Served",
+    "headline": "Trusted Across Sectors",
+    "subhead": "Delivering mission-critical systems in complex operating environments."
+  },
+
+  "caseStudiesSection": {
+    "badge": "Case Studies",
+    "headline": "Proven Enterprise Impact",
+    "subhead": "Real transformation stories from global organizations.",
+    "viewAllCTA": {
+      "label": "View All Case Studies",
+      "href": "/case-studies"
+    }
+  },
+
+  "testimonialsSection": {
+    "badge": "Client Testimonials",
+    "headline": "What Our Clients Say"
+  },
+
+  "pricingSection": {
+    "badge": "Engagement Models",
+    "headline": "Flexible Commercial Structures",
+    "subhead": "Tailored to enterprise procurement and delivery requirements."
+  }
 }

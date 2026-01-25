@@ -1,161 +1,148 @@
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, Navigate } from "react-router-dom";
 import { useCaseStudyBySlug } from "@/hooks/use-content";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Card } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
-import { CheckCircle2, TrendingUp } from "lucide-react";
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb";
+import { ArrowLeft, CheckCircle2, TrendingUp, Target, Zap } from "lucide-react";
 
 const CaseStudyDetail = () => {
   const { slug } = useParams<{ slug: string }>();
   const { data: study, isLoading, isError } = useCaseStudyBySlug(slug);
 
   if (isLoading) return <CaseDetailSkeleton />;
-  if (isError || !study) return <div>Not Found</div>;
+  if (isError || !study) return <Navigate to="/case-studies" replace />;
 
   return (
-    <div className="min-h-screen bg-background flex flex-col">
+    <div className="min-h-screen bg-white flex flex-col animate-in fade-in duration-500">
       <main className="flex-grow pt-[110px]">
-        {/* Standardized Breadcrumbs */}
-        <div className="container mx-auto px-4 py-6">
-          <Breadcrumb>
-            <BreadcrumbList>
-              <BreadcrumbItem>
-                <BreadcrumbLink asChild>
-                  <Link to="/">Home</Link>
-                </BreadcrumbLink>
-              </BreadcrumbItem>
-              <BreadcrumbSeparator />
-              <BreadcrumbItem>
-                <BreadcrumbLink asChild>
-                  <Link to="/case-studies">Case Studies</Link>
-                </BreadcrumbLink>
-              </BreadcrumbItem>
-              <BreadcrumbSeparator />
-              <BreadcrumbItem>
-                <BreadcrumbPage>{study.title}</BreadcrumbPage>
-              </BreadcrumbItem>
-            </BreadcrumbList>
-          </Breadcrumb>
-        </div>
+        {/* --- Header Section --- */}
+        <div className="bg-slate-50 border-b border-slate-200">
+          <div className="container mx-auto px-4 py-12">
+            <Link
+              to="/case-studies"
+              className="inline-flex items-center text-sm font-medium text-slate-500 hover:text-primary mb-8 transition-colors"
+            >
+              <ArrowLeft className="w-4 h-4 mr-2" /> Back to All Cases
+            </Link>
 
-        {/* Hero Section */}
-        <div className="container mx-auto px-4 mb-16">
-          <div className="max-w-4xl">
-            <div className="flex gap-4 mb-6">
-              <Badge
-                variant="outline"
-                className="border-primary text-primary px-3 py-1"
-              >
-                {study.industry}
-              </Badge>
-              <Badge variant="secondary">{study.client}</Badge>
-            </div>
-            <h1 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-6 leading-tight">
-              {study.title}
-            </h1>
-            <p className="text-xl text-muted-foreground leading-relaxed border-l-4 border-accent pl-6">
-              {study.summary}
-            </p>
-          </div>
-        </div>
-
-        {/* KPI Strip */}
-        <div className="bg-primary text-primary-foreground py-12">
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {study.kpis.map((kpi, idx) => (
-                <div key={idx} className="text-center md:text-left">
-                  <div className="text-4xl md:text-5xl font-bold font-heading mb-2">
-                    {kpi.value}
-                  </div>
-                  <div className="text-sm uppercase tracking-widest font-medium opacity-80">
-                    {kpi.label}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* Content Body */}
-        <div className="container mx-auto px-4 py-16">
-          <div className="grid lg:grid-cols-12 gap-12">
-            <div className="lg:col-span-8 space-y-12">
-              {/* The Story Sections */}
-              <section>
-                <h2 className="text-2xl font-bold font-heading mb-4">
-                  The Challenge
-                </h2>
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  Legacy infrastructure was preventing {study.client} from
-                  scaling effectively. Manual deployment processes resulted in
-                  frequent downtime, and lack of observability made root-cause
-                  analysis difficult.
-                </p>
-              </section>
-
-              <section>
-                <h2 className="text-2xl font-bold font-heading mb-4">
-                  The Solution
-                </h2>
-                <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                  InfraTech architected a bespoke solution leveraging our Core
-                  Platform:
-                </p>
-                <div className="grid gap-4">
-                  {[
-                    "Automated CI/CD Pipelines with rollback capabilities",
-                    "Edge Gateway deployment for local telemetry processing",
-                    "Zero Trust network segmentation",
-                  ].map((item, i) => (
-                    <div
-                      key={i}
-                      className="flex items-start gap-3 p-4 bg-card border rounded-lg"
+            <div className="grid lg:grid-cols-12 gap-12 items-center">
+              <div className="lg:col-span-7">
+                <div className="flex flex-wrap gap-3 mb-6">
+                  <Badge
+                    variant="outline"
+                    className="border-primary/30 text-primary bg-primary/5 px-3 py-1"
+                  >
+                    {study.industry}
+                  </Badge>
+                  {study.tags.map((tag) => (
+                    <Badge
+                      key={tag}
+                      variant="secondary"
+                      className="bg-white text-slate-600 border border-slate-200"
                     >
-                      <CheckCircle2 className="w-5 h-5 text-accent mt-0.5" />
-                      <span>{item}</span>
-                    </div>
+                      {tag}
+                    </Badge>
                   ))}
                 </div>
+
+                <h1 className="text-3xl md:text-5xl font-heading font-bold text-slate-900 mb-6 leading-tight">
+                  {study.title}
+                </h1>
+
+                <div className="flex items-center gap-4 text-sm text-slate-500 font-medium">
+                  <span className="uppercase tracking-wide">
+                    Client: {study.client}
+                  </span>
+                  <span className="h-1 w-1 rounded-full bg-slate-300" />
+                  <span className="uppercase tracking-wide">
+                    Metric: {study.metric}
+                  </span>
+                </div>
+              </div>
+
+              {/* Hero Image */}
+              <div className="lg:col-span-5">
+                <div className="aspect-video rounded-2xl overflow-hidden shadow-2xl border border-slate-200">
+                  <img
+                    src={study.image}
+                    alt={study.title}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* --- Content Body --- */}
+        <div className="container mx-auto px-4 py-20 max-w-5xl">
+          <div className="grid md:grid-cols-12 gap-12">
+            {/* Left: The Narrative */}
+            <div className="md:col-span-8 space-y-16">
+              <section>
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="p-2 bg-red-100 text-red-600 rounded-lg">
+                    <Target className="w-6 h-6" />
+                  </div>
+                  <h2 className="text-2xl font-bold text-slate-900">
+                    The Challenge
+                  </h2>
+                </div>
+                <p className="text-lg text-slate-600 leading-relaxed">
+                  {study.challenge}
+                </p>
               </section>
 
               <section>
-                <h2 className="text-2xl font-bold font-heading mb-4">
-                  The Result
-                </h2>
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  Within 3 months of deployment, {study.client} achieved full
-                  ROI. System stability improved dramatically, allowing their
-                  engineering team to focus on product innovation rather than
-                  firefighting.
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="p-2 bg-blue-100 text-blue-600 rounded-lg">
+                    <Zap className="w-6 h-6" />
+                  </div>
+                  <h2 className="text-2xl font-bold text-slate-900">
+                    The Solution
+                  </h2>
+                </div>
+                <p className="text-lg text-slate-600 leading-relaxed">
+                  {study.solution}
+                </p>
+              </section>
+
+              <section>
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="p-2 bg-green-100 text-green-600 rounded-lg">
+                    <TrendingUp className="w-6 h-6" />
+                  </div>
+                  <h2 className="text-2xl font-bold text-slate-900">
+                    The Outcome
+                  </h2>
+                </div>
+                <p className="text-lg text-slate-600 leading-relaxed border-l-4 border-green-500 pl-6 bg-green-50/50 py-4 pr-4 rounded-r-lg">
+                  {study.outcome}
                 </p>
               </section>
             </div>
 
-            {/* Sidebar Call to Action */}
-            <div className="lg:col-span-4">
-              <Card className="sticky top-32 p-8 bg-secondary/30 border-primary/20">
-                <TrendingUp className="w-10 h-10 text-primary mb-6" />
-                <h3 className="text-xl font-bold font-heading mb-2">
-                  Achieve similar results
+            {/* Right: Sidebar CTA */}
+            <div className="md:col-span-4">
+              <div className="sticky top-32 bg-slate-900 text-white p-8 rounded-2xl shadow-xl">
+                <h3 className="text-xl font-bold mb-4">
+                  Face a similar challenge?
                 </h3>
-                <p className="text-muted-foreground mb-6">
-                  Schedule a consultation to see how we can help your
-                  organization scale.
+                <p className="text-slate-300 mb-8 leading-relaxed">
+                  Our architects can walk you through the technical details of
+                  this implementation.
                 </p>
-                <Button className="w-full font-bold" asChild>
-                  <Link to="/contact">Start a Conversation</Link>
+                <Button
+                  className="w-full bg-white text-slate-900 hover:bg-slate-100 font-bold"
+                  asChild
+                >
+                  <Link to="/get-proposal">Get a Proposal</Link>
                 </Button>
-              </Card>
+                <div className="mt-6 flex items-center justify-center gap-2 text-xs text-slate-400">
+                  <CheckCircle2 className="w-4 h-4 text-green-400" />
+                  <span>No commitment required</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -165,12 +152,18 @@ const CaseStudyDetail = () => {
 };
 
 const CaseDetailSkeleton = () => (
-  <div className="min-h-screen bg-background flex flex-col">
-    <main className="flex-grow pt-[110px] container mx-auto px-4 py-12">
-      <Skeleton className="h-12 w-1/4 mb-8" />
-      <Skeleton className="h-24 w-3/4 mb-12" />
-      <Skeleton className="h-48 w-full rounded-xl" />
-    </main>
+  <div className="min-h-screen bg-white pt-[110px] container mx-auto px-4">
+    <Skeleton className="h-64 w-full mb-12 rounded-3xl" />
+    <div className="grid md:grid-cols-12 gap-12">
+      <div className="md:col-span-8 space-y-12">
+        <Skeleton className="h-40 w-full rounded-xl" />
+        <Skeleton className="h-40 w-full rounded-xl" />
+        <Skeleton className="h-40 w-full rounded-xl" />
+      </div>
+      <div className="md:col-span-4">
+        <Skeleton className="h-64 w-full rounded-xl" />
+      </div>
+    </div>
   </div>
 );
 

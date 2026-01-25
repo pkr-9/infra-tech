@@ -1,0 +1,129 @@
+{
+  "pageMeta": {
+    "title": "Industries We Serve | InfraTech",
+    "subtitle": "Vertical-Specific Digital Transformation",
+    "description": "Specialized software engineering and infrastructure solutions for Healthcare, Finance, Manufacturing, and Energy sectors.",
+    "canonical": "https://infra-tech.com/industries",
+    "ogImage": "/images/og/industries.jpg"
+  },
+
+  "hero": {
+    "headline": "Mission-Critical Solutions for Every Sector",
+    "subhead": "We don't believe in generic IT. We engineer sector-specific platforms that adhere to your unique regulatory, operational, and physical constraints.",
+    "ctas": {
+      "primary": {
+        "label": "Explore Verticals",
+        "href": "#industries-grid"
+      },
+      "secondary": {
+        "label": "Consult an Expert",
+        "href": "/get-proposal"
+      }
+    },
+    "stats": [
+      { "label": "Regulatory Success", "value": "100%" },
+      { "label": "Verticals Served", "value": "8+" },
+      { "label": "Client Tier", "value": "Fortune 500" }
+    ]
+  },
+
+  "overview": {
+    "headline": "Domain Expertise Meets Engineering Rigor",
+    "content": "Digital transformation looks different in a hospital than it does on an oil rig. We combine deep industry knowledge with technical excellence to solve problems specific to your field.",
+    "keyPoints": [
+      {
+        "label": "Compliance First",
+        "desc": "HIPAA, PCI-DSS, GDPR, and NERC-CIP baked into the architecture."
+      },
+      {
+        "label": "Legacy Integration",
+        "desc": "Bridging the gap between mainframes/SCADA systems and modern cloud apps."
+      },
+      {
+        "label": "OT/IT Convergence",
+        "desc": "Seamlessly connecting physical operational technology with IT systems."
+      }
+    ]
+  },
+
+  "industries": [
+    {
+      "id": "ind-01",
+      "slug": "healthcare-life-sciences",
+      "title": "Healthcare & Life Sciences",
+      "summary": "Interoperable patient data platforms and IoT-enabled care. We build HIPAA-compliant systems that improve patient outcomes.",
+      "icon": "HeartPulse",
+      "tags": ["HIPAA/HITECH", "Telehealth", "IoMT"],
+      "href": "/industries/healthcare-life-sciences"
+    },
+    {
+      "id": "ind-02",
+      "slug": "banking-financial-services",
+      "title": "Banking & FinTech",
+      "summary": "High-frequency trading infrastructure and secure digital banking portals. Zero-trust security for financial transactions.",
+      "icon": "Landmark",
+      "tags": ["PCI-DSS", "High Frequency", "Blockchain"],
+      "href": "/industries/banking-financial-services"
+    },
+    {
+      "id": "ind-03",
+      "slug": "manufacturing-industry-4",
+      "title": "Manufacturing & Industry 4.0",
+      "summary": "Smart factory digital twins and predictive maintenance. Connecting shop floor PLCs to the cloud for real-time analytics.",
+      "icon": "Factory",
+      "tags": ["IIoT", "Digital Twin", "SCADA"],
+      "href": "/industries/manufacturing-industry-4"
+    },
+    {
+      "id": "ind-04",
+      "slug": "retail-logistics",
+      "title": "Retail & Global Logistics",
+      "summary": "Omnichannel e-commerce platforms and intelligent supply chain tracking. Scalable infrastructure for peak season loads.",
+      "icon": "ShoppingCart",
+      "tags": ["Omnichannel", "Supply Chain", "POS"],
+      "href": "/industries/retail-logistics"
+    },
+    {
+      "id": "ind-05",
+      "slug": "energy-utilities",
+      "title": "Energy & Utilities",
+      "summary": "Grid modernization and renewable energy management systems. Ruggedized edge compute for remote substations.",
+      "icon": "Zap",
+      "tags": ["Smart Grid", "NERC-CIP", "Edge Compute"],
+      "href": "/industries/energy-utilities"
+    },
+    {
+      "id": "ind-06",
+      "slug": "public-sector",
+      "title": "Public Sector & Defense",
+      "summary": "Secure government cloud and citizen services. FedRAMP-ready architectures for mission-critical agencies.",
+      "icon": "Building2",
+      "tags": ["GovCloud", "FedRAMP", "Citizen Exp"],
+      "href": "/industries/public-sector"
+    }
+  ],
+
+  "summaryBlocks": [
+    {
+      "id": "compliance-shield",
+      "headline": "Compliance is Not a Checkbox",
+      "content": "In regulated industries, a security breach is an existential threat. Our 'Compliance-as-Code' frameworks ensure your infrastructure adheres to industry standards automatically, with audit trails generated in real-time.",
+      "image": "/images/industries/compliance-dashboard.jpg"
+    },
+    {
+      "id": "digital-physical-bridge",
+      "headline": "Bridging the Digital & Physical",
+      "content": "Most partners only know software. We know how software interacts with MRI machines, assembly robots, and wind turbines. We design the full stack—from the sensor to the SaaS dashboard.",
+      "image": "/images/industries/digital-twin.jpg"
+    }
+  ],
+
+  "ctaSection": {
+    "headline": "Solve Your Industry's Toughest Challenges",
+    "subhead": "Talk to an architect who understands your vertical, not just a salesperson.",
+    "cta": {
+      "label": "Schedule Industry Consultation",
+      "href": "/get-proposal"
+    }
+  }
+}

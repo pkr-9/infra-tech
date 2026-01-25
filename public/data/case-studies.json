@@ -1,35 +1,77 @@
 {
-  "badge": "Real World Impact",
-  "headline": "Delivering Measurable Results for Enterprises",
-  "subhead": "See how we design software, deploy infrastructure, and transform operations across industries.",
-  "cta": {
-    "label": "View All Case Studies",
-    "href": "/case-studies"
+  "pageMeta": {
+    "title": "Case Studies | InfraTech",
+    "description": "Real-world examples of how we help enterprises modernize infrastructure and ship software faster."
+  },
+  "hero": {
+    "headline": "Proven Impact at Scale",
+    "subhead": "Don't just take our word for it. See how we've helped Fortune 500s and high-growth startups solve their toughest engineering challenges."
+  },
+  "homeSection": {
+    "badge": "Client Success Stories",
+    "headline": "Engineered for Impact",
+    "subhead": "Explore how leading enterprises solve complex infrastructure challenges with InfraTech.",
+    "cta": {
+      "label": "View All Case Studies",
+      "href": "/case-studies"
+    }
   },
   "cases": [
     {
       "id": "cs-01",
-      "industry": "Banking",
-      "title": "AI-Powered KYC Automation Platform",
-      "summary": "Built an OCR + AI pipeline for customer onboarding, reducing manual verification time by 70%.",
-      "metric": "70% Faster Onboarding",
-      "href": "/case-studies/ai-kyc-banking"
+      "slug": "fintech-legacy-migration",
+      "client": "Global NeoBank",
+      "industry": "Fintech",
+      "title": "Zero-Downtime Migration for 50M+ Users",
+      "metric": "99.999% Uptime",
+      "summary": "Migrating a monolithic core banking system to a microservices architecture on AWS without disrupting a single transaction.",
+      "challenge": "The client's legacy on-premise mainframe was struggling to handle Black Friday transaction volumes. Scaling required physical hardware procurement that took months. They needed to move to the cloud but could not afford any downtime due to regulatory SLAs.",
+      "solution": "We designed a 'Strangler Fig' migration pattern. We built a parallel cloud-native environment on AWS using EKS (Kubernetes). We implemented a real-time data sync layer using Kafka to keep the old and new systems consistent, allowing us to route traffic gradually (1%, 5%, 100%) to the new platform.",
+      "outcome": "The bank now scales automatically during peak loads. Infrastructure costs were reduced by 40% by eliminating idle capacity, and deployment frequency increased from once a month to multiple times a day.",
+      "tags": ["AWS", "Kubernetes", "Kafka", "Java"],
+      "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1000&auto=format&fit=crop"
     },
     {
       "id": "cs-02",
+      "slug": "manufacturing-iot-edge",
+      "client": "AutoCorp Industries",
       "industry": "Manufacturing",
-      "title": "Edge IoT Monitoring Infrastructure",
-      "summary": "Deployed edge gateways and real-time analytics to monitor production lines across 12 plants.",
-      "metric": "35% Downtime Reduction",
-      "href": "/case-studies/edge-iot-manufacturing"
+      "title": "Predictive Maintenance at the Edge",
+      "metric": "30% Less Downtime",
+      "summary": "Deploying ruggedized edge compute clusters to 40+ factories to process sensor data locally and predict machine failures.",
+      "challenge": "Sending terabytes of vibration and thermal sensor data to the cloud for analysis was too slow and expensive. The factory needed real-time alerts to stop production lines before expensive machinery broke down.",
+      "solution": "We deployed a fleet of ruggedized edge gateways running K3s (Lightweight Kubernetes). We trained ML models in the cloud and pushed the inference engines to the edge. This allowed sub-millisecond anomaly detection without internet dependency.",
+      "outcome": "Unplanned downtime dropped by 30% in the first quarter. Bandwidth costs were slashed by 90% as only aggregated insights were sent to the cloud dashboard.",
+      "tags": ["IoT", "Edge Computing", "Python", "K3s"],
+      "image": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1000&auto=format&fit=crop"
     },
     {
       "id": "cs-03",
+      "slug": "telehealth-scale",
+      "client": "HealthPlus",
       "industry": "Healthcare",
-      "title": "Hospital Cloud Migration & EHR System",
-      "summary": "Migrated legacy systems to cloud-native EHR with 99.99% uptime and secure data compliance.",
-      "metric": "99.99% System Uptime",
-      "href": "/case-studies/cloud-ehr-healthcare"
+      "title": "Scaling Telehealth 100x Overnight",
+      "metric": "100x Scale",
+      "summary": "Re-architecting a video consultation platform to handle a massive surge in pandemic-era traffic while maintaining HIPAA compliance.",
+      "challenge": "During the pandemic, demand for remote visits skyrocketed. The existing WebRTC implementation was crashing under load, and patient data privacy (HIPAA) compliance made rapid scaling risky.",
+      "solution": "We implemented a transient infrastructure model using Terraform. We decoupled the video processing units from the patient record system, allowing the media layer to auto-scale independently. We also automated HIPAA compliance checks in the CI/CD pipeline.",
+      "outcome": "The platform successfully handled a 10,000% increase in daily active users. Patient trust was maintained with zero security incidents, and the client became a market leader in remote care.",
+      "tags": ["WebRTC", "Terraform", "HIPAA", "React"],
+      "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=1000&auto=format&fit=crop"
+    },
+    {
+      "id": "cs-04",
+      "slug": "retail-omnichannel",
+      "client": "FashionForward",
+      "industry": "Retail",
+      "title": "Unified Inventory Across 500 Stores",
+      "metric": "15% Revenue Lift",
+      "summary": "Connecting physical POS systems with e-commerce inventory in real-time to enable 'Buy Online, Pick Up In-Store'.",
+      "challenge": "Online shoppers would see items as 'in stock', but store inventory was often outdated by 24 hours. This led to cancelled orders and frustrated customers.",
+      "solution": "We built an event-driven inventory ledger. Every POS scan in a physical store triggers a cloud function that updates the global inventory database instantly. We utilized Redis for high-speed caching of stock levels.",
+      "outcome": "Inventory accuracy reached 99%. The reliable BOPIS (Buy Online Pick Up In Store) rollout drove a 15% increase in total revenue.",
+      "tags": ["Redis", "Serverless", "Node.js", "Retail"],
+      "image": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=1000&auto=format&fit=crop"
     }
   ]
 }

@@ -1,0 +1,437 @@
+{
+  "data-center-infrastructure": {
+    "title": "Data Center Turnkey",
+    "hero": {
+      "headline": "Physical Infrastructure, Delivered & Deployed",
+      "subhead": "We bridge the gap between procurement and production. From bare metal to blinking lights, we handle the entire physical layer of your data center.",
+      "stats": [
+        { "label": "Global Logistics", "value": "150+ Countries" },
+        { "label": "Deployment Speed", "value": "4 Weeks Avg" },
+        { "label": "SLA Adherence", "value": "100%" }
+      ]
+    },
+    "overview": "Our Data Center Turnkey service is a comprehensive fulfillment solution. We don't just ship boxes; we provide Importer of Record (IOR) services, secure logistics, and white-glove rack-and-stack installation certified by major OEMs.",
+    "capabilities": [
+      {
+        "title": "Global Procurement & IOR",
+        "description": "We act as your Importer of Record in 150+ countries, handling customs, taxes, and compliance so your hardware never gets stuck at the border."
+      },
+      {
+        "title": "Precision Rack & Stack",
+        "description": "Certified engineers handle the physical mounting of servers, storage, and switches, adhering to strict thermal and power containment designs."
+      },
+      {
+        "title": "Structured Cabling",
+        "description": "ISO/TIA-compliant copper and fiber cabling with neat labeling and cable management, fully tested and certified (Fluke reports included)."
+      },
+      {
+        "title": "Asset Tagging & CMDB",
+        "description": "Every deployed asset is tagged, scanned, and registered into your Configuration Management Database before we leave the site."
+      }
+    ],
+    "process": [
+      {
+        "step": "01",
+        "title": "Site Survey & BOM Validation",
+        "description": "We verify power, cooling, and space availability at the target site and validate the Bill of Materials against physical constraints."
+      },
+      {
+        "step": "02",
+        "title": "Procurement & Staging",
+        "description": "Hardware is sourced directly from OEMs and consolidated at our regional staging centers for pre-configuration (BIOS/Firmware)."
+      },
+      {
+        "step": "03",
+        "title": "Secure Logistics",
+        "description": "Insured freight transport to the data center facility, including lift-gate service and unboxing debris removal."
+      },
+      {
+        "step": "04",
+        "title": "Installation & Handover",
+        "description": "Physical installation, cabling, power-on self-test (POST), and handover of As-Built documentation."
+      }
+    ],
+    "deliverables": [
+      "As-Built Rack Elevations",
+      "Cable Test Results (Fluke)",
+      "Asset Register (CSV/JSON)",
+      "Site Photos & Handover Report"
+    ],
+    "technologies": [
+      "HPE ProLiant",
+      "Dell PowerEdge",
+      "Cisco Nexus",
+      "APC Schneider",
+      "Panduit",
+      "Corning Fiber"
+    ],
+    "documents": [
+      { "title": "Data Center Deployment Checklist", "url": "#" },
+      { "title": "Sample As-Built Report", "url": "#" }
+    ],
+    "cta": {
+      "label": "Start Deployment Project",
+      "href": "/get-proposal"
+    }
+  },
+
+  "edge-iot-infrastructure": {
+    "title": "Industrial Edge & IoT",
+    "hero": {
+      "headline": "Compute Where the Data Lives",
+      "subhead": "Ruggedized infrastructure for harsh environments. We deploy gateways, sensors, and edge servers to factories, oil rigs, and smart cities.",
+      "stats": [
+        { "label": "Uptime", "value": "99.99%" },
+        { "label": "Temp Range", "value": "-40°C to 85°C" },
+        { "label": "Connectivity", "value": "5G / LoRaWAN" }
+      ]
+    },
+    "overview": "Deploying IT in non-IT environments requires specialized engineering. We design and install ruggedized edge computing solutions that withstand vibration, dust, and extreme temperatures.",
+    "capabilities": [
+      {
+        "title": "Ruggedized Engineering",
+        "description": "Hardware selection focused on fanless designs, IP67 ratings, and shock resistance for industrial deployments."
+      },
+      {
+        "title": "Remote Out-of-Band Mgmt",
+        "description": "Cellular (LTE/5G) OOB management to ensure you can reach your edge nodes even if the primary network fails."
+      },
+      {
+        "title": "Field Installation Services",
+        "description": "Our field techs are certified for industrial sites (PPE/Safety) to mount enclosures, run conduit, and install antennas."
+      },
+      {
+        "title": "Zero-Touch Provisioning",
+        "description": "Systems ship pre-configured to phone home and download their configuration automatically upon power-up."
+      }
+    ],
+    "process": [
+      {
+        "step": "01",
+        "title": "Environmental Assessment",
+        "description": "Analyzing site conditions (power, connectivity, hazards) to select the appropriate NEMA/IP rated enclosures."
+      },
+      {
+        "step": "02",
+        "title": "Pilot Deployment",
+        "description": "Deploying a small proof-of-concept cluster to validate connectivity and thermal performance."
+      },
+      {
+        "step": "03",
+        "title": "Fleet Rollout",
+        "description": "Mass deployment across hundreds of sites using coordinated field engineering teams."
+      },
+      {
+        "step": "04",
+        "title": "Centralized Acceptance",
+        "description": "Verifying all nodes have checked into the central management plane before sign-off."
+      }
+    ],
+    "deliverables": [
+      "Site Installation Guides",
+      "Network Topology Maps",
+      "Signal Strength Reports",
+      "Warranty Documentation"
+    ],
+    "technologies": [
+      "Cisco Industrial",
+      "Advantech",
+      "Sierra Wireless",
+      "Azure IoT Edge",
+      "K3s (Kubernetes)"
+    ],
+    "documents": [{ "title": "Industrial Edge Reference Arch", "url": "#" }],
+    "cta": {
+      "label": "Deploy Edge Infrastructure",
+      "href": "/get-proposal"
+    }
+  },
+
+  "network-connectivity": {
+    "title": "Enterprise Networking",
+    "hero": {
+      "headline": "Connecting Your Global Workforce",
+      "subhead": "Standardized office IT and networking delivered globally. From SD-WAN rollouts to high-density Wi-Fi.",
+      "stats": [
+        { "label": "Projects", "value": "500+" },
+        { "label": "Wi-Fi Coverage", "value": "100%" },
+        { "label": "Support", "value": "24/7" }
+      ]
+    },
+    "overview": "We handle the physical layer of your enterprise network. Whether it's a campus refresh or a new branch opening, we ensure standardized equipment and cabling across all your locations.",
+    "capabilities": [
+      {
+        "title": "SD-WAN Deployment",
+        "description": "Physical installation of edge routers and uCPEs to enable software-defined wide area networking."
+      },
+      {
+        "title": "Wi-Fi Heatmapping",
+        "description": "Predictive and active site surveys to design high-density wireless networks with zero dead zones."
+      },
+      {
+        "title": "Campus Switching",
+        "description": "Designing and stacking core, distribution, and access layer switches for high-throughput LANs."
+      },
+      {
+        "title": "Smart Hands Support",
+        "description": "On-demand dispatch of technicians for break-fix, patch cabling, or equipment swaps."
+      }
+    ],
+    "process": [
+      {
+        "step": "01",
+        "title": "Standardization",
+        "description": "Defining a global hardware catalog to ensure consistency across all branch offices."
+      },
+      {
+        "step": "02",
+        "title": "Site Prep",
+        "description": "Coordinating with local ISPs and electricians to ensure circuits and power are ready."
+      },
+      {
+        "step": "03",
+        "title": "Installation Sprint",
+        "description": "Rapid deployment of switching, Wi-Fi, and firewall gear over a weekend to minimize disruption."
+      },
+      {
+        "step": "04",
+        "title": "Day 1 Support",
+        "description": "On-site standby support during the first day of operations to resolve immediate user issues."
+      }
+    ],
+    "deliverables": [
+      "Wi-Fi Heatmaps (Ekahau)",
+      "Port Connectivity Matrix",
+      "Device Inventory",
+      "Sign-off Certificates"
+    ],
+    "technologies": [
+      "Cisco Meraki",
+      "Palo Alto Networks",
+      "Fortinet",
+      "Aruba",
+      "Juniper Mist"
+    ],
+    "documents": [{ "title": "Branch Office Standard Spec", "url": "#" }],
+    "cta": {
+      "label": "Upgrade Network Infrastructure",
+      "href": "/get-proposal"
+    }
+  },
+
+  "hybrid-cloud-hardware": {
+    "title": "Hybrid Cloud Hardware",
+    "hero": {
+      "headline": "The Cloud, On Your Premises",
+      "subhead": "Deploying AWS Outposts, Azure Stack, and Google Anthos hardware in your private data center.",
+      "stats": [
+        { "label": "Compliance", "value": "Data Sov" },
+        { "label": "Latency", "value": "<1ms" },
+        { "label": "Integration", "value": "Native" }
+      ]
+    },
+    "overview": "For regulated industries or latency-sensitive workloads, the public cloud isn't enough. We procure and install the specialized hardware required to run hyperscale cloud stacks in your own facility.",
+    "capabilities": [
+      {
+        "title": "Site Readiness Assessment",
+        "description": "Verifying your facility meets the strict power, cooling, and weight requirements for HCI appliances."
+      },
+      {
+        "title": "Appliance Installation",
+        "description": "Rolling in and powering up pre-integrated racks like AWS Outposts or Azure Stack Hub."
+      },
+      {
+        "title": "Network Integration",
+        "description": "Configuring top-of-rack switches and Direct Connect / ExpressRoute links for hybrid connectivity."
+      },
+      {
+        "title": "Secure Decommissioning",
+        "description": "When hardware reaches end-of-life, we handle secure wiping and certified recycling."
+      }
+    ],
+    "process": [
+      {
+        "step": "01",
+        "title": "Workload Analysis",
+        "description": "Determining which workloads need to stay on-prem and sizing the hardware accordingly."
+      },
+      {
+        "step": "02",
+        "title": "Facility Prep",
+        "description": "Upgrading power feeds and reinforcing floors to support dense HCI racks."
+      },
+      {
+        "step": "03",
+        "title": "White-Glove Delivery",
+        "description": "Specialized logistics to transport sensitive pre-racked equipment."
+      },
+      {
+        "step": "04",
+        "title": "Cloud Tethering",
+        "description": "Connecting the local hardware to the public cloud control plane."
+      }
+    ],
+    "deliverables": [
+      "Site Readiness Report",
+      "Connectivity Diagram",
+      "Handover Checklist",
+      "Support Matrix"
+    ],
+    "technologies": [
+      "AWS Outposts",
+      "Azure Stack HCI",
+      "Google Anthos",
+      "VMware Cloud Foundation",
+      "Dell VxRail"
+    ],
+    "documents": [{ "title": "Hybrid Cloud Pre-Reqs", "url": "#" }],
+    "cta": {
+      "label": "Plan Hybrid Deployment",
+      "href": "/get-proposal"
+    }
+  },
+
+  "security-physical": {
+    "title": "Physical Security Systems",
+    "hero": {
+      "headline": "Protecting Your Physical Assets",
+      "subhead": "Integrated access control, video surveillance, and environmental monitoring for critical facilities.",
+      "stats": [
+        { "label": "Monitoring", "value": "24/7" },
+        { "label": "Storage", "value": "Encrypted" },
+        { "label": "Audit", "value": "Full Logs" }
+      ]
+    },
+    "overview": "Cybersecurity starts at the front door. We design and install comprehensive physical security systems that integrate with your IT identity providers for seamless access management.",
+    "capabilities": [
+      {
+        "title": "Access Control Systems",
+        "description": "Badge readers, biometric scanners, and turnstiles integrated with your AD/Okta directory."
+      },
+      {
+        "title": "IP Video Surveillance",
+        "description": "High-definition CCTV networks with AI-powered analytics for anomaly detection."
+      },
+      {
+        "title": "Environmental Monitoring",
+        "description": "Sensors for temperature, humidity, and water leaks in server rooms and wiring closets."
+      },
+      {
+        "title": "Intrusion Detection",
+        "description": "Motion sensors, glass break detectors, and door contacts linked to a central alarm panel."
+      }
+    ],
+    "process": [
+      {
+        "step": "01",
+        "title": "Threat Assessment",
+        "description": "Identifying physical vulnerabilities in your facility's perimeter and interior."
+      },
+      {
+        "step": "02",
+        "title": "System Design",
+        "description": "Planning camera angles and sensor placement for maximum coverage."
+      },
+      {
+        "step": "03",
+        "title": "Cabling & Mounting",
+        "description": "Running low-voltage cabling and mounting hardware discreetly."
+      },
+      {
+        "step": "04",
+        "title": "Integration & Training",
+        "description": "Connecting systems to the network and training security staff on the VMS."
+      }
+    ],
+    "deliverables": [
+      "Security System As-Builts",
+      "Camera Coverage Map",
+      "User Training Manuals",
+      "Warranty Certificates"
+    ],
+    "technologies": [
+      "Verkada",
+      "Avigilon",
+      "Honeywell",
+      "HID Global",
+      "Axis Communications"
+    ],
+    "documents": [{ "title": "Physical Security Best Practices", "url": "#" }],
+    "cta": {
+      "label": "Secure Your Facility",
+      "href": "/get-proposal"
+    }
+  },
+
+  "workplace-it": {
+    "title": "Global Workplace IT",
+    "hero": {
+      "headline": "Empowering Your Workforce",
+      "subhead": "Standardized end-user compute and collaboration tools delivered to employees worldwide.",
+      "stats": [
+        { "label": "Devices", "value": "10k+" },
+        { "label": "Logistics", "value": "DDP Incoterms" },
+        { "label": "Setup", "value": "Zero Touch" }
+      ]
+    },
+    "overview": "Managing IT assets for a distributed workforce is a logistical nightmare. We handle the procurement, warehousing, imaging, and shipping of laptops and peripherals to employee homes or offices globally.",
+    "capabilities": [
+      {
+        "title": "Device-as-a-Service",
+        "description": "Procurement and lifecycle management of laptops, monitors, and docks on a monthly opex model."
+      },
+      {
+        "title": "Kitting & Logistics",
+        "description": "Bundling laptops with swag and accessories, then shipping directly to new hires."
+      },
+      {
+        "title": "Meeting Room Solutions",
+        "description": "Standardized AV setups for huddle rooms, boardrooms, and all-hands spaces."
+      },
+      {
+        "title": "E-Waste Recycling",
+        "description": "Secure retrieval and certified destruction of old assets to meet environmental standards."
+      }
+    ],
+    "process": [
+      {
+        "step": "01",
+        "title": "Catalog Definition",
+        "description": "Selecting standard laptop models (Mac/PC) and peripherals for different user personas."
+      },
+      {
+        "step": "02",
+        "title": "Inventory Stocking",
+        "description": "Pre-purchasing stock in regional hubs to ensure rapid delivery for new hires."
+      },
+      {
+        "step": "03",
+        "title": "Order Fulfillment",
+        "description": "Pick, pack, and ship upon ticket request from your HR/IT system."
+      },
+      {
+        "step": "04",
+        "title": "Lifecycle Support",
+        "description": "Handling repairs, loaner devices, and eventual retirement."
+      }
+    ],
+    "deliverables": [
+      "Asset Tracking Portal",
+      "Delivery Proofs (POD)",
+      "Destruction Certificates",
+      "Monthly Billing Reports"
+    ],
+    "technologies": [
+      "Apple Business Manager",
+      "Microsoft Autopilot",
+      "Jamf",
+      "Dell TechDirect",
+      "Logitech"
+    ],
+    "documents": [{ "title": "Remote Onboarding Guide", "url": "#" }],
+    "cta": {
+      "label": "Streamline Workplace IT",
+      "href": "/get-proposal"
+    }
+  }
+}

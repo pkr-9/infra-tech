@@ -1,0 +1,211 @@
+{
+  "pageMeta": {
+    "title": "Enterprise Solutions | InfraTech",
+    "subtitle": "End-to-End Digital Transformation & Infrastructure",
+    "description": "Explore our catalog of enterprise software engineering, cloud infrastructure, and managed operation services.",
+    "canonical": "https://infra-tech.com/solutions",
+    "ogImage": "/images/og/solutions.jpg"
+  },
+
+  "hero": {
+    "headline": "Engineering the Future of Enterprise",
+    "subhead": "We don't just write code or rack servers. We deliver outcomes. From modernization to physical deployment, access a unified catalog of engineering capabilities designed for the Fortune 500.",
+    "ctas": {
+      "primary": {
+        "label": "Schedule Architecture Review",
+        "href": "/get-proposal"
+      },
+      "secondary": {
+        "label": "View Capability Matrix",
+        "href": "#solutions-matrix"
+      }
+    },
+    "stats": [
+      { "label": "Uptime Guaranteed", "value": "99.99%" },
+      { "label": "Global Regions", "value": "15+" },
+      { "label": "Compliance", "value": "SOC2 Type II" }
+    ]
+  },
+
+  "filters": {
+    "categories": [
+      { "id": "all", "label": "View All" },
+      { "id": "software", "label": "Software Engineering" },
+      { "id": "infrastructure", "label": "Physical Infrastructure" },
+      { "id": "managed", "label": "Managed Operations" }
+    ],
+    "industries": [
+      "Banking & Fintech",
+      "Healthcare & MedTech",
+      "Manufacturing 4.0",
+      "Retail & Logistics",
+      "Energy & Utilities",
+      "Public Sector"
+    ],
+    "technologies": [
+      "Cloud Native",
+      "Edge Computing",
+      "AI & ML",
+      "Cybersecurity",
+      "Blockchain",
+      "IoT",
+      "Legacy Modernization"
+    ]
+  },
+  "featuredSolution": {
+    "id": "feat-01",
+    "slug": "enterprise-application-modernization",
+    "badge": "Flagship Service",
+    "title": "Legacy to Cloud Modernization",
+    "summary": "Stop accumulating technical debt. We re-platform monolithic legacy systems into scalable, secure, and maintainable cloud-native microservices architectures without disrupting business continuity.",
+    "image": "/images/solutions/cloud-devops.jpeg",
+    "cta": { "label": "See Transformation Stories", "href": "/case-studies" },
+    "stats": [
+      { "label": "Cost Reduction", "value": "40%" },
+      { "label": "Deployment Speed", "value": "10x" }
+    ]
+  },
+
+  "solutions": [
+    {
+      "id": "SW-01",
+      "slug": "custom-software-engineering",
+      "title": "Custom Software Engineering",
+      "category": "software",
+      "summary": "Full-cycle product development for mission-critical applications. We handle everything from architecture design to production rollout using domain-driven design.",
+      "icon": "Code2",
+      "tags": [
+        "Microservices",
+        "React/Next.js",
+        "Java Spring",
+        "System Design"
+      ],
+      "industries": ["Banking", "Healthcare", "Retail"],
+      "href": "/solutions/custom-software-engineering"
+    },
+    {
+      "id": "INF-01",
+      "slug": "data-center-infrastructure",
+      "title": "Data Center Turnkey Deployment",
+      "category": "infrastructure",
+      "summary": "End-to-end physical infrastructure fulfillment. We procure, rack, stack, cable, and configure server farms and private clouds with strict SLA adherence.",
+      "icon": "Server",
+      "tags": [
+        "HPE/Dell",
+        "Structured Cabling",
+        "Power & Cooling",
+        "Hardware Procurement"
+      ],
+      "industries": ["Telecommunications", "Finance", "Cloud Providers"],
+      "href": "/infrastructure/data-center-infrastructure"
+    },
+    {
+      "id": "SW-02",
+      "slug": "ai-data-solutions",
+      "title": "Enterprise AI & Data Intelligence",
+      "category": "software",
+      "summary": "Transform raw data into decision-grade intelligence. We build data lakes, ETL pipelines, and deploy custom machine learning models for predictive analytics.",
+      "icon": "BrainCircuit",
+      "tags": ["Data Engineering", "LLMs", "Computer Vision", "Python"],
+      "industries": ["Manufacturing", "Healthcare", "Insurance"],
+      "href": "/solutions/ai-data-solutions"
+    },
+    {
+      "id": "INF-02",
+      "slug": "edge-iot-infrastructure",
+      "title": "Industrial Edge & IoT Connectivity",
+      "category": "infrastructure",
+      "summary": "Deploy compute power where your data lives. We design ruggedized edge networks and IoT sensor grids for factories, oil rigs, and smart cities.",
+      "icon": "RadioTower",
+      "tags": [
+        "IoT Gateways",
+        "5G/LoRaWAN",
+        "Ruggedized Hardware",
+        "Edge Compute"
+      ],
+      "industries": ["Energy", "Manufacturing", "Logistics"],
+      "href": "/infrastructure/edge-iot-infrastructure"
+    },
+    {
+      "id": "MNG-01",
+      "slug": "managed-cloud-operations",
+      "title": "24/7 Managed Cloud Operations (SRE)",
+      "category": "managed",
+      "summary": "Sleep soundly while we watch your systems. Our Site Reliability Engineers (SREs) provide round-the-clock monitoring, incident response, and performance tuning.",
+      "icon": "ShieldCheck",
+      "tags": [
+        "24/7 NOC",
+        "Incident Response",
+        "Cost Optimization",
+        "Multi-Cloud"
+      ],
+      "industries": ["All"],
+      "href": "/solutions/managed-cloud-operations"
+    },
+    {
+      "id": "SW-03",
+      "slug": "cybersecurity-governance",
+      "title": "Cybersecurity & Governance",
+      "category": "software",
+      "summary": "Zero-trust architecture implementation and compliance automation. We secure your software supply chain and ensure adherence to GDPR, HIPAA, and SOC2.",
+      "icon": "Lock",
+      "tags": [
+        "Zero Trust",
+        "Penetration Testing",
+        "Identity Mgmt",
+        "Compliance"
+      ],
+      "industries": ["Finance", "Public Sector", "Healthcare"],
+      "href": "/solutions/cybersecurity-governance"
+    }
+  ],
+
+  "summaryBlocks": [
+    {
+      "id": "unified-delivery",
+      "headline": "The 'One-Handshake' Advantage",
+      "content": "Stop juggling five different vendors for one project. InfraTech provides a single chain of custody for your entire technical estate. If the software fails, we fix it. If the server fails, we replace it. Total accountability.",
+      "image": "/images/solutions/enterprise-automation.jpeg"
+    },
+    {
+      "id": "regulatory-first",
+      "headline": "Compliance is Not an Afterthought",
+      "content": "We work in the world's most regulated sectors. Our delivery framework bake in audit trails, data sovereignty, and security controls from Day 0, reducing your risk profile significantly.",
+      "image": "/images/solutions/data-center-networking.jpeg"
+    }
+  ],
+  "sidebar": {
+    "cta": {
+      "headline": "Need Custom Architecture?",
+      "href": "/contact",
+      "label": "Talk to an Architect"
+    }
+  },
+  "faqs": [
+    {
+      "question": "How do you handle engagement models?",
+      "answer": "We offer Time & Materials (T&M) for agile software projects, Fixed Price for defined infrastructure deployments, and Managed Services SLAs for ongoing operations."
+    },
+    {
+      "question": "Can you procure hardware for us?",
+      "answer": "Yes. We are authorized partners with major OEMs (Dell, HPE, Cisco). We handle the entire procurement, logistics, and customs clearance process for your infrastructure."
+    },
+    {
+      "question": "Do you support hybrid cloud environments?",
+      "answer": "Absolutely. Our specialization is bridging the gap between on-premise hardware and public cloud (AWS/Azure), ensuring seamless connectivity and unified governance."
+    },
+    {
+      "question": "What is your typical lead time for a project?",
+      "answer": "Software discovery phases typically start within 1-2 weeks. Physical infrastructure timelines depend on hardware availability, but we usually deploy within 4-6 weeks of PO."
+    }
+  ],
+
+  "ctaSection": {
+    "headline": "Stop Compromising on Your Infrastructure",
+    "subhead": "Whether you need a new software platform or a physical data center, we have the engineers to build it.",
+    "cta": {
+      "label": "Start Your Project",
+      "href": "/get-proposal"
+    }
+  }
+}

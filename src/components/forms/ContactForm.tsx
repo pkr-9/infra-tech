@@ -63,7 +63,7 @@ export const ContactForm = () => {
               <FormItem>
                 <FormLabel>Full Name</FormLabel>
                 <FormControl>
-                  <Input placeholder="John Doe" {...field} />
+                  <Input placeholder="Your Full Name" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -76,7 +76,7 @@ export const ContactForm = () => {
               <FormItem>
                 <FormLabel>Work Email</FormLabel>
                 <FormControl>
-                  <Input placeholder="john@company.com" {...field} />
+                  <Input placeholder="your.email@company.com" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -92,7 +92,7 @@ export const ContactForm = () => {
               <FormItem>
                 <FormLabel>Company</FormLabel>
                 <FormControl>
-                  <Input placeholder="Acme Inc." {...field} />
+                  <Input placeholder="Your Company Name" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>

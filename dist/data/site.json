@@ -1,0 +1,553 @@
+{
+  "nav": {
+    "primary": [
+      { "label": "Solutions", "href": "/solutions" },
+      { "label": "Infrastructure", "href": "/infrastructure" },
+      { "label": "Industries", "href": "/industries" },
+      { "label": "Case Studies", "href": "/case-studies" },
+      { "label": "About", "href": "/about" },
+      { "label": "Contact", "href": "/contact" }
+    ],
+    "categories": [
+      { "label": "Healthcare", "href": "/industries/healthcare" },
+      { "label": "Manufacturing", "href": "/industries/manufacturing" },
+      { "label": "Finance", "href": "/industries/finance" },
+      { "label": "Retail", "href": "/industries/retail" },
+      { "label": "Education", "href": "/industries/education" },
+      { "label": "Logistics", "href": "/industries/logistics" },
+      { "label": "Energy", "href": "/industries/energy" }
+    ],
+    "solutionsMenu": {
+      "software": [
+        {
+          "label": "Custom Software Engineering",
+          "slug": "custom-software-engineering"
+        },
+        {
+          "label": "Application Modernization",
+          "slug": "enterprise-application-modernization"
+        },
+        {
+          "label": "AI & Data Intelligence",
+          "slug": "ai-data-solutions"
+        },
+        {
+          "label": "Data Platform Engineering",
+          "slug": "data-platform-engineering"
+        }
+      ],
+      "infrastructure": [
+        {
+          "label": "Cloud & DevOps Fulfillment",
+          "slug": "cloud-devops"
+        },
+        {
+          "label": "Hybrid & Multi-Cloud Architecture",
+          "slug": "hybrid-cloud-architecture"
+        },
+        {
+          "label": "IT Infrastructure Deployment",
+          "slug": "it-infrastructure-deployment"
+        },
+        {
+          "label": "Edge Computing Solutions",
+          "slug": "edge-compute-solutions"
+        }
+      ],
+      "managed": [
+        {
+          "label": "Managed Cloud Operations",
+          "slug": "managed-cloud-operations"
+        },
+        {
+          "label": "Infrastructure Managed Services",
+          "slug": "infrastructure-managed-services"
+        }
+      ]
+    }
+  },
+
+  "trustBar": {
+    "headline": "Trusted by leading enterprises",
+    "clients": [
+      { "name": "FinBank", "logo": "/logos/finbank.svg" },
+      { "name": "MediCore Health", "logo": "/logos/medicore.svg" },
+      { "name": "EduSphere", "logo": "/logos/edusphere.svg" },
+      { "name": "RetailX", "logo": "/logos/retailx.svg" },
+      { "name": "AutoForge", "logo": "/logos/autoforge.svg" },
+      { "name": "SecureInsure", "logo": "/logos/secureinsure.svg" }
+    ]
+  },
+
+  "process": {
+    "badge": "Operational Blueprint",
+    "headline": "Engineered for Velocity",
+    "subhead": "A systematic execution model that integrates software lifecycles with physical infrastructure deployment.",
+    "steps": [
+      {
+        "title": "Requirement Discovery",
+        "description": "We align business goals with technical feasibility.",
+        "icon": "FileText",
+        "timeframe": "Week 1",
+        "deliverables": ["Scope of Work", "Tech Radar", "Gap Analysis"],
+        "status": "Initiation"
+      },
+      {
+        "title": "Solution Design",
+        "description": "Architecting the topology for software and hardware.",
+        "icon": "PenTool",
+        "timeframe": "Week 2",
+        "deliverables": ["System Topology", "Database Schema", "Infra BOQ"],
+        "status": "Architecture"
+      },
+      {
+        "title": "Software Development",
+        "description": "Agile sprints focused on core logic and UI.",
+        "icon": "Code2",
+        "timeframe": "Week 3-4",
+        "deliverables": ["Source Code", "API Docs", "Unit Tests"],
+        "status": "Construction"
+      },
+      {
+        "title": "Infra Fulfillment",
+        "description": "Procuring and configuring physical/cloud environments.",
+        "icon": "Server",
+        "timeframe": "Parallel",
+        "deliverables": ["Hardware Order", "Net Config", "Rack Setup"],
+        "status": "Procurement"
+      },
+      {
+        "title": "Go-Live & Migration",
+        "description": "Zero-downtime deployment and data migration.",
+        "icon": "Rocket",
+        "timeframe": "Week 4",
+        "deliverables": ["Prod Release", "Data Sync", "User Handover"],
+        "status": "Deployment"
+      },
+      {
+        "title": "Managed Operations",
+        "description": "SLA-backed support and continuous observability.",
+        "icon": "Headset",
+        "timeframe": "Ongoing",
+        "deliverables": ["24/7 Monitoring", "Patch Mgmt", "Incident Reports"],
+        "status": "Maintenance"
+      }
+    ],
+    "cta": {
+      "label": "Start Your Project",
+      "href": "/contact"
+    }
+  },
+
+  "solutions": {
+    "headline": "Integrated Digital Solutions",
+    "subhead": "We don't just write code; we build the platforms it runs on. A unified approach to software engineering and physical infrastructure.",
+    "software": [
+      {
+        "id": "SW-01",
+        "title": "Custom Software Engineering",
+        "slug": "custom-software-engineering",
+        "summary": "Full-cycle development for web, mobile, and enterprise SaaS platforms using React, Node.js, and Python.",
+        "href": "/solutions/web-mobile",
+        "icon": "Code2",
+        "tags": ["React Native", "Microservices", "PWA"]
+      },
+      {
+        "id": "SW-02",
+        "title": "AI & Data Intelligence",
+        "slug": "ai-data-solutions",
+        "summary": "Production-grade Machine Learning pipelines, NLP models, and computer vision systems for automation.",
+        "href": "/solutions/ai-data",
+        "icon": "Cpu",
+        "tags": ["TensorFlow", "NLP", "Data Lakes"]
+      },
+      {
+        "id": "SW-03",
+        "title": "Enterprise Automation",
+        "slug": "enterprise-automation",
+        "summary": "Document intelligence (OCR), robotic process automation (RPA), and workflow orchestration.",
+        "href": "/solutions/automation",
+        "icon": "FileText",
+        "tags": ["IDP", "Workflow", "OCR"]
+      }
+    ],
+    "infrastructure": [
+      {
+        "id": "INF-01",
+        "title": "Cloud & DevOps Fulfillment",
+        "slug": "cloud-devops",
+        "summary": "End-to-end cloud architecture, CI/CD pipeline setup, and Kubernetes cluster management.",
+        "href": "/infrastructure/cloud-devops",
+        "icon": "Cloud",
+        "tags": ["AWS/Azure", "K8s", "Terraform"]
+      },
+      {
+        "id": "INF-02",
+        "title": "Edge Computing & IoT",
+        "slug": "edge-iot",
+        "summary": "Procurement and configuration of edge gateways, industrial sensors, and on-premise compute nodes.",
+        "href": "/infrastructure/edge-iot",
+        "icon": "HardDrive",
+        "tags": ["Edge Devices", "IoT Protocols", "MQTT"]
+      },
+      {
+        "id": "INF-03",
+        "title": "Data Center Networking",
+        "slug": "data-center-networking",
+        "summary": "Structured cabling, server rack installation, switch configuration, and firewall deployment.",
+        "href": "/infrastructure/networking",
+        "icon": "Layers",
+        "tags": ["Cisco", "Rack Setup", "Security"]
+      }
+    ],
+    "ctas": {
+      "viewAll": { "label": "View Solution Matrix", "href": "/solutions" },
+      "requestProposal": { "label": "Start a Project", "href": "/get-proposal" }
+    }
+  },
+
+  "industries": {
+    "badge": "Strategic Verticals",
+    "headline": "Engineered for Critical Industries",
+    "subhead": "Deep domain expertise embedded into every line of code and every rack of servers we deploy.",
+    "industries": [
+      {
+        "name": "Banking & Finance",
+        "slug": "banking-finance",
+        "description": "High-frequency trading platforms, secure core banking, and fraud detection systems.",
+        "icon": "Landmark",
+        "href": "/industries/banking",
+        "stat": "PCI-DSS Compliant"
+      },
+      {
+        "name": "Insurance",
+        "slug": "insurance",
+        "description": "Automated claims processing, risk modeling, and document intelligence pipelines.",
+        "icon": "Shield",
+        "href": "/industries/insurance",
+        "stat": "99.9% Auto-Adjudication"
+      },
+      {
+        "name": "Healthcare",
+        "slug": "healthcare",
+        "description": "HIPAA-compliant cloud migration, telemedicine platforms, and medical imaging AI.",
+        "icon": "HeartPulse",
+        "href": "/industries/healthcare",
+        "stat": "HIPAA & HL7 Ready"
+      },
+      {
+        "name": "Education",
+        "slug": "education",
+        "description": "Scalable LMS architectures, campus Wi-Fi density, and secure student data portals.",
+        "icon": "GraduationCap",
+        "href": "/industries/education",
+        "stat": "500k+ Concurrent Users"
+      },
+      {
+        "name": "Manufacturing",
+        "slug": "manufacturing",
+        "description": "Industrial IoT (IIoT), edge computing gateways, and predictive maintenance twins.",
+        "icon": "Factory",
+        "href": "/industries/manufacturing",
+        "stat": "Industry 4.0 Standard"
+      },
+      {
+        "name": "Retail",
+        "slug": "retail",
+        "description": "Omnichannel e-commerce, real-time inventory sync, and POS infrastructure.",
+        "icon": "ShoppingBag",
+        "href": "/industries/retail",
+        "stat": "< 100ms Latency"
+      }
+    ],
+    "cta": {
+      "label": "Explore Sector Expertise",
+      "href": "/industries"
+    }
+  },
+
+  "caseStudies": {
+    "badge": "Real World Impact",
+    "headline": "Delivering Measurable Results for Enterprises",
+    "subhead": "See how we design software, deploy infrastructure, and transform operations across industries.",
+    "cta": {
+      "label": "View All Case Studies",
+      "href": "/case-studies"
+    },
+    "cases": [
+      {
+        "id": "cs-01",
+        "industry": "Banking",
+        "title": "AI-Powered KYC Automation Platform",
+        "summary": "Built an OCR + AI pipeline for customer onboarding, reducing manual verification time by 70%.",
+        "metric": "70% Faster Onboarding",
+        "href": "/case-studies/ai-kyc-banking"
+      },
+      {
+        "id": "cs-02",
+        "industry": "Manufacturing",
+        "title": "Edge IoT Monitoring Infrastructure",
+        "summary": "Deployed edge gateways and real-time analytics to monitor production lines across 12 plants.",
+        "metric": "35% Downtime Reduction",
+        "href": "/case-studies/edge-iot-manufacturing"
+      },
+      {
+        "id": "cs-03",
+        "industry": "Healthcare",
+        "title": "Hospital Cloud Migration & EHR System",
+        "summary": "Migrated legacy systems to cloud-native EHR with 99.99% uptime and secure data compliance.",
+        "metric": "99.99% System Uptime",
+        "href": "/case-studies/cloud-ehr-healthcare"
+      }
+    ]
+  },
+
+  "achievements": {
+    "headline": "Engineered for Enterprise Scale",
+    "subhead": "Our infrastructure is built on day one to handle the demands of Fortune 500 workloads.",
+    "primaryMetrics": [
+      {
+        "id": "m1",
+        "value": "99.99%",
+        "label": "Uptime SLA Guarantee",
+        "description": "Financially backed service level agreements for mission-critical deployments.",
+        "icon": "ShieldCheck"
+      },
+      {
+        "id": "m2",
+        "value": " < 50ms",
+        "label": "Global Latency",
+        "description": "Optimized routing via our partner edge network across 15 regions.",
+        "icon": "Zap"
+      },
+      {
+        "id": "m3",
+        "value": "24/7/365",
+        "label": "Engineering Support",
+        "description": "Direct access to Tier-3 architects, not just support scripts.",
+        "icon": "Headset"
+      }
+    ],
+    "secondaryMetrics": [
+      {
+        "label": "Compliance Ready",
+        "value": "SOC2 / ISO",
+        "icon": "FileCheck"
+      },
+      {
+        "label": "Cloud Partners",
+        "value": "AWS / Azure / GCP",
+        "icon": "Cloud"
+      },
+      {
+        "label": "Security Standards",
+        "value": "Zero Trust",
+        "icon": "Lock"
+      },
+      {
+        "label": "Deployment Speed",
+        "value": "Hours, not Weeks",
+        "icon": "Rocket"
+      }
+    ]
+  },
+
+  "testimonials": [
+    {
+      "id": "t1",
+      "quote": "Their team delivered both our AI software platform and the underlying infrastructure flawlessly.",
+      "author": "Rohit Mehra",
+      "role": "CTO",
+      "company": "FinBank",
+      "avatar": "/testimonials/rohit-mehra.jpg"
+    },
+    {
+      "id": "t2",
+      "quote": "We no longer deal with multiple vendors. They handled software, cloud, and deployment end-to-end.",
+      "author": "Ananya Singh",
+      "role": "Head of Engineering",
+      "company": "MediCore Health",
+      "avatar": ""
+    },
+    {
+      "id": "t3",
+      "quote": "From infrastructure rollout to managed operations — everything was delivered under one contract.",
+      "author": "David Chen",
+      "role": "Director of IT",
+      "company": "AutoForge Manufacturing",
+      "avatar": ""
+    }
+  ],
+
+  "pricing": {
+    "badge": "Engagement Models",
+    "headline": "Flexible Engagements Tailored to Your Needs",
+    "subhead": "Every enterprise transformation is unique. Choose an engagement model that fits your scope, timeline, and operational needs.",
+    "models": [
+      {
+        "title": "Project-Based Delivery",
+        "description": "Ideal for clearly defined software or infrastructure projects with fixed scope and timelines.",
+        "highlights": [
+          "Fixed project scope",
+          "Defined milestones",
+          "Dedicated delivery team",
+          "Risk-shared pricing"
+        ]
+      },
+      {
+        "title": "Dedicated Team Model",
+        "description": "Extend your in-house team with our engineers, architects, and infrastructure specialists.",
+        "highlights": [
+          "Scalable team size",
+          "Monthly billing",
+          "Long-term collaboration",
+          "Direct knowledge transfer"
+        ]
+      },
+      {
+        "title": "Managed Services",
+        "description": "We operate and optimize your software and IT infrastructure with continuous monitoring and support.",
+        "highlights": [
+          "24/7 monitoring",
+          "SLA-backed operations",
+          "Continuous optimization",
+          "Quarterly strategy reviews"
+        ]
+      }
+    ],
+    "cta": {
+      "label": "Contact Sales for a Quote",
+      "href": "/contact"
+    }
+  },
+
+  "globalCTA": {
+    "title": "Ready to transform your digital infrastructure?",
+    "highlight": "Digital Infrastructure?",
+    "subtitle": "Whether you need enterprise software, AI platforms, or complete IT infrastructure deployment — we deliver everything under one accountable engagement.",
+    "primaryButton": {
+      "label": "Request Proposal",
+      "link": "/get-proposal"
+    },
+    "secondaryButton": {
+      "label": "Talk to an Architect",
+      "link": "/contact"
+    },
+    "steps": [
+      "We review your requirements and goals",
+      "Our architects design a tailored solution",
+      "You receive a detailed technical & commercial proposal"
+    ],
+    "note": "No obligation. Response within 24 business hours."
+  },
+
+  "footer": {
+    "brand": {
+      "companyName": "InfraTech",
+      "tagline": "Intelligent Systems",
+      "description": "The single accountable partner for enterprise software engineering and physical infrastructure deployment."
+    },
+
+    "address": {
+      "label": "Global HQ",
+      "line1": "123 Innovation Drive, Tech Park",
+      "line2": "Pune, MH 411045"
+    },
+
+    "socials": [
+      {
+        "platform": "Linkedin",
+        "href": "https://linkedin.com",
+        "label": "LinkedIn"
+      },
+      {
+        "platform": "Twitter",
+        "href": "https://twitter.com",
+        "label": "Twitter"
+      },
+      {
+        "platform": "Facebook",
+        "href": "https://facebook.com",
+        "label": "Facebook"
+      },
+      {
+        "platform": "Instagram",
+        "href": "https://instagram.com",
+        "label": "Instagram"
+      }
+    ],
+
+    "navCards": [
+      {
+        "title": "Solutions",
+        "links": [
+          { "label": "Custom Software", "href": "/solutions/software" },
+          { "label": "AI & Data", "href": "/solutions/ai-data" },
+          { "label": "Cloud DevOps", "href": "/solutions/cloud" }
+        ]
+      },
+      {
+        "title": "Infrastructure",
+        "links": [
+          { "label": "Data Centers", "href": "/infrastructure/dc" },
+          { "label": "Edge Networking", "href": "/infrastructure/edge" },
+          {
+            "label": "Hardware Fulfillment",
+            "href": "/infrastructure/hardware"
+          }
+        ]
+      },
+      {
+        "title": "Industries",
+        "links": [
+          { "label": "Banking & Finance", "href": "/industries/banking" },
+          { "label": "Healthcare", "href": "/industries/healthcare" },
+          { "label": "Manufacturing", "href": "/industries/manufacturing" }
+        ]
+      },
+      {
+        "title": "Resources",
+        "links": [
+          { "label": "Case Studies", "href": "/case-studies" },
+          { "label": "Process Details", "href": "/process" },
+          { "label": "Whitepapers", "href": "/resources/whitepapers" }
+        ]
+      },
+      {
+        "title": "Company",
+        "links": [
+          { "label": "About Us", "href": "/about" },
+          { "label": "Careers", "href": "/careers" },
+          { "label": "Partners", "href": "/partners" }
+        ]
+      },
+      {
+        "title": "Support",
+        "links": [
+          { "label": "Help Center", "href": "/support/help" },
+          { "label": "System Status", "href": "/status" },
+          { "label": "API Docs", "href": "/docs" }
+        ]
+      }
+    ],
+
+    "engagement": {
+      "title": "Start a Project",
+      "subtitle": "Ready to transform your infrastructure? Get a proposal within 24 hours.",
+      "primaryButton": {
+        "label": "Request Proposal",
+        "href": "/get-proposal"
+      },
+      "secondaryButton": {
+        "label": "Contact Sales",
+        "href": "/contact"
+      }
+    },
+
+    "copyrightLinks": [
+      { "label": "Privacy Policy", "href": "/privacy-policy" },
+      { "label": "Terms of Service", "href": "/terms-of-service" },
+      { "label": "Cookie Settings", "href": "/cookies" }
+    ]
+  }
+}

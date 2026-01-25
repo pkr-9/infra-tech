@@ -1,27 +1,14 @@
 import { useRef, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ChevronDown } from "lucide-react";
-
-/**
- * SolutionsMegaMenu
- * - Opens on mouseenter / focus
- * - Keeps open while hovering panel or trigger
- * - Small close delay to avoid flicker
- * - Basic ARIA: aria-expanded, role="menu" on panel
- */
+import { useNavData } from "@/hooks/use-content";
 
 export const SolutionsMegaMenu = () => {
+  const { data: nav } = useNavData();
+  const menu = nav?.solutionsMenu;
+
   const [isOpen, setIsOpen] = useState(false);
   const closeTimer = useRef<number | null>(null);
-  const wrapperRef = useRef<HTMLDivElement | null>(null);
-
-  useEffect(() => {
-    return () => {
-      if (closeTimer.current) {
-        window.clearTimeout(closeTimer.current);
-      }
-    };
-  }, []);
 
   const openMenu = () => {
     if (closeTimer.current) {
@@ -36,165 +23,53 @@ export const SolutionsMegaMenu = () => {
     closeTimer.current = window.setTimeout(() => setIsOpen(false), ms);
   };
 
-  // Close on Escape key
   useEffect(() => {
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setIsOpen(false);
+    return () => {
+      if (closeTimer.current) {
+        window.clearTimeout(closeTimer.current);
+      }
     };
-    if (isOpen) window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
-  }, [isOpen]);
+  }, []);
+
+  if (!menu) return null;
 
   return (
     <div
-      ref={wrapperRef}
       className="relative"
       onMouseEnter={openMenu}
       onMouseLeave={() => scheduleClose(120)}
-      onFocus={openMenu} // for keyboard navigation
+      onFocus={openMenu}
       onBlur={() => scheduleClose(120)}
     >
-      <button
-        aria-haspopup="true"
-        aria-expanded={isOpen}
-        className="flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-primary py-2"
-        onClick={() => setIsOpen((s) => !s)}
-      >
-        Solutions <ChevronDown className="w-4 h-4" />
-      </button>
+      <div className="flex items-center gap-1 text-sm font-medium text-muted-foreground hover:text-primary py-2">
+        <Link to="/solutions" className="hover:text-primary">
+          Solutions
+        </Link>
+        <button
+          onClick={(e) => {
+            e.preventDefault();
+            setIsOpen((s) => !s);
+          }}
+          className="p-1"
+          aria-label="Toggle solutions menu"
+        >
+          <ChevronDown className="w-4 h-4" />
+        </button>
+      </div>
 
-      {/* Panel: keep in DOM for accessibility */}
       <div
         role="menu"
         aria-hidden={!isOpen}
-        className={`transition-opacity duration-150 pointer-events-none transform origin-top-left ${
-          isOpen
-            ? "opacity-100 visible pointer-events-auto translate-y-0"
-            : "opacity-0 invisible -translate-y-1"
-        } absolute left-0 mt-2 w-[900px] bg-card border border-border rounded-xl shadow-lg p-6 z-50`}
+        className={`absolute left-0 mt-2 w-[900px] bg-card border border-border rounded-xl shadow-lg p-6 z-50 transition-opacity ${
+          isOpen ? "opacity-100 visible" : "opacity-0 invisible"
+        }`}
         onMouseEnter={openMenu}
         onMouseLeave={() => scheduleClose(120)}
       >
         <div className="grid grid-cols-3 gap-6">
-          {/* Column 1: Software Solutions */}
-          <div>
-            <h4 className="text-xs font-semibold uppercase text-muted-foreground mb-3">
-              Software
-            </h4>
-            <nav
-              className="flex flex-col gap-2"
-              aria-label="Software solutions"
-            >
-              <Link
-                to="/solutions/web-mobile"
-                className="text-sm hover:text-primary"
-              >
-                Web & Mobile Development
-              </Link>
-              <Link
-                to="/solutions/enterprise-systems"
-                className="text-sm hover:text-primary"
-              >
-                Enterprise Systems (ERP/CRM/LMS)
-              </Link>
-              <Link to="/solutions/saas" className="text-sm hover:text-primary">
-                SaaS Product Engineering
-              </Link>
-              <Link
-                to="/solutions/integration"
-                className="text-sm hover:text-primary"
-              >
-                API & Integration
-              </Link>
-              <Link
-                to="/solutions/automation"
-                className="text-sm hover:text-primary"
-              >
-                RPA & Business Automation
-              </Link>
-            </nav>
-          </div>
-
-          {/* Column 2: AI & Data + Document Intelligence */}
-          <div>
-            <h4 className="text-xs font-semibold uppercase text-muted-foreground mb-3">
-              AI & Data
-            </h4>
-            <nav
-              className="flex flex-col gap-2"
-              aria-label="AI and data solutions"
-            >
-              <Link
-                to="/solutions/ai-data"
-                className="text-sm hover:text-primary"
-              >
-                AI / Machine Learning
-              </Link>
-              <Link
-                to="/solutions/computer-vision"
-                className="text-sm hover:text-primary"
-              >
-                Computer Vision
-              </Link>
-              <Link to="/solutions/nlp" className="text-sm hover:text-primary">
-                NLP & Conversational AI
-              </Link>
-              <Link
-                to="/solutions/document-intelligence"
-                className="text-sm hover:text-primary"
-              >
-                OCR / ICR / Document Intelligence
-              </Link>
-              <Link
-                to="/solutions/analytics"
-                className="text-sm hover:text-primary"
-              >
-                Predictive Analytics
-              </Link>
-            </nav>
-          </div>
-
-          {/* Column 3: Infrastructure & Managed Services */}
-          <div>
-            <h4 className="text-xs font-semibold uppercase text-muted-foreground mb-3">
-              Infrastructure & Services
-            </h4>
-            <nav
-              className="flex flex-col gap-2"
-              aria-label="Infrastructure & services"
-            >
-              <Link
-                to="/infrastructure/servers-storage"
-                className="text-sm hover:text-primary"
-              >
-                Servers & Storage Setup
-              </Link>
-              <Link
-                to="/infrastructure/networking"
-                className="text-sm hover:text-primary"
-              >
-                Network, Wi-Fi & Security
-              </Link>
-              <Link
-                to="/infrastructure/edge-iot"
-                className="text-sm hover:text-primary"
-              >
-                Edge & IoT Deployments
-              </Link>
-              <Link
-                to="/infrastructure/data-center"
-                className="text-sm hover:text-primary"
-              >
-                Data Center & Colocation
-              </Link>
-              <Link
-                to="/solutions/managed-services"
-                className="text-sm hover:text-primary"
-              >
-                Managed Services & DevOps
-              </Link>
-            </nav>
-          </div>
+          <MenuColumn title="Software Solutions" items={menu.software} />
+          <MenuColumn title="Infrastructure" items={menu.infrastructure} />
+          <MenuColumn title="Managed Services" items={menu.managed} />
         </div>
 
         <div className="mt-6 border-t border-border pt-4 flex items-center justify-between">
@@ -217,3 +92,30 @@ export const SolutionsMegaMenu = () => {
     </div>
   );
 };
+
+function MenuColumn({
+  title,
+  items,
+}: {
+  title: string;
+  items: { label: string; slug: string }[];
+}) {
+  return (
+    <div>
+      <h4 className="text-xs font-semibold uppercase text-muted-foreground mb-3">
+        {title}
+      </h4>
+      <nav className="flex flex-col gap-2">
+        {items.map((item) => (
+          <Link
+            key={item.slug}
+            to={`/solutions/${item.slug}`}
+            className="text-sm hover:text-primary"
+          >
+            {item.label}
+          </Link>
+        ))}
+      </nav>
+    </div>
+  );
+}

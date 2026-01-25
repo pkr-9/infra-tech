@@ -1,0 +1,212 @@
+{
+  "featuredCapabilities": [
+    "custom-software-engineering",
+    "ai-data-solutions",
+    "cloud-devops",
+    "data-center-networking"
+  ],
+
+  "categories": [
+    { "id": "software", "label": "Software Solutions", "icon": "Code2" },
+    { "id": "ai-data", "label": "AI & Data Solutions", "icon": "Cpu" },
+    {
+      "id": "infrastructure",
+      "label": "Infrastructure Fulfillment",
+      "icon": "Server"
+    }
+  ],
+
+  "offerings": [
+    {
+      "id": "SW-01",
+      "slug": "custom-software-engineering",
+      "title": "Custom Software Engineering",
+      "summary": "Full-cycle development for web, mobile, and enterprise SaaS platforms.",
+      "description": "Design, build, and scale enterprise-grade digital platforms using modern architectures and best-in-class engineering practices.",
+      "category": "software",
+      "icon": "Code2",
+      "tags": ["React", "Microservices", "Node.js", "Python"],
+      "href": "/solutions/web-mobile",
+
+      "hero": {
+        "headline": "Enterprise Software Built for Scale",
+        "subhead": "Modern architectures, cloud-native execution, and future-proof engineering."
+      },
+
+      "features": [
+        "Web and Mobile Application Development",
+        "Enterprise Systems (ERP / CRM / LMS)",
+        "SaaS Product Engineering",
+        "API & Integration Services"
+      ],
+
+      "deliverables": [
+        "Solution Architecture Blueprint",
+        "UI/UX Design Systems",
+        "Production-ready Application Code",
+        "Deployment Pipelines"
+      ],
+
+      "techStack": [
+        "React",
+        "Next.js",
+        "Node.js",
+        "Spring Boot",
+        "Docker",
+        "PostgreSQL"
+      ],
+      "documents": [
+        {
+          "title": "Custom Software Brochure",
+          "url": "/docs/custom-software.pdf"
+        }
+      ],
+
+      "seo": {
+        "title": "Custom Software Engineering",
+        "description": "Enterprise-grade software development services."
+      }
+    },
+
+    {
+      "id": "SW-02",
+      "slug": "ai-data-solutions",
+      "title": "AI & Data Intelligence",
+      "summary": "Production-grade ML pipelines, NLP, and computer vision systems.",
+      "description": "Deliver intelligent automation through AI/ML model development, data engineering, and MLOps deployment.",
+      "category": "ai-data",
+      "icon": "Cpu",
+      "tags": ["Machine Learning", "NLP", "Computer Vision"],
+
+      "href": "/solutions/ai-data",
+
+      "hero": {
+        "headline": "AI that Moves Business Metrics",
+        "subhead": "From raw data to deployed intelligence."
+      },
+
+      "features": [
+        "Machine Learning Model Development",
+        "Natural Language Processing",
+        "Computer Vision Systems",
+        "Data Engineering Pipelines"
+      ],
+
+      "deliverables": [
+        "Data Lake Architecture",
+        "Trained AI Models",
+        "Inference APIs",
+        "MLOps Pipelines"
+      ],
+
+      "techStack": ["Python", "TensorFlow", "PyTorch", "Spark", "Airflow"],
+      "documents": [
+        {
+          "title": "AI & Data Brochure",
+          "url": "/docs/ai-data.pdf"
+        }
+      ]
+    },
+
+    {
+      "id": "SW-03",
+      "slug": "enterprise-automation",
+      "title": "Enterprise Automation",
+      "summary": "OCR, RPA, and workflow orchestration.",
+      "description": "Automate high-volume business processes using intelligent document processing and robotic automation.",
+      "category": "software",
+      "icon": "FileText",
+      "tags": ["OCR", "RPA", "Workflow"],
+
+      "href": "/solutions/automation",
+
+      "features": [
+        "Document OCR & ICR",
+        "Business Process Automation",
+        "Workflow Orchestration"
+      ],
+
+      "deliverables": [
+        "Automation Blueprints",
+        "Deployed RPA Bots",
+        "Monitoring Dashboards"
+      ],
+      "techStack": ["UiPath", "Automation Anywhere", "Tesseract"],
+      "documents": [
+        {
+          "title": "Automation Brochure",
+          "url": "/docs/automation.pdf"
+        }
+      ]
+    },
+
+    {
+      "id": "INF-01",
+      "slug": "cloud-devops",
+      "title": "Cloud & DevOps Fulfillment",
+      "summary": "Cloud architecture, CI/CD, and Kubernetes operations.",
+      "description": "Design and deploy enterprise cloud infrastructure with automated DevOps pipelines.",
+      "category": "infrastructure",
+      "icon": "Cloud",
+      "tags": ["AWS", "Azure", "Kubernetes"],
+
+      "href": "/infrastructure/cloud-devops",
+
+      "hero": {
+        "headline": "Cloud Platforms Built for Reliability",
+        "subhead": "Automated infrastructure and DevOps operations."
+      },
+
+      "features": [
+        "Cloud Architecture Design",
+        "CI/CD Pipeline Setup",
+        "Kubernetes Cluster Deployment",
+        "Monitoring & Observability"
+      ],
+
+      "deliverables": [
+        "Infrastructure-as-Code",
+        "Automated Pipelines",
+        "Operational Playbooks"
+      ]
+    },
+
+    {
+      "id": "INF-02",
+      "slug": "edge-iot",
+      "title": "Edge Computing & IoT",
+      "summary": "Edge gateways, IoT devices, and on-prem compute.",
+      "description": "Deploy edge nodes and IoT infrastructure for real-time industrial intelligence.",
+      "category": "infrastructure",
+      "icon": "HardDrive",
+      "tags": ["IoT", "Edge", "MQTT"],
+
+      "href": "/infrastructure/edge-iot",
+
+      "features": [
+        "Edge Device Procurement",
+        "Gateway Configuration",
+        "IoT Platform Setup"
+      ]
+    },
+
+    {
+      "id": "INF-03",
+      "slug": "data-center-networking",
+      "title": "Data Center Networking",
+      "summary": "Cabling, rack setup, switching, and firewalls.",
+      "description": "Build enterprise-grade data centers with secure, high-performance networking.",
+      "category": "infrastructure",
+      "icon": "Layers",
+      "tags": ["Cisco", "Networking", "Security"],
+
+      "href": "/infrastructure/networking",
+
+      "features": [
+        "Structured Cabling",
+        "Server Rack Installation",
+        "Switch & Firewall Setup"
+      ]
+    }
+  ]
+}

@@ -16,26 +16,32 @@ import { InnerPageLayout } from "@/components/layout/InnerPageLayout";
 // Pages
 import Index from "./pages/Index";
 import About from "./pages/About";
+
 import Contact from "./pages/Contact";
 import Careers from "./pages/Careers";
-import Industries from "./pages/Industries";
-import CaseStudies from "./pages/CaseStudies";
-import BlogIndex from "./pages/BlogIndex";
-import BlogPost from "./pages/BlogPost";
+import CaseStudiesLandingPage from "./pages/CaseStudiesLandingPage";
+import CaseStudyDetail from "@/pages/CaseStudyDetail";
+import BlogLandingPage from "@/pages/BlogLandingPage";
+import BlogPostDetail from "@/pages/BlogPostDetail";
 import ROICalculatorPage from "./pages/resources/ROICalculatorPage";
 import Resources from "./pages/Resources";
-import Solutions from "./pages/Solutions";
-// import { IndustryDetail } from "./pages/industries/IndustryDetail";
+import GetProposal from "./pages/GetProposal";
 
 // Footer Pages
 import Pricing from "./pages/Pricing";
 import Support from "./pages/Support";
 import Docs from "./pages/Docs";
 import Security from "./pages/Security";
-import { Privacy, Terms, Cookie } from "./pages/legal/LegalPages";
+import { Privacy } from "./pages/legal/Privacy";
 
 import NotFound from "./pages/NotFound";
 import { FloatingIcons } from "@/components/FloatingIcons";
+import { SolutionsLandingLayout } from "./pages/SolutionsLandingLayout";
+import { SolutionDetailPage } from "./pages/SolutionDetailPage";
+import InfrastructureLandingLayout from "./pages/InfrastructureLandingLayout";
+import InfrastructureDetailPage from "./pages/InfrastructureDetailPage";
+import IndustriesLandingLayout from "./pages/IndustriesLandingLayout";
+import IndustryDetailPage from "./pages/IndustryDetailPage";
 
 const queryClient = new QueryClient();
 
@@ -48,19 +54,28 @@ const router = createBrowserRouter(
       {/* Catalog Routes */}
       <Route path="/pricing" element={<Pricing />} />
       <Route path="/resources/roi-calculator" element={<ROICalculatorPage />} />
-      <Route path="/solutions" element={<Solutions />} />
+      <Route path="/get-proposal" element={<GetProposal />} />
       {/* <Route path="/industries/:slug" element={<IndustryDetail />} /> */}
 
       {/* Insights Routes */}
-      <Route path="/industries" element={<Industries />} />
-      <Route path="/case-studies" element={<CaseStudies />} />
+      <Route path="/solutions" element={<SolutionsLandingLayout />} />
+      <Route path="/solutions/:slug" element={<SolutionDetailPage />} />
+      <Route path="/case-studies" element={<CaseStudiesLandingPage />} />
+      <Route path="/case-studies/:slug" element={<CaseStudyDetail />} />
+      <Route path="/infrastructure" element={<InfrastructureLandingLayout />} />
+      <Route
+        path="/infrastructure/:slug"
+        element={<InfrastructureDetailPage />}
+      />
+      <Route path="/industries" element={<IndustriesLandingLayout />} />
+      <Route path="/industries/:slug" element={<IndustryDetailPage />} />
 
       {/* Company Routes */}
       <Route path="/about" element={<About />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/careers" element={<Careers />} />
-      <Route path="/blog" element={<BlogIndex />} />
-      <Route path="/blog/:slug" element={<BlogPost />} />
+      <Route path="/blog" element={<BlogLandingPage />} />
+      <Route path="/blog/:slug" element={<BlogPostDetail />} />
 
       {/* Resources & Legal */}
       <Route path="/resources" element={<Resources />} />
@@ -68,8 +83,6 @@ const router = createBrowserRouter(
       <Route path="/docs" element={<Docs />} />
       <Route path="/security" element={<Security />} />
       <Route path="/privacy-policy" element={<Privacy />} />
-      <Route path="/terms-of-service" element={<Terms />} />
-      <Route path="/cookie-policy" element={<Cookie />} />
 
       <Route path="*" element={<NotFound />} />
     </Route>,

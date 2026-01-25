@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
-import { Menu, X, Sun, Moon } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useTheme } from "next-themes";
 import { NavItem } from "@/lib/api";
 import { GlobalSearch } from "@/components/GlobalSearch";
 import { SolutionsMegaMenu } from "./SolutionsMegaMenu";
+// import { useTheme } from "next-themes";
+// import { Sun, Moon } from "lucide-react";
 
 interface TopNavProps {
   items: NavItem[];
@@ -17,10 +18,10 @@ export const TopNav = ({
   isMobileMenuOpen,
   setIsMobileMenuOpen,
 }: TopNavProps) => {
-  const { theme, setTheme } = useTheme();
+  // const { theme, setTheme } = useTheme();
 
   return (
-    <div className="border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50">
+    <div className="border-b border-border bg-background sticky top-0 z-50">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between relative">
         {/* Left: Brand */}
         <Link to="/" className="flex items-center space-x-2 group shrink-0">
@@ -67,7 +68,7 @@ export const TopNav = ({
             <GlobalSearch />
           </div>
 
-          <Button
+          {/* <Button
             variant="ghost"
             size="icon"
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
@@ -76,7 +77,7 @@ export const TopNav = ({
             <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
             <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
             <span className="sr-only">Toggle theme</span>
-          </Button>
+          </Button> */}
 
           <div className="hidden md:flex">
             <Button

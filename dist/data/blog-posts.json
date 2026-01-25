@@ -1,0 +1,45 @@
+{
+  "pageMeta": {
+    "title": "Engineering Blog | InfraTech",
+    "description": "Insights on cloud architecture, DevOps, and infrastructure engineering."
+  },
+  "hero": {
+    "headline": "Engineering Insights",
+    "subhead": "Deep dives into the technology and patterns shaping the future of enterprise infrastructure."
+  },
+  "posts": [
+    {
+      "id": "blog-01",
+      "slug": "kubernetes-cost-optimization",
+      "title": "Slashing Kubernetes Costs by 40% with Spot Instances",
+      "excerpt": "How to safely leverage AWS Spot Instances for production workloads without risking downtime.",
+      "author": "James Wilson",
+      "date": "Oct 12, 2025",
+      "category": "DevOps",
+      "image": "https://images.unsplash.com/photo-1667372393119-c81c0cda0a29?q=80&w=1000&auto=format&fit=crop",
+      "content": "Full content would go here. We implemented Karpenter to manage node provisioning..."
+    },
+    {
+      "id": "blog-02",
+      "slug": "zero-trust-architecture",
+      "title": "Implementing Zero Trust in a Legacy Environment",
+      "excerpt": "A pragmatic guide to moving from VPNs to identity-aware proxies without rewriting every app.",
+      "author": "Sarah Chen",
+      "date": "Sep 28, 2025",
+      "category": "Security",
+      "image": "https://images.unsplash.com/photo-1555949963-aa79dcee981c?q=80&w=1000&auto=format&fit=crop",
+      "content": "Zero trust isn't a product, it's a mindset. Here is how we stratified the network..."
+    },
+    {
+      "id": "blog-03",
+      "slug": "terraform-best-practices",
+      "title": "Terraform State Management at Scale",
+      "excerpt": "Why you should stop using a single monorepo for your infrastructure as code.",
+      "author": "Alex Mercer",
+      "date": "Sep 15, 2025",
+      "category": "IaC",
+      "image": "https://images.unsplash.com/photo-1558494949-ef526b0042a0?q=80&w=1000&auto=format&fit=crop",
+      "content": "State locking and module versioning are critical when your team grows beyond 5 engineers..."
+    }
+  ]
+}

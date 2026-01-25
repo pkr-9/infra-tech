@@ -2,109 +2,101 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Layers, Box } from "lucide-react";
-import { useSolutionsData } from "@/hooks/use-content";
+import { Layers, Box } from "lucide-react";
+import { useOfferingsData } from "@/hooks/use-content";
 import { Skeleton } from "@/components/ui/skeleton";
 import { ServiceCard } from "./ServiceCard";
 import { InfraCard } from "./InfraCard";
 
-const PAGE_SIZE = 3;
+const PAGE_SIZE = 4;
 
 export const SolutionsShowcase = () => {
-  const { data, isLoading } = useSolutionsData();
+  const { data, isLoading } = useOfferingsData();
 
   const [softwareCount, setSoftwareCount] = useState(PAGE_SIZE);
   const [infraCount, setInfraCount] = useState(PAGE_SIZE);
 
-  if (isLoading) {
-    return (
-      <section className="py-24 bg-background">
-        <div className="container mx-auto px-4">
-          <GridSkeleton />
-        </div>
-      </section>
-    );
-  }
-
+  if (isLoading) return <LoadingSkeleton />;
   if (!data) return null;
 
+  // Filter offerings by category
+  const software = data.offerings.filter((o) =>
+    ["software", "ai-data"].includes(o.category),
+  );
+
+  const infrastructure = data.offerings.filter(
+    (o) => o.category === "infrastructure",
+  );
+
   return (
-    <section className="py-24 bg-background">
-      <div className="container mx-auto px-4">
+    <section className="py-24 bg-background relative">
+      <div className="container mx-auto px-4 max-w-6xl">
         {/* Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
-          <div className="max-w-2xl">
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-4">
-              {data.headline.split(" ")[0]}{" "}
-              <span className="gradient-text">
-                {data.headline.split(" ").slice(1).join(" ")}
-              </span>
-            </h2>
-            <p className="text-lg text-muted-foreground">{data.subhead}</p>
-          </div>
-
-          <div className="hidden md:flex gap-3">
-            <Button variant="ghost" asChild>
-              <Link to={data.ctas.viewAll.href}>
-                {data.ctas.viewAll.label}
-                <ArrowRight className="ml-2 w-4 h-4" />
-              </Link>
-            </Button>
-
-            <Button className="bg-primary text-white" asChild>
-              <Link to={data.ctas.requestProposal.href}>
-                {data.ctas.requestProposal.label}
-              </Link>
-            </Button>
-          </div>
+        <div className="text-center mb-16 max-w-3xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-6 leading-tight">
+            Our End-to-End Solutions
+          </h2>
+          <p className="text-xl text-muted-foreground leading-relaxed">
+            Software engineering and infrastructure fulfillment under one
+            accountable engagement.
+          </p>
         </div>
 
         {/* Tabs */}
-        <Tabs defaultValue="software">
-          <TabsList className="grid w-full max-w-[420px] grid-cols-2 mb-10 bg-muted/50 p-1 rounded-md">
-            <TabsTrigger value="software">
-              <Layers className="w-4 h-4 mr-2" /> Software
-            </TabsTrigger>
-            <TabsTrigger value="infrastructure">
-              <Box className="w-4 h-4 mr-2" /> Infrastructure
-            </TabsTrigger>
-          </TabsList>
+        <Tabs defaultValue="software" className="w-full">
+          <div className="flex justify-center mb-12">
+            <TabsList className="h-14 p-1 bg-muted/50 rounded-full border border-border">
+              <TabsTrigger
+                value="software"
+                className="h-full rounded-full px-8 text-base data-[state=active]:bg-background data-[state=active]:text-primary data-[state=active]:shadow-sm transition-all"
+              >
+                <Layers className="w-4 h-4 mr-2" />
+                Software Solutions
+              </TabsTrigger>
 
-          {/* Software */}
-          <TabsContent value="software">
-            <div className="grid md:grid-cols-3 gap-8">
-              {data.software.slice(0, softwareCount).map((item) => (
-                <ServiceCard key={item.id} item={item} />
-              ))}
-            </div>
+              <TabsTrigger
+                value="infrastructure"
+                className="h-full rounded-full px-8 text-base data-[state=active]:bg-background data-[state=active]:text-indigo-600 data-[state=active]:shadow-sm transition-all"
+              >
+                <Box className="w-4 h-4 mr-2" />
+                Infrastructure Fulfillment
+              </TabsTrigger>
+            </TabsList>
+          </div>
 
-            {softwareCount < data.software.length && (
-              <div className="mt-10 text-center">
+          {/* Software Tab */}
+          <TabsContent value="software" className="space-y-8">
+            {software.slice(0, softwareCount).map((item) => (
+              <ServiceCard key={item.id} item={item} />
+            ))}
+
+            {softwareCount < software.length && (
+              <div className="pt-8 text-center">
                 <Button
                   variant="outline"
+                  size="lg"
                   onClick={() => setSoftwareCount((p) => p + PAGE_SIZE)}
                 >
-                  Load More
+                  Load More Software
                 </Button>
               </div>
             )}
           </TabsContent>
 
-          {/* Infrastructure */}
-          <TabsContent value="infrastructure">
-            <div className="grid md:grid-cols-3 gap-8">
-              {data.infrastructure.slice(0, infraCount).map((item) => (
-                <InfraCard key={item.id} item={item} />
-              ))}
-            </div>
+          {/* Infrastructure Tab */}
+          <TabsContent value="infrastructure" className="space-y-8">
+            {infrastructure.slice(0, infraCount).map((item) => (
+              <InfraCard key={item.id} item={item} />
+            ))}
 
-            {infraCount < data.infrastructure.length && (
-              <div className="mt-10 text-center">
+            {infraCount < infrastructure.length && (
+              <div className="pt-8 text-center">
                 <Button
                   variant="outline"
+                  size="lg"
                   onClick={() => setInfraCount((p) => p + PAGE_SIZE)}
                 >
-                  Load More
+                  Load More Infrastructure
                 </Button>
               </div>
             )}
@@ -115,18 +107,10 @@ export const SolutionsShowcase = () => {
   );
 };
 
-/* Skeleton */
-const GridSkeleton = () => (
-  <div className="grid md:grid-cols-3 gap-8">
-    {[1, 2, 3].map((i) => (
-      <div
-        key={i}
-        className="h-[320px] bg-card border rounded-xl p-6 space-y-4"
-      >
-        <Skeleton className="h-12 w-12 rounded-lg" />
-        <Skeleton className="h-8 w-3/4" />
-        <Skeleton className="h-20 w-full" />
-      </div>
-    ))}
+const LoadingSkeleton = () => (
+  <div className="container mx-auto px-4 py-24 space-y-8">
+    <Skeleton className="h-12 w-48 mx-auto" />
+    <Skeleton className="h-96 w-full rounded-2xl" />
+    <Skeleton className="h-96 w-full rounded-2xl" />
   </div>
 );

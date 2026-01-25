@@ -1,0 +1,737 @@
+{
+  "custom-software-engineering": {
+    "title": "Custom Software Engineering",
+    "hero": {
+      "headline": "Enterprise Software, Engineered to Scale",
+      "subhead": "We design and build secure, high-performance software platforms aligned with your business strategy. From microservices to monolithic migrations.",
+      "stats": [
+        { "label": "Code Coverage", "value": "95%+" },
+        { "label": "Security", "value": "OWASP Top 10" },
+        { "label": "Delivery", "value": "Agile / CI/CD" }
+      ]
+    },
+    "benefits": [
+      {
+        "title": "Domain-Driven Design",
+        "description": "We map complex business logic into clean, maintainable code structures that speak your industry's language."
+      },
+      {
+        "title": "Cloud-Native First",
+        "description": "Built for scale from day one using containerization, orchestration (K8s), and serverless patterns."
+      },
+      {
+        "title": "Security by Design",
+        "description": "Security isn't an afterthought. We implement IAM, encryption, and audit logging at the architectural level."
+      },
+      {
+        "title": "High Performance",
+        "description": "Optimized database queries, caching strategies (Redis), and CDN integration for sub-second latency."
+      }
+    ],
+    "process": [
+      {
+        "step": "01",
+        "title": "Discovery & Architecture",
+        "description": "We analyze your requirements, define the technical specs, and produce a high-level system design document."
+      },
+      {
+        "step": "02",
+        "title": "Sprint-Based Development",
+        "description": "Iterative delivery in 2-week sprints. You get demoable builds and progress reports every cycle."
+      },
+      {
+        "step": "03",
+        "title": "QA & Security Audit",
+        "description": "Rigorous automated testing, load testing, and static code analysis before any production release."
+      },
+      {
+        "step": "04",
+        "title": "Deployment & Handoff",
+        "description": "Zero-downtime deployment pipelines, complete documentation handover, and knowledge transfer sessions."
+      }
+    ],
+    "deliverables": [
+      "Production-ready Codebase",
+      "Architecture & Design Documentation",
+      "CI/CD Pipelines",
+      "Deployment & Release Guides"
+    ],
+    "technologies": [
+      "React",
+      "Next.js",
+      "Node.js",
+      "Java",
+      "Python",
+      "PostgreSQL"
+    ],
+    "cta": {
+      "label": "Request Software Proposal",
+      "href": "/get-proposal"
+    }
+  },
+
+  "enterprise-application-modernization": {
+    "title": "Application Modernization",
+    "hero": {
+      "headline": "Modernize Without Disruption",
+      "subhead": "Transform legacy systems into cloud-ready, maintainable platforms. We re-architect monolithic applications into scalable microservices.",
+      "stats": [
+        { "label": "Cost Reduction", "value": "40%" },
+        { "label": "Deployment", "value": "10x Faster" },
+        { "label": "Risk", "value": "Minimized" }
+      ]
+    },
+    "benefits": [
+      {
+        "title": "Eliminate Technical Debt",
+        "description": "Refactor aging codebases to remove security vulnerabilities and improve maintainability."
+      },
+      {
+        "title": "Monolith to Microservices",
+        "description": "Decouple complex systems into independently deployable services for greater agility."
+      },
+      {
+        "title": "Cloud Enablement",
+        "description": "Re-platform applications to leverage cloud-native features like auto-scaling and managed databases."
+      },
+      {
+        "title": "UI/UX Refresh",
+        "description": "Update outdated user interfaces with modern, responsive frameworks (React/Angular) without breaking backend logic."
+      }
+    ],
+    "process": [
+      {
+        "step": "01",
+        "title": "Audit & Risk Analysis",
+        "description": "We assess your current codebase, dependencies, and infrastructure to identify modernization risks."
+      },
+      {
+        "step": "02",
+        "title": "Target Architecture Design",
+        "description": "Defining the future state architecture, selecting the right cloud services, and planning the migration path."
+      },
+      {
+        "step": "03",
+        "title": "Incremental Migration",
+        "description": "Using the 'Strangler Fig' pattern to gradually replace legacy functionality with new services."
+      },
+      {
+        "step": "04",
+        "title": "Validation & Cutover",
+        "description": "Running parallel systems to ensure data integrity before the final cutover and decommissioning."
+      }
+    ],
+    "deliverables": [
+      "Modernized Application Stack",
+      "Migration Roadmap",
+      "Performance Benchmarks",
+      "Operational Runbooks"
+    ],
+    "technologies": ["Java", "Spring Boot", "React", "Docker", "Kubernetes"],
+    "cta": {
+      "label": "Modernize Your Applications",
+      "href": "/get-proposal"
+    }
+  },
+
+  "ai-data-solutions": {
+    "title": "AI & Data Intelligence",
+    "hero": {
+      "headline": "Turn Data Into Decisions",
+      "subhead": "Production-grade AI systems that automate, predict, and optimize. We move you beyond proof-of-concept to real-world value.",
+      "stats": [
+        { "label": "Accuracy", "value": "98%+" },
+        { "label": "Processing", "value": "Real-time" },
+        { "label": "ROI", "value": "Measurable" }
+      ]
+    },
+    "benefits": [
+      {
+        "title": "Predictive Analytics",
+        "description": "Forecast demand, detect anomalies, and anticipate market trends using custom machine learning models."
+      },
+      {
+        "title": "Intelligent Automation",
+        "description": "Automate repetitive tasks like document processing and customer support using NLP and Computer Vision."
+      },
+      {
+        "title": "Data Unification",
+        "description": "Break down silos by creating a central data lake that feeds intelligence across your organization."
+      },
+      {
+        "title": "MLOps Excellence",
+        "description": "We don't just train models; we build pipelines to deploy, monitor, and retrain them automatically."
+      }
+    ],
+    "process": [
+      {
+        "step": "01",
+        "title": "Data Readiness Assessment",
+        "description": "Evaluating the quality, quantity, and accessibility of your data to determine AI feasibility."
+      },
+      {
+        "step": "02",
+        "title": "Model Design & Training",
+        "description": "Selecting algorithms, feature engineering, and training models on your specific datasets."
+      },
+      {
+        "step": "03",
+        "title": "Integration & Inference",
+        "description": "Wrapping models in scalable APIs and integrating them into your existing software workflows."
+      },
+      {
+        "step": "04",
+        "title": "Monitoring & Tuning",
+        "description": "Continuous tracking of model drift and performance to ensure long-term accuracy."
+      }
+    ],
+    "deliverables": [
+      "Trained AI Models",
+      "Inference APIs",
+      "Data Pipelines",
+      "Monitoring Dashboards"
+    ],
+    "technologies": ["Python", "TensorFlow", "PyTorch", "Spark", "OpenCV"],
+    "cta": {
+      "label": "Explore AI Solutions",
+      "href": "/get-proposal"
+    }
+  },
+
+  "data-platform-engineering": {
+    "title": "Data Platform Engineering",
+    "hero": {
+      "headline": "Data Platforms Built for Scale",
+      "subhead": "Reliable, governed, and analytics-ready data foundations. We build the engines that power your BI and AI initiatives.",
+      "stats": [
+        { "label": "Latency", "value": "Sub-second" },
+        { "label": "Scale", "value": "Petabytes" },
+        { "label": "Governance", "value": "Automated" }
+      ]
+    },
+    "benefits": [
+      {
+        "title": "Unified Data Lakes",
+        "description": "Store structured and unstructured data in a cost-effective, scalable repository accessible to all teams."
+      },
+      {
+        "title": "Real-time Streaming",
+        "description": "Capture and process events as they happen using Kafka and Spark Streaming for instant insights."
+      },
+      {
+        "title": "Automated ETL/ELT",
+        "description": "Robust data pipelines that clean, transform, and load data without manual intervention."
+      },
+      {
+        "title": "Data Governance",
+        "description": "Implement role-based access control, lineage tracking, and quality checks to ensure trust in your data."
+      }
+    ],
+    "process": [
+      {
+        "step": "01",
+        "title": "Architecture Design",
+        "description": "Designing a lambda or kappa architecture tailored to your data volume and velocity needs."
+      },
+      {
+        "step": "02",
+        "title": "Pipeline Implementation",
+        "description": "Developing and testing the ingestion, transformation, and storage layers of the platform."
+      },
+      {
+        "step": "03",
+        "title": "Governance & Security",
+        "description": "Applying encryption, masking, and access policies to meet compliance requirements (GDPR/CCPA)."
+      },
+      {
+        "step": "04",
+        "title": "Analytics Enablement",
+        "description": "Connecting BI tools and data science notebooks to empower end-users."
+      }
+    ],
+    "deliverables": [
+      "Production Data Platform",
+      "ETL Pipelines",
+      "Analytics Schemas",
+      "Governance Policies"
+    ],
+    "technologies": ["Snowflake", "BigQuery", "Kafka", "Airflow", "dbt"],
+    "cta": {
+      "label": "Build Your Data Platform",
+      "href": "/get-proposal"
+    }
+  },
+
+  "cloud-devops": {
+    "title": "Cloud & DevOps Fulfillment",
+    "hero": {
+      "headline": "Cloud Platforms That Never Go Down",
+      "subhead": "Architected, automated, and operated for enterprise reliability. We turn your infrastructure into code.",
+      "stats": [
+        { "label": "Uptime", "value": "99.99%" },
+        { "label": "Deployments", "value": "On-Demand" },
+        { "label": "Recovery", "value": "< 15 Mins" }
+      ]
+    },
+    "benefits": [
+      {
+        "title": "Infrastructure as Code",
+        "description": "Manage your entire environment using Terraform or Pulumi for reproducible, version-controlled infrastructure."
+      },
+      {
+        "title": "Kubernetes Mastery",
+        "description": "Production-grade K8s clusters with automated scaling, networking, and storage management."
+      },
+      {
+        "title": "CI/CD Automation",
+        "description": "Streamlined pipelines that take code from commit to production with automated testing and gates."
+      },
+      {
+        "title": "Full Observability",
+        "description": "Deep visibility into system health using distributed tracing, centralized logging, and metrics."
+      }
+    ],
+    "process": [
+      {
+        "step": "01",
+        "title": "Readiness Assessment",
+        "description": "Analyzing your application's suitability for cloud migration and identifying necessary refactoring."
+      },
+      {
+        "step": "02",
+        "title": "Platform Architecture",
+        "description": "Designing a secure, high-availability VPC network, IAM policies, and compute resources."
+      },
+      {
+        "step": "03",
+        "title": "Automated Provisioning",
+        "description": "Writing and applying IaC scripts to spin up environments (Dev, Staging, Prod) identically."
+      },
+      {
+        "step": "04",
+        "title": "Optimization Loop",
+        "description": "Continuous monitoring of costs and performance to right-size resources."
+      }
+    ],
+    "deliverables": [
+      "Cloud Environments",
+      "Kubernetes Clusters",
+      "DevOps Toolchains",
+      "Runbooks & SOPs"
+    ],
+    "technologies": ["AWS", "Azure", "Docker", "Kubernetes", "Terraform"],
+    "cta": {
+      "label": "Start Cloud Transformation",
+      "href": "/get-proposal"
+    }
+  },
+
+  "hybrid-cloud-architecture": {
+    "title": "Hybrid & Multi-Cloud Architecture",
+    "hero": {
+      "headline": "Best of On-Prem and Cloud",
+      "subhead": "Secure, governed hybrid and multi-cloud environments. Keep sensitive data local while leveraging cloud scale.",
+      "stats": [
+        { "label": "Compliance", "value": "100%" },
+        { "label": "Connectivity", "value": "Low Latency" },
+        { "label": "Flexibility", "value": "Maximal" }
+      ]
+    },
+    "benefits": [
+      {
+        "title": "Data Sovereignty",
+        "description": "Keep regulated data on-premise or in specific regions while bursting compute to the public cloud."
+      },
+      {
+        "title": "Vendor Agnosticism",
+        "description": "Avoid lock-in by designing architectures that span multiple cloud providers (AWS, Azure, GCP)."
+      },
+      {
+        "title": "Unified Management",
+        "description": "Manage on-prem VM clusters and cloud instances from a single pane of glass."
+      },
+      {
+        "title": "Secure Connectivity",
+        "description": "Enterprise-grade VPNs and Direct Connect setups ensuring private, encrypted traffic flow."
+      }
+    ],
+    "process": [
+      {
+        "step": "01",
+        "title": "Infrastructure Assessment",
+        "description": "Mapping your existing on-prem assets and defining the optimal workload placement strategy."
+      },
+      {
+        "step": "02",
+        "title": "Architecture Design",
+        "description": "Creating a blueprint that integrates identity, networking, and storage across environments."
+      },
+      {
+        "step": "03",
+        "title": "Connectivity Setup",
+        "description": "Configuring site-to-site VPNs, MPLS, or dedicated interconnects for reliable throughput."
+      },
+      {
+        "step": "04",
+        "title": "Governance Rollout",
+        "description": "Implementing policy-as-code to enforce security standards across all cloud and on-prem zones."
+      }
+    ],
+    "deliverables": [
+      "Hybrid Architecture Blueprint",
+      "Secure Connectivity Setup",
+      "Governance Policies",
+      "Disaster Recovery Plan"
+    ],
+    "technologies": ["AWS", "Azure", "VMware", "Fortinet", "Anthos"],
+    "cta": {
+      "label": "Design Hybrid Architecture",
+      "href": "/get-proposal"
+    }
+  },
+
+  "it-infrastructure-deployment": {
+    "title": "IT Infrastructure Deployment",
+    "hero": {
+      "headline": "Physical Foundations for Digital Systems",
+      "subhead": "Procured, installed, and commissioned with precision. We handle the heavy lifting of enterprise IT.",
+      "stats": [
+        { "label": "Logistics", "value": "Global" },
+        { "label": "Install", "value": "Turnkey" },
+        { "label": "Testing", "value": "Certified" }
+      ]
+    },
+    "benefits": [
+      {
+        "title": "End-to-End Procurement",
+        "description": "We source servers, storage, and networking gear directly from OEMs, handling all logistics and customs."
+      },
+      {
+        "title": "Professional Installation",
+        "description": "Certified technicians handle rack mounting, structured cabling, and power configuration."
+      },
+      {
+        "title": "Network Configuration",
+        "description": "Initial setup of switching, routing, and firewalls to ensure day-one connectivity."
+      },
+      {
+        "title": "Asset Management",
+        "description": "Detailed tagging and documentation of every deployed asset for your CMDB."
+      }
+    ],
+    "process": [
+      {
+        "step": "01",
+        "title": "Requirement Definition",
+        "description": "Specifying the exact hardware configurations (BOM) needed to support your workloads."
+      },
+      {
+        "step": "02",
+        "title": "Sourcing & Logistics",
+        "description": "Coordinating with vendors to ensure timely delivery of hardware to the deployment site."
+      },
+      {
+        "step": "03",
+        "title": "On-Site Deployment",
+        "description": "Physical installation, cabling, and labeling performed by our field engineering teams."
+      },
+      {
+        "step": "04",
+        "title": "Commissioning",
+        "description": "Power-on self-tests, firmware updates, and acceptance testing before handover."
+      }
+    ],
+    "deliverables": [
+      "Installed Infrastructure",
+      "Network Configurations",
+      "Security Hardening",
+      "As-Built Documentation"
+    ],
+    "technologies": ["Cisco", "Dell EMC", "Fortinet", "VMware", "APC"],
+    "cta": {
+      "label": "Request Infrastructure Proposal",
+      "href": "/get-proposal"
+    }
+  },
+
+  "edge-compute-solutions": {
+    "title": "Edge Computing Solutions",
+    "hero": {
+      "headline": "Compute Where Data Is Created",
+      "subhead": "Low-latency edge platforms for real-time operations. Bring intelligence to the factory floor, oil rig, or retail store.",
+      "stats": [
+        { "label": "Latency", "value": "< 5ms" },
+        { "label": "Reliability", "value": "Rugged" },
+        { "label": "Sync", "value": "Cloud-Native" }
+      ]
+    },
+    "benefits": [
+      {
+        "title": "Real-time Processing",
+        "description": "Process data locally for immediate decision-making without waiting for cloud round-trips."
+      },
+      {
+        "title": "Bandwidth Optimization",
+        "description": "Filter and aggregate data at the edge, sending only relevant insights to the cloud to save costs."
+      },
+      {
+        "title": "Offline Autonomy",
+        "description": "Ensure critical operations continue running even when internet connectivity is lost."
+      },
+      {
+        "title": "Industrial Ruggedness",
+        "description": "Hardware and software designed to withstand harsh environments (temperature, vibration, dust)."
+      }
+    ],
+    "process": [
+      {
+        "step": "01",
+        "title": "Use-Case Analysis",
+        "description": "Identifying the specific latency and reliability requirements of your edge workload."
+      },
+      {
+        "step": "02",
+        "title": "Platform Design",
+        "description": "Selecting the right mix of ruggedized hardware and lightweight container orchestration."
+      },
+      {
+        "step": "03",
+        "title": "Fleet Deployment",
+        "description": "Zero-touch provisioning of edge nodes across hundreds or thousands of locations."
+      },
+      {
+        "step": "04",
+        "title": "Centralized Management",
+        "description": "Setting up a control plane to monitor, patch, and update the entire edge fleet remotely."
+      }
+    ],
+    "deliverables": [
+      "Edge Compute Nodes",
+      "Management Dashboards",
+      "Secure Connectivity",
+      "Edge Application Stack"
+    ],
+    "technologies": [
+      "IoT",
+      "Kubernetes (K3s)",
+      "Linux",
+      "Industrial PCs",
+      "Azure IoT Edge"
+    ],
+    "cta": {
+      "label": "Deploy Edge Solutions",
+      "href": "/get-proposal"
+    }
+  },
+
+  "managed-cloud-operations": {
+    "title": "Managed Cloud Operations",
+    "hero": {
+      "headline": "Operate with Confidence",
+      "subhead": "24/7 monitoring, incident response, and SLA-backed operations. We watch the screens so you can sleep.",
+      "stats": [
+        { "label": "Coverage", "value": "24/7/365" },
+        { "label": "Response", "value": "15 Min" },
+        { "label": "Resolution", "value": "SLA Backed" }
+      ]
+    },
+    "benefits": [
+      {
+        "title": "Proactive Monitoring",
+        "description": "We detect and resolve issues before they impact your users, using advanced alerting and thresholds."
+      },
+      {
+        "title": "Incident Management",
+        "description": "Rapid response teams dedicated to troubleshooting outages and restoring service within SLA."
+      },
+      {
+        "title": "Security Patching",
+        "description": "Regular OS and application patching to keep your environment secure against new threats."
+      },
+      {
+        "title": "Cost Optimization",
+        "description": "Ongoing reviews of your cloud usage to identify waste and implement savings plans."
+      }
+    ],
+    "process": [
+      {
+        "step": "01",
+        "title": "Onboarding & Baseline",
+        "description": "Documenting your environment, setting up access, and establishing a performance baseline."
+      },
+      {
+        "step": "02",
+        "title": "Monitoring Setup",
+        "description": "Configuring dashboards, alerts, and escalation policies tailored to your business criticality."
+      },
+      {
+        "step": "03",
+        "title": "SLA Definition",
+        "description": "Agreeing on guaranteed response and resolution times for different severity levels."
+      },
+      {
+        "step": "04",
+        "title": "Continuous Operation",
+        "description": "Monthly reporting, quarterly business reviews, and continuous improvement of runbooks."
+      }
+    ],
+    "deliverables": [
+      "Operational Dashboards",
+      "Incident Reports",
+      "Monthly SLA Reports",
+      "Cost Savings Analysis"
+    ],
+    "technologies": [
+      "Prometheus",
+      "Grafana",
+      "CloudWatch",
+      "PagerDuty",
+      "ServiceNow"
+    ],
+    "cta": {
+      "label": "Start Managed Operations",
+      "href": "/get-proposal"
+    }
+  },
+
+  "infrastructure-managed-services": {
+    "title": "Infrastructure Managed Services",
+    "hero": {
+      "headline": "Reliable Infrastructure, Managed End-to-End",
+      "subhead": "Ongoing management of on-prem, hybrid, and cloud infrastructure. Focus on your business, not your servers.",
+      "stats": [
+        { "label": "Assets", "value": "Managed" },
+        { "label": "Availability", "value": "High" },
+        { "label": "Support", "value": "Tier 1-3" }
+      ]
+    },
+    "benefits": [
+      {
+        "title": "Holistic Monitoring",
+        "description": "Unified view of health across servers, storage, networking, and virtualization layers."
+      },
+      {
+        "title": "Capacity Planning",
+        "description": "Predictive analysis to forecast when you need more storage or compute, preventing bottlenecks."
+      },
+      {
+        "title": "Vendor Coordination",
+        "description": "We handle the RMAs and support tickets with hardware vendors (Dell, Cisco, etc.) on your behalf."
+      },
+      {
+        "title": "Lifecycle Management",
+        "description": "Tracking asset age and warranty status to plan timely refreshes and avoid obsolescence."
+      }
+    ],
+    "process": [
+      {
+        "step": "01",
+        "title": "Infrastructure Audit",
+        "description": "Creating a complete inventory of assets and assessing their current health and warranty status."
+      },
+      {
+        "step": "02",
+        "title": "Operational Transition",
+        "description": "Installing monitoring agents, securing remote access, and transferring knowledge to our NOC."
+      },
+      {
+        "step": "03",
+        "title": "Steady State",
+        "description": "Routine maintenance, backups, patching, and 24/7 eyes-on-glass monitoring."
+      },
+      {
+        "step": "04",
+        "title": "Strategic Review",
+        "description": "Regular consulting on infrastructure evolution, upgrades, and cloud migration opportunities."
+      }
+    ],
+    "deliverables": [
+      "Managed Infrastructure",
+      "Operational Reports",
+      "Lifecycle Plans",
+      "Backup Validation Logs"
+    ],
+    "technologies": [
+      "VMware",
+      "Linux",
+      "Windows Server",
+      "SolarWinds",
+      "Nagios"
+    ],
+    "cta": {
+      "label": "Manage My Infrastructure",
+      "href": "/get-proposal"
+    }
+  },
+
+  "cybersecurity-governance": {
+    "title": "Cybersecurity & Governance",
+    "hero": {
+      "headline": "Zero Trust Security for the Modern Enterprise",
+      "subhead": "Protect your assets with military-grade encryption, continuous compliance automation, and proactive threat hunting.",
+      "stats": [
+        { "label": "Threats Blocked", "value": "99.9%" },
+        { "label": "Compliance", "value": "Automated" },
+        { "label": "Response", "value": "24/7 SOC" }
+      ]
+    },
+    "benefits": [
+      {
+        "title": "Zero Trust Architecture",
+        "description": "We implement 'never trust, always verify' protocols across your network, ensuring strict identity verification for every user and device."
+      },
+      {
+        "title": "Automated Compliance",
+        "description": "Streamline audits for SOC2, HIPAA, GDPR, and ISO 27001 with infrastructure-as-code that self-documents adherence."
+      },
+      {
+        "title": "Supply Chain Security",
+        "description": "Secure your CI/CD pipelines and software dependencies (SBOM) to prevent upstream attacks and vulnerabilities."
+      },
+      {
+        "title": "Resilient Identity Management",
+        "description": "Centralized IAM (Identity and Access Management) with MFA and SSO to eliminate weak links in user authentication."
+      }
+    ],
+    "process": [
+      {
+        "step": "01",
+        "title": "Vulnerability Assessment",
+        "description": "We conduct deep penetration testing and architecture reviews to find cracks in your current defenses."
+      },
+      {
+        "step": "02",
+        "title": "Security Blueprinting",
+        "description": "Designing a defense-in-depth strategy that layers network, application, and data security controls."
+      },
+      {
+        "step": "03",
+        "title": "Remediation & Hardening",
+        "description": "Patching vulnerabilities, locking down configurations, and deploying security agents (EDR/XDR)."
+      },
+      {
+        "step": "04",
+        "title": "Continuous Governance",
+        "description": "Establishing automated monitoring and regular audit cadences to ensure security posture doesn't drift."
+      }
+    ],
+    "deliverables": [
+      "Penetration Test Reports",
+      "SOC2 Readiness Checklist",
+      "Zero Trust Implementation",
+      "Incident Response Plan"
+    ],
+    "technologies": [
+      "CrowdStrike",
+      "Okta",
+      "Vault",
+      "Palo Alto",
+      "Splunk",
+      "Wiz"
+    ],
+    "cta": {
+      "label": "Secure Your Infrastructure",
+      "href": "/get-proposal"
+    }
+  }
+}

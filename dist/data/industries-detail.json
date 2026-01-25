@@ -1,0 +1,517 @@
+{
+  "healthcare-life-sciences": {
+    "title": "Healthcare & Life Sciences",
+    "hero": {
+      "headline": "Digital Healthcare Platforms Built for Trust",
+      "subhead": "Secure, compliant systems designed for patient care, research, and operational excellence. We bridge the gap between legacy EHRs and modern cloud innovation.",
+      "stats": [
+        { "label": "HIPAA", "value": "Compliant" },
+        { "label": "Uptime", "value": "99.99%" },
+        { "label": "Data Security", "value": "End-to-End" }
+      ]
+    },
+    "overview": "InfraTech delivers healthcare technology solutions that meet strict regulatory requirements while enabling innovation. We help providers and payers unlock the value of patient data without compromising privacy.",
+    "challenges": [
+      {
+        "title": "Data Silos & Interoperability",
+        "description": "Patient data is trapped in fragmented legacy systems (EHR/EMR), making a unified view of the patient journey impossible."
+      },
+      {
+        "title": "Regulatory Burden",
+        "description": "Navigating HIPAA, HITECH, and GDPR requirements requires specialized architectural controls and continuous audit readiness."
+      },
+      {
+        "title": "Cybersecurity Threats",
+        "description": "Healthcare is the #1 target for ransomware. Protecting sensitive PHI requires defense-in-depth strategies."
+      },
+      {
+        "title": "Legacy Modernization",
+        "description": "Migrating mission-critical clinical applications to the cloud without downtime or data loss."
+      }
+    ],
+    "solutions": [
+      {
+        "title": "Interoperability Engine",
+        "description": "FHIR-based APIs that connect disparate EHRs, labs, and payer systems into a single data lake."
+      },
+      {
+        "title": "Secure Patient Portals",
+        "description": "Web and mobile experiences for scheduling, telehealth, and records access with MFA and identity verification."
+      },
+      {
+        "title": "Clinical Data Analytics",
+        "description": "AI-driven dashboards for population health management and operational efficiency."
+      },
+      {
+        "title": "Medical IoT Infrastructure",
+        "description": "Secure segmentation for connected medical devices (IoMT) to prevent lateral movement of threats."
+      }
+    ],
+    "capabilities": [
+      {
+        "title": "HIPAA-Compliant DevOps",
+        "description": "CI/CD pipelines with automated security scanning and compliance checks built-in."
+      },
+      {
+        "title": "Zero-Trust Architecture",
+        "description": "Identity-based access controls ensuring only authorized personnel can access PHI."
+      },
+      {
+        "title": "Cloud Migration",
+        "description": "Moving workloads to AWS/Azure HealthLake with encrypted storage and transmission."
+      },
+      {
+        "title": "24/7 Clinical Support",
+        "description": "Helpdesk services familiar with clinical workflows and urgency."
+      }
+    ],
+    "useCases": [
+      {
+        "title": "Telemedicine Platform",
+        "description": "Built a scalable video consultation platform handling 10k+ daily visits during peak demand."
+      },
+      {
+        "title": "Hospital Operations Center",
+        "description": "Integrated IoT sensors to track bed availability and asset utilization in real-time."
+      },
+      {
+        "title": "Precision Medicine Data Lake",
+        "description": "Aggregated genomic and phenotypic data for a leading research institution."
+      }
+    ],
+    "cta": {
+      "label": "Discuss Healthcare Solutions",
+      "href": "/get-proposal"
+    }
+  },
+
+  "banking-financial-services": {
+    "title": "Banking & FinTech",
+    "hero": {
+      "headline": "High-Velocity Finance, Zero-Compromise Security",
+      "subhead": "Resilient infrastructure for trading, banking, and payments. We engineer speed and security into the core of your financial systems.",
+      "stats": [
+        { "label": "Latency", "value": "Microsec" },
+        { "label": "Compliance", "value": "PCI-DSS" },
+        { "label": "Fraud Blocked", "value": "Real-time" }
+      ]
+    },
+    "overview": "From high-frequency trading floors to consumer banking apps, we build the digital backbone of modern finance. Our solutions prioritize data integrity, transaction speed, and regulatory compliance.",
+    "challenges": [
+      {
+        "title": "Legacy Core Banking",
+        "description": "Mainframe-based core systems stifle innovation and make integration with modern fintech apps difficult."
+      },
+      {
+        "title": "Fraud & Risk",
+        "description": "Sophisticated cyber attacks require real-time detection capabilities that don't slow down legitimate transactions."
+      },
+      {
+        "title": "Regulatory Complexity",
+        "description": "Meeting evolving standards (SOX, PCI-DSS, PSD2) across multiple jurisdictions."
+      },
+      {
+        "title": "Customer Expectations",
+        "description": "Users demand instant, mobile-first banking experiences with 100% uptime."
+      }
+    ],
+    "solutions": [
+      {
+        "title": "Open Banking APIs",
+        "description": "Secure API gateways that allow safe integration with third-party fintech services and partners."
+      },
+      {
+        "title": "Real-Time Fraud Detection",
+        "description": "Machine learning models processing transaction streams to flag anomalies in milliseconds."
+      },
+      {
+        "title": "High-Frequency Trading Infra",
+        "description": "Colocated, low-latency server farms and dark fiber connectivity for algo-trading."
+      },
+      {
+        "title": "Blockchain Ledgers",
+        "description": "Private permissioned blockchains for secure, transparent settlement and clearing."
+      }
+    ],
+    "capabilities": [
+      {
+        "title": "PCI-DSS Certification",
+        "description": "Infrastructure designed and audited to meet the highest payment security standards."
+      },
+      {
+        "title": "Disaster Recovery",
+        "description": "Geo-redundant data centers ensuring zero RPO/RTO for critical ledgers."
+      },
+      {
+        "title": "Mainframe Offloading",
+        "description": "CDC (Change Data Capture) patterns to stream mainframe data to the cloud for analytics."
+      },
+      {
+        "title": "Identity Governance",
+        "description": "Robust IAM systems to manage employee access and customer KYC/AML workflows."
+      }
+    ],
+    "useCases": [
+      {
+        "title": "Digital Neobank Launch",
+        "description": "Built the entire cloud infrastructure for a challenger bank, launching in 6 months."
+      },
+      {
+        "title": "Trading Floor Refit",
+        "description": "Upgraded network switching and desktop compute for a NYC trading desk."
+      },
+      {
+        "title": "Payment Gateway",
+        "description": "Designed a high-availability gateway processing $5B+ annually."
+      }
+    ],
+    "cta": {
+      "label": "Modernize Financial Systems",
+      "href": "/get-proposal"
+    }
+  },
+
+  "manufacturing-industry-4": {
+    "title": "Manufacturing & Industry 4.0",
+    "hero": {
+      "headline": "The Connected Factory Floor",
+      "subhead": "Bridging OT and IT. We deploy edge computing, digital twins, and industrial IoT to drive efficiency and predictive maintenance.",
+      "stats": [
+        { "label": "OEE Impact", "value": "+15%" },
+        { "label": "Downtime", "value": "-30%" },
+        { "label": "Connectivity", "value": "Private 5G" }
+      ]
+    },
+    "overview": "Industry 4.0 isn't just a buzzword. It's about getting real-time data from your machines to your decision-makers. We secure the OT network and enable cloud-based analytics.",
+    "challenges": [
+      {
+        "title": "IT/OT Convergence",
+        "description": "Connecting decades-old PLCs and SCADA systems to modern IP networks creates security gaps."
+      },
+      {
+        "title": "Unplanned Downtime",
+        "description": "Reactive maintenance costs millions. Machines fail without warning due to lack of visibility."
+      },
+      {
+        "title": "Data Latency",
+        "description": "Sending terabytes of sensor data to the cloud is too slow for real-time process control."
+      },
+      {
+        "title": "Supply Chain Visibility",
+        "description": "Lack of transparency into raw material flows and inventory levels."
+      }
+    ],
+    "solutions": [
+      {
+        "title": "Industrial Edge Compute",
+        "description": "Processing sensor data locally on the factory floor for sub-millisecond decision making."
+      },
+      {
+        "title": "Digital Twins",
+        "description": "Creating virtual replicas of production lines to simulate changes before physical implementation."
+      },
+      {
+        "title": "Predictive Maintenance",
+        "description": "Vibration and acoustic monitoring to predict bearing failures weeks in advance."
+      },
+      {
+        "title": "OT Security Segmentation",
+        "description": "Firewalling industrial zones (Purdue Model) to prevent ransomware from stopping production."
+      }
+    ],
+    "capabilities": [
+      {
+        "title": "Ruggedized Deployment",
+        "description": "Installing IP67-rated hardware that withstands heat, dust, and vibration."
+      },
+      {
+        "title": "Private 5G Networks",
+        "description": "Deploying ultra-reliable, low-latency wireless for AGVs and mobile robots."
+      },
+      {
+        "title": "MES Integration",
+        "description": "Connecting ERP systems directly to Manufacturing Execution Systems."
+      },
+      {
+        "title": "Vision Quality Control",
+        "description": "Deploying computer vision cameras to automate defect detection on the line."
+      }
+    ],
+    "useCases": [
+      {
+        "title": "Automotive Assembly",
+        "description": "Deployed 500+ IoT sensors to track chassis movement and torque tool data."
+      },
+      {
+        "title": "Chemical Plant Safety",
+        "description": "Implemented worker safety monitoring using wearables and geofencing."
+      },
+      {
+        "title": "Smart Warehousing",
+        "description": "Automated inventory tracking with RFID and autonomous drones."
+      }
+    ],
+    "cta": {
+      "label": "Build the Smart Factory",
+      "href": "/get-proposal"
+    }
+  },
+
+  "retail-logistics": {
+    "title": "Retail & Global Logistics",
+    "hero": {
+      "headline": "Supply Chains That Never Stop",
+      "subhead": "Omnichannel retail platforms and intelligent logistics infrastructure. Deliver the right product, to the right place, at the right time.",
+      "stats": [
+        { "label": "Scale", "value": "Global" },
+        { "label": "Uptime", "value": "100% Peak" },
+        { "label": "Speed", "value": "Real-time" }
+      ]
+    },
+    "overview": "Consumer expectations for speed and visibility are higher than ever. We help retailers and logistics providers build resilient, scalable digital supply chains.",
+    "challenges": [
+      {
+        "title": "Peak Season Scaling",
+        "description": "Websites crashing and warehouses jamming during Black Friday/Cyber Monday surges."
+      },
+      {
+        "title": "Inventory Accuracy",
+        "description": "Ghost inventory and stockouts due to disconnected POS and warehouse systems."
+      },
+      {
+        "title": "Last Mile Complexity",
+        "description": "Optimizing delivery routes and costs in a complex urban environment."
+      },
+      {
+        "title": "Omnichannel Disconnect",
+        "description": "Buy Online, Pick Up In-Store (BOPIS) requires tight integration of digital and physical stores."
+      }
+    ],
+    "solutions": [
+      {
+        "title": "Elastic E-Commerce Cloud",
+        "description": "Auto-scaling infrastructure that handles 100x traffic spikes without degradation."
+      },
+      {
+        "title": "Smart Warehousing",
+        "description": "Robotics integration and vision picking systems to speed up fulfillment."
+      },
+      {
+        "title": "Unified Commerce Platform",
+        "description": "Single view of customer and inventory across mobile, web, and brick-and-mortar."
+      },
+      {
+        "title": "Fleet IoT Tracking",
+        "description": "Real-time cold chain monitoring and route optimization for delivery trucks."
+      }
+    ],
+    "capabilities": [
+      {
+        "title": "High-Performance Wi-Fi",
+        "description": "Blanket coverage for warehouses and large retail footprints for handheld scanners."
+      },
+      {
+        "title": "Data Engineering",
+        "description": "Demand forecasting models using historical sales and weather data."
+      },
+      {
+        "title": "POS Security",
+        "description": "End-to-end encryption for point-of-sale terminals and payment gateways."
+      },
+      {
+        "title": "Micro-Fulfillment",
+        "description": "Designing compact automated fulfillment centers in urban cores."
+      }
+    ],
+    "useCases": [
+      {
+        "title": "Global Fashion Retailer",
+        "description": "Migrated on-prem ERP to cloud, enabling real-time global inventory visibility."
+      },
+      {
+        "title": "Cold Chain Logistics",
+        "description": "Deployed IoT sensors to monitor vaccine shipments globally."
+      },
+      {
+        "title": "Scan & Go Pilot",
+        "description": "Rolled out cashier-less checkout infrastructure for a grocery chain."
+      }
+    ],
+    "cta": {
+      "label": "Optimize Logistics Operations",
+      "href": "/get-proposal"
+    }
+  },
+
+  "energy-utilities": {
+    "title": "Energy & Utilities",
+    "hero": {
+      "headline": "The Smart Grid, Secured",
+      "subhead": "Modernizing critical infrastructure for the renewable age. Grid analytics, remote monitoring, and NERC-CIP compliance.",
+      "stats": [
+        { "label": "Grid Reliability", "value": "High" },
+        { "label": "Security", "value": "NERC-CIP" },
+        { "label": "Renewables", "value": "Integrated" }
+      ]
+    },
+    "overview": "The energy transition requires a smarter, more flexible grid. We help utilities digitize their assets while protecting critical infrastructure from cyber threats.",
+    "challenges": [
+      {
+        "title": "Distributed Energy Resources",
+        "description": "Managing the influx of solar, wind, and battery storage on a grid designed for one-way flow."
+      },
+      {
+        "title": "Aging Infrastructure",
+        "description": "Retrofitting digital sensors onto analog substations and transformers."
+      },
+      {
+        "title": "Regulatory Compliance",
+        "description": "Strict adherence to NERC-CIP standards for critical infrastructure protection."
+      },
+      {
+        "title": "Workforce Safety",
+        "description": "Monitoring field workers in remote and hazardous locations."
+      }
+    ],
+    "solutions": [
+      {
+        "title": "Grid Analytics Platform",
+        "description": "Ingesting smart meter (AMI) data to balance load and detect outages instantly."
+      },
+      {
+        "title": "Substation Security",
+        "description": "Physical and cyber security perimeter defense for remote assets."
+      },
+      {
+        "title": "Renewable Asset Mgmt",
+        "description": "IoT monitoring for wind turbines and solar farms to optimize output."
+      },
+      {
+        "title": "Digital Field Worker",
+        "description": "Mobile apps and AR headsets for technicians performing maintenance."
+      }
+    ],
+    "capabilities": [
+      {
+        "title": "SCADA Virtualization",
+        "description": "Moving control systems to secure, redundant private clouds."
+      },
+      {
+        "title": "Rugged Comms",
+        "description": "Satellite and private LTE backhaul for remote infrastructure."
+      },
+      {
+        "title": "Predictive Maintenance",
+        "description": "Using thermal imaging and vibration data to prevent transformer failures."
+      },
+      {
+        "title": "Cyber-Physical Security",
+        "description": "Unified SOC monitoring for both IT networks and OT control systems."
+      }
+    ],
+    "useCases": [
+      {
+        "title": "Smart Meter Rollout",
+        "description": "Managed the data infrastructure for 2M+ smart meters."
+      },
+      {
+        "title": "Wind Farm Connectivity",
+        "description": "Designed the fiber and wireless network for an offshore wind project."
+      },
+      {
+        "title": "Grid Operations Center",
+        "description": "Built the video wall and data visualization for a regional DSO."
+      }
+    ],
+    "cta": {
+      "label": "Design Energy Systems",
+      "href": "/get-proposal"
+    }
+  },
+
+  "public-sector": {
+    "title": "Public Sector & Defense",
+    "hero": {
+      "headline": "Mission Success, Secure & Scalable",
+      "subhead": "Modernizing government IT with FedRAMP-ready cloud, secure communications, and citizen-centric digital services.",
+      "stats": [
+        { "label": "Security", "value": "FedRAMP" },
+        { "label": "Accessibility", "value": "Section 508" },
+        { "label": "Cost", "value": "Optimized" }
+      ]
+    },
+    "overview": "Government agencies face the dual challenge of modernization and strict security mandates. We deliver secure, compliant IT solutions that improve service delivery to citizens and warfighters.",
+    "challenges": [
+      {
+        "title": "Legacy Debt",
+        "description": "Decades-old mainframes handling critical citizen data (tax, benefits)."
+      },
+      {
+        "title": "Security Mandates",
+        "description": "Meeting NIST 800-53, FedRAMP, and DoD IL5 requirements is complex and costly."
+      },
+      {
+        "title": "Procurement Speed",
+        "description": "Traditional acquisition cycles are too slow for modern tech needs."
+      },
+      {
+        "title": "Citizen Experience",
+        "description": "Public expectation for Amazon-like digital services vs. clunky gov portals."
+      }
+    ],
+    "solutions": [
+      {
+        "title": "GovCloud Migration",
+        "description": "Secure landing zones in AWS GovCloud or Azure Government for sensitive workloads."
+      },
+      {
+        "title": "Citizen Digital Services",
+        "description": "User-centric web portals for permitting, benefits, and licensing."
+      },
+      {
+        "title": "Tactical Edge Compute",
+        "description": "Deploying servers in rugged cases for disaster response and field ops."
+      },
+      {
+        "title": "Secure Collaboration",
+        "description": "Encrypted email and file sharing for inter-agency cooperation."
+      }
+    ],
+    "capabilities": [
+      {
+        "title": "Compliance Automation",
+        "description": "Inheriting security controls to accelerate ATO (Authority to Operate)."
+      },
+      {
+        "title": "Identity Management",
+        "description": "PIV/CAC card integration and robust MFA for federal employees."
+      },
+      {
+        "title": "Data Sovereignty",
+        "description": "Ensuring all data remains within national borders and US-person supported."
+      },
+      {
+        "title": "Accessibility Design",
+        "description": "Building interfaces that fully comply with WCAG and Section 508 standards."
+      }
+    ],
+    "useCases": [
+      {
+        "title": "Benefits Portal Modernization",
+        "description": "Rebuilt a state unemployment system to handle 10x load during crisis."
+      },
+      {
+        "title": "Smart City Infrastructure",
+        "description": "IoT lighting and traffic management for a major metro area."
+      },
+      {
+        "title": "Secure Remote Work",
+        "description": "Deployed VDI solution for 5,000 agency staff during remote transition."
+      }
+    ],
+    "cta": {
+      "label": "Modernize Government IT",
+      "href": "/get-proposal"
+    }
+  }
+}

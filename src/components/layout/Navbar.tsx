@@ -1,30 +1,29 @@
+// src/components/layout/Navbar.tsx
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { TopNav } from "./TopNav";
 import { CategoryRow } from "./CategoryRow";
 import { Button } from "@/components/ui/button";
-import { useNavData } from "@/hooks/use-content";
+import { useSite } from "@/context/SiteContext";
 import { ArrowRight } from "lucide-react";
 
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  // Use the hook to fetch data (as per Section 5 of Doc)
-  const { data, isLoading } = useNavData();
+  // ✅ NEW: read from SiteContext
+  const { nav } = useSite();
 
-  // Scroll handler for sticky effects
+  // Scroll handler
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
+    const handleScroll = () => setIsScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Safe fallback if data is loading or missing
-  const primaryLinks = data?.primary || [];
-  const categoryLinks = data?.categories || [];
+  // Safe fallbacks
+  const primaryLinks = nav?.primary || [];
+  const categoryLinks = nav?.categories || [];
 
   return (
     <header
@@ -38,7 +37,7 @@ export const Navbar = () => {
         setIsMobileMenuOpen={setIsMobileMenuOpen}
       />
 
-      {/* Category Row - Hides on scroll to save space, reappears at top */}
+      {/* Category Row */}
       <div
         className={`transition-all duration-300 origin-top ${
           isScrolled ? "h-0 opacity-0 overflow-hidden" : "h-auto opacity-100"
@@ -47,7 +46,7 @@ export const Navbar = () => {
         <CategoryRow categories={categoryLinks} />
       </div>
 
-      {/* Mobile Menu Overlay */}
+      {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="md:hidden absolute top-16 left-0 w-full bg-background border-b border-border shadow-xl animate-in slide-in-from-top-5">
           <div className="p-4 space-y-4">
@@ -67,7 +66,7 @@ export const Navbar = () => {
 
             <div className="border-t border-border pt-4">
               <p className="text-xs font-semibold text-muted-foreground uppercase mb-3">
-                Solutions
+                Industries
               </p>
               <div className="grid grid-cols-2 gap-2">
                 {categoryLinks.map((cat) => (

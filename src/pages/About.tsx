@@ -1,139 +1,162 @@
+import { useAboutPageData } from "@/hooks/use-content";
 import { Achievements } from "@/components/home/Achievements";
-import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { ShieldCheck } from "lucide-react";
+import { Skeleton } from "@/components/ui/skeleton";
+import { ShieldCheck, Cpu, Search, Award } from "lucide-react";
 
-// Mock data (usually fetched from API)
-const team = [
-  {
-    name: "Alex Mercer",
-    role: "CEO & Founder",
-    bio: "Ex-Google Cloud architect with 15 years in distributed systems.",
-    initials: "AM",
-  },
-  {
-    name: "Dr. Sarah Chen",
-    role: "CTO",
-    bio: "PhD in Embedded Systems. Led IoT architecture for Smart City Metro.",
-    initials: "SC",
-  },
-  {
-    name: "James Wilson",
-    role: "VP of Engineering",
-    bio: "Specialist in Kubernetes operators and high-availability clusters.",
-    initials: "JW",
-  },
-  {
-    name: "Elena Rodriguez",
-    role: "Head of Product",
-    bio: "Previously led product at major cybersecurity firms.",
-    initials: "ER",
-  },
-];
-
-const certs = ["ISO 27001", "SOC2 Type II", "GDPR Compliant", "HIPAA Ready"];
+// Icon mapping for values
+const iconMap: Record<string, any> = {
+  ShieldCheck,
+  Cpu,
+  Search,
+};
 
 const About = () => {
+  const { data, isLoading } = useAboutPageData();
+
+  if (isLoading) {
+    return (
+      <div className="min-h-screen pt-32 container px-4 space-y-12">
+        <Skeleton className="h-[40vh] w-full rounded-3xl" />
+        <Skeleton className="h-24 w-full" />
+      </div>
+    );
+  }
+
+  if (!data) return null;
+
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <main className="flex-grow pt-[110px]">
-        {/* Hero */}
-        <div className="container mx-auto px-4 py-20 text-center">
-          <h1 className="text-4xl md:text-6xl font-heading font-bold text-foreground mb-6">
-            Building the <span className="gradient-text">Intelligent Edge</span>
+        {/* 1. Hero Section */}
+        <section className="container mx-auto px-4 py-20 text-center max-w-4xl">
+          <div className="inline-flex items-center px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-widest mb-6">
+            Our Story
+          </div>
+          <h1 className="text-4xl md:text-6xl font-heading font-bold mb-6 text-foreground">
+            {data.hero.headline}
           </h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            InfraTech bridges the gap between physical infrastructure and
-            digital intelligence. We enable enterprises to scale securely from
-            the data center to the rugged edge.
+          <p className="text-xl text-muted-foreground leading-relaxed">
+            {data.hero.subhead}
           </p>
-        </div>
+        </section>
 
-        {/* Stats Strip */}
+        {/* 2. Global Achievements (Existing Component) */}
         <Achievements />
 
-        {/* Story / Mission */}
-        <div className="container mx-auto px-4 py-20">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-              <h2 className="text-3xl font-bold font-heading">Our Mission</h2>
-              <div className="prose dark:prose-invert text-muted-foreground">
-                <p>
-                  Founded in 2020, InfraTech was born from a simple observation:
-                  hardware and software were evolving in silos. Infrastructure
-                  teams struggled to manage the complexity of modern
-                  cloud-native applications running on diverse, rugged hardware.
+        {/* 3. Mission & Story */}
+        <section className="bg-muted/30 py-24">
+          <div className="container mx-auto px-4">
+            <div className="grid lg:grid-cols-2 gap-16 items-center">
+              <div className="space-y-6">
+                <h2 className="text-3xl font-heading font-bold">
+                  {data.story.headline}
+                </h2>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  {data.story.content}
                 </p>
-                <p>
-                  We set out to build a unified platform—converging OT
-                  (Operational Technology) and IT (Information Technology).
-                  Today, we support over 200 enterprise clients in
-                  manufacturing, finance, and smart cities.
-                </p>
+
+                {/* Embedded Stats */}
+                <div className="grid grid-cols-3 gap-8 pt-8 border-t border-border">
+                  {data.story.stats.map((stat) => (
+                    <div key={stat.label}>
+                      <div className="text-2xl font-bold text-primary">
+                        {stat.value}
+                      </div>
+                      <div className="text-sm text-muted-foreground uppercase tracking-wide">
+                        {stat.label}
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
-              <div className="flex flex-wrap gap-3 pt-4">
-                {certs.map((cert) => (
-                  <Badge
-                    key={cert}
-                    variant="outline"
-                    className="px-3 py-1.5 border-primary/20 text-foreground flex gap-2"
-                  >
-                    <ShieldCheck className="w-3 h-3 text-primary" />
-                    {cert}
-                  </Badge>
-                ))}
+
+              {/* Values Grid */}
+              <div className="grid gap-6">
+                {data.values.map((val, idx) => {
+                  const Icon = iconMap[val.icon] || Cpu;
+                  return (
+                    <Card key={idx} className="bg-background border-border">
+                      <CardContent className="p-6 flex items-start gap-4">
+                        <div className="p-3 rounded-lg bg-primary/10 text-primary">
+                          <Icon className="w-6 h-6" />
+                        </div>
+                        <div>
+                          <h3 className="font-bold text-lg mb-2">
+                            {val.title}
+                          </h3>
+                          <p className="text-muted-foreground text-sm">
+                            {val.description}
+                          </p>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  );
+                })}
               </div>
-            </div>
-            <div className="bg-secondary/30 rounded-2xl h-[400px] border border-border relative overflow-hidden flex items-center justify-center">
-              <div className="absolute inset-0 bg-gradient-hero opacity-50" />
-              <span className="text-muted-foreground font-medium relative z-10">
-                [Office/Team Photo Placeholder]
-              </span>
             </div>
           </div>
-        </div>
+        </section>
 
-        {/* Team Grid */}
-        <div className="bg-muted/30 py-20 border-y border-border">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold font-heading mb-4">
-                Leadership Team
-              </h2>
-              <p className="text-muted-foreground">
-                Engineers, architects, and visionaries.
-              </p>
-            </div>
+        {/* 4. Leadership Team */}
+        <section className="container mx-auto px-4 py-24">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-3xl font-heading font-bold mb-4">
+              Leadership Team
+            </h2>
+            <p className="text-muted-foreground">
+              Engineers, architects, and visionaries leading the charge.
+            </p>
+          </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {team.map((member) => (
-                <Card
-                  key={member.name}
-                  className="border-border hover:border-primary/50 transition-colors text-center"
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {data.team.map((member) => (
+              <Card
+                key={member.id}
+                className="group border-border hover:border-primary/50 transition-colors text-center overflow-hidden"
+              >
+                <CardContent className="pt-8 pb-8 flex flex-col items-center gap-4">
+                  <Avatar className="w-24 h-24 border-2 border-primary/10 group-hover:border-primary/30 transition-colors">
+                    <AvatarImage src={`/images/team/${member.id}.jpg`} />
+                    <AvatarFallback className="text-xl font-heading font-bold bg-secondary text-primary">
+                      {member.initials}
+                    </AvatarFallback>
+                  </Avatar>
+                  <div>
+                    <h3 className="font-bold text-lg">{member.name}</h3>
+                    <p className="text-sm text-primary font-medium mb-3">
+                      {member.role}
+                    </p>
+                    <p className="text-sm text-muted-foreground leading-relaxed px-2">
+                      {member.bio}
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </section>
+
+        {/* 5. Certifications */}
+        <section className="bg-slate-950 text-white py-20">
+          <div className="container mx-auto px-4 text-center">
+            <p className="text-slate-400 uppercase tracking-widest text-sm font-bold mb-10">
+              Certified & Compliant
+            </p>
+            <div className="flex flex-wrap justify-center gap-4 md:gap-8">
+              {data.certifications.map((cert) => (
+                <div
+                  key={cert}
+                  className="flex items-center gap-2 px-6 py-3 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition-colors cursor-default"
                 >
-                  <CardContent className="pt-8 pb-8 flex flex-col items-center gap-4">
-                    <Avatar className="w-24 h-24 border-2 border-primary/20">
-                      <AvatarImage src="" />
-                      <AvatarFallback className="text-xl font-heading font-bold bg-primary/10 text-primary">
-                        {member.initials}
-                      </AvatarFallback>
-                    </Avatar>
-                    <div>
-                      <h3 className="font-bold text-lg">{member.name}</h3>
-                      <p className="text-sm text-primary font-medium mb-2">
-                        {member.role}
-                      </p>
-                      <p className="text-sm text-muted-foreground">
-                        {member.bio}
-                      </p>
-                    </div>
-                  </CardContent>
-                </Card>
+                  <Award className="w-4 h-4 text-primary" />
+                  <span className="font-medium text-sm">{cert}</span>
+                </div>
               ))}
             </div>
           </div>
-        </div>
+        </section>
       </main>
     </div>
   );

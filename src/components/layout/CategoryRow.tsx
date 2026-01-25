@@ -15,7 +15,7 @@ export const CategoryRow = ({ categories }: CategoryRowProps) => {
   const [moreOpen, setMoreOpen] = useState(false);
 
   return (
-    <div className="w-full border-b border-border bg-muted/30 hidden md:block">
+    <div className="w-full border-b border-border bg-background hidden md:block">
       <div className="container mx-auto px-4">
         <div className="flex items-center h-10 gap-4">
           <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider shrink-0">
