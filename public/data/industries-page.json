@@ -108,13 +108,13 @@
       "id": "compliance-shield",
       "headline": "Compliance is Not a Checkbox",
       "content": "In regulated industries, a security breach is an existential threat. Our 'Compliance-as-Code' frameworks ensure your infrastructure adheres to industry standards automatically, with audit trails generated in real-time.",
-      "image": "/images/industries/compliance-dashboard.jpg"
+      "image": "/images/industries/manufacturing.jpeg"
     },
     {
       "id": "digital-physical-bridge",
       "headline": "Bridging the Digital & Physical",
       "content": "Most partners only know software. We know how software interacts with MRI machines, assembly robots, and wind turbines. We design the full stack—from the sensor to the SaaS dashboard.",
-      "image": "/images/industries/digital-twin.jpg"
+      "image": "/images/industries/retail.jpeg"
     }
   ],
 

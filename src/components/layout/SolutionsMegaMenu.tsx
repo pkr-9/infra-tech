@@ -67,9 +67,26 @@ export const SolutionsMegaMenu = () => {
         onMouseLeave={() => scheduleClose(120)}
       >
         <div className="grid grid-cols-3 gap-6">
-          <MenuColumn title="Software Solutions" items={menu.software} />
-          <MenuColumn title="Infrastructure" items={menu.infrastructure} />
-          <MenuColumn title="Managed Services" items={menu.managed} />
+          {/* 1. Software uses default /solutions base */}
+          <MenuColumn
+            title="Software Solutions"
+            items={menu.software}
+            basePath="/solutions"
+          />
+
+          {/* 2. Infrastructure MUST use /infrastructure base */}
+          <MenuColumn
+            title="Infrastructure"
+            items={menu.infrastructure}
+            basePath="/infrastructure"
+          />
+
+          {/* 3. Managed Services usually live under /solutions (check your routes) */}
+          <MenuColumn
+            title="Managed Services"
+            items={menu.managed}
+            basePath="/solutions"
+          />
         </div>
 
         <div className="mt-6 border-t border-border pt-4 flex items-center justify-between">
@@ -96,9 +113,11 @@ export const SolutionsMegaMenu = () => {
 function MenuColumn({
   title,
   items,
+  basePath,
 }: {
   title: string;
   items: { label: string; slug: string }[];
+  basePath: string;
 }) {
   return (
     <div>
@@ -109,7 +128,8 @@ function MenuColumn({
         {items.map((item) => (
           <Link
             key={item.slug}
-            to={`/solutions/${item.slug}`}
+            // Use the dynamic basePath instead of hardcoded string
+            to={`${basePath}/${item.slug}`}
             className="text-sm hover:text-primary"
           >
             {item.label}

@@ -1,0 +1,28 @@
+{
+  "steps": [
+    {
+      "title": "Discover",
+      "points": [
+        "Workload analysis",
+        "Security requirements",
+        "Budget constraints"
+      ]
+    },
+    {
+      "title": "Design",
+      "points": [
+        "Network topology",
+        "Device standards",
+        "Software architecture"
+      ]
+    },
+    {
+      "title": "Procure",
+      "points": ["Vendor quotes", "Warranty mapping", "Logistics planning"]
+    },
+    {
+      "title": "Deploy",
+      "points": ["On-site installation", "Imaging & hardening", "UAT sign-off"]
+    }
+  ]
+}

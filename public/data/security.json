@@ -1,0 +1,16 @@
+{
+  "practices": [
+    "Secure configuration baselines",
+    "Supply-chain verification",
+    "Data handling controls",
+    "Least privilege",
+    "Asset tagging",
+    "Incident response support"
+  ],
+
+  "standards": [
+    "ISO 27001 aligned",
+    "SOC2 ready practices",
+    "GDPR aware handling"
+  ]
+}

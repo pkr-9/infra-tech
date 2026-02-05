@@ -157,6 +157,79 @@
       ],
       "industries": ["Finance", "Public Sector", "Healthcare"],
       "href": "/solutions/cybersecurity-governance"
+    },
+    {
+      "id": "feat-01-link",
+      "slug": "enterprise-application-modernization",
+      "title": "Application Modernization",
+      "category": "software",
+      "summary": "Refactor monolithic legacy systems into scalable, secure, and maintainable cloud-native microservices.",
+      "icon": "RefreshCw",
+      "tags": ["Legacy Migration", "Microservices", "Cloud-Native"],
+      "industries": ["Finance", "Healthcare", "Manufacturing"],
+      "href": "/solutions/enterprise-application-modernization"
+    },
+    {
+      "id": "SW-04",
+      "slug": "data-platform-engineering",
+      "title": "Data Platform Engineering",
+      "category": "software",
+      "summary": "Reliable, governed, and analytics-ready data foundations powering BI and AI initiatives.",
+      "icon": "Database",
+      "tags": ["Snowflake", "Data Lake", "ETL", "Governance"],
+      "industries": ["Retail", "Finance", "Tech"],
+      "href": "/solutions/data-platform-engineering"
+    },
+    {
+      "id": "MNG-02",
+      "slug": "infrastructure-managed-services",
+      "title": "Infrastructure Managed Services",
+      "category": "managed",
+      "summary": "Ongoing management of on-prem, hybrid, and cloud infrastructure with 24/7 monitoring.",
+      "icon": "ServerCog",
+      "tags": ["Hybrid Cloud", "Patching", "Monitoring", "SLA"],
+      "industries": ["All"],
+      "href": "/solutions/infrastructure-managed-services"
+    },
+    {
+      "id": "inf-03",
+      "slug": "network-connectivity",
+      "title": "Enterprise Networking",
+      "category": "infrastructure",
+      "summary": "Campus and branch connectivity. Designing and deploying core switching, SD-WAN overlays, and high-density Wi-Fi.",
+      "icon": "Wifi",
+      "tags": ["Cisco/Meraki", "SD-WAN", "Fiber"],
+      "href": "/infrastructure/network-connectivity"
+    },
+    {
+      "id": "inf-04",
+      "slug": "hybrid-cloud-hardware",
+      "title": "Hybrid Cloud Hardware",
+      "category": "infrastructure",
+      "summary": "On-premise infrastructure that integrates seamlessly with AWS Outposts, Azure Stack, or Google Anthos.",
+      "icon": "Cloud",
+      "tags": ["Azure Stack", "AWS Outposts", "Hybrid"],
+      "href": "/infrastructure/hybrid-cloud-hardware"
+    },
+    {
+      "id": "inf-05",
+      "slug": "security-physical",
+      "title": "Physical Security Systems",
+      "category": "infrastructure",
+      "summary": "Protecting your assets with integrated access control, IP video surveillance, and environmental monitoring.",
+      "icon": "ShieldCheck",
+      "tags": ["CCTV", "Access Control", "Biometrics"],
+      "href": "/infrastructure/security-physical"
+    },
+    {
+      "id": "inf-06",
+      "slug": "workplace-it",
+      "title": "Global Workplace IT",
+      "category": "infrastructure",
+      "summary": "Standardized equipment for your global workforce. Laptops, workstations, and conference room AV setups.",
+      "icon": "Laptop",
+      "tags": ["End-User Compute", "AV Solutions", "Logistics"],
+      "href": "/infrastructure/workplace-it"
     }
   ],
 

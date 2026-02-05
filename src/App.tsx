@@ -26,6 +26,11 @@ import BlogPostDetail from "@/pages/BlogPostDetail";
 import ROICalculatorPage from "./pages/resources/ROICalculatorPage";
 import Resources from "./pages/Resources";
 import GetProposal from "./pages/GetProposal";
+// import DeliveryProcess from "./pages/DeliveryProcess";
+// import EngagementModels from "./pages/EngagementModels";
+// import SecurityCompliance from "./pages/SecurityCompliance";
+// import ProcurementApproach from "./pages/ProcurementApproach";
+// import FAQ from "./pages/FAQ";
 
 // Footer Pages
 import Pricing from "./pages/Pricing";
@@ -83,6 +88,12 @@ const router = createBrowserRouter(
       <Route path="/docs" element={<Docs />} />
       <Route path="/security" element={<Security />} />
       <Route path="/privacy-policy" element={<Privacy />} />
+
+      {/* <Route path="/delivery-process" element={<DeliveryProcess />} />
+      <Route path="/engagement-models" element={<EngagementModels />} />
+      <Route path="/security-compliance" element={<SecurityCompliance />} />
+      <Route path="/procurement-approach" element={<ProcurementApproach />} />
+      <Route path="/faq" element={<FAQ />} /> */}
 
       <Route path="*" element={<NotFound />} />
     </Route>,

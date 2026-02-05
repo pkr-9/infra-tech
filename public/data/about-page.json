@@ -35,35 +35,35 @@
   ],
   "team": [
     {
-      "id": "alex-mercer",
-      "name": "Alex Mercer",
+      "id": "aarav-sharma",
+      "name": "Aarav Sharma",
       "role": "CEO & Founder",
-      "bio": "Ex-Google Cloud architect with 15 years in distributed systems engineering.",
-      "initials": "AM",
+      "bio": "Former cloud infrastructure lead with 15 years in distributed systems and platform engineering.",
+      "initials": "AS",
       "linkedin": "#"
     },
     {
-      "id": "sarah-chen",
-      "name": "Dr. Sarah Chen",
+      "id": "dr-ananya-iyer",
+      "name": "Dr. Ananya Iyer",
       "role": "CTO",
-      "bio": "PhD in Embedded Systems. Led IoT architecture for Smart City Metro projects.",
-      "initials": "SC",
+      "bio": "PhD in Embedded Systems. Led IoT architecture for smart transit and municipal projects.",
+      "initials": "AI",
       "linkedin": "#"
     },
     {
-      "id": "james-wilson",
-      "name": "James Wilson",
+      "id": "vivaan-patel",
+      "name": "Vivaan Patel",
       "role": "VP of Engineering",
-      "bio": "Specialist in Kubernetes operators and high-availability bare metal clusters.",
-      "initials": "JW",
+      "bio": "Specialist in Kubernetes operators and high-availability on‑prem clusters.",
+      "initials": "VP",
       "linkedin": "#"
     },
     {
-      "id": "elena-rodriguez",
-      "name": "Elena Rodriguez",
+      "id": "meera-menon",
+      "name": "Meera Menon",
       "role": "Head of Operations",
-      "bio": "Supply chain veteran who has managed logistics for major hardware OEMs.",
-      "initials": "ER",
+      "bio": "Supply chain leader who has managed logistics for major hardware OEMs.",
+      "initials": "MM",
       "linkedin": "#"
     }
   ],

@@ -176,7 +176,7 @@ const ServiceCard = ({ cap }: { cap: any }) => {
       to={cap.href || "/solutions"}
       className="group/card relative w-full h-full bg-transparent rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col border border-gray-100"
     >
-      <div className="relative flex-[6] overflow-hidden bg-gray-100">
+      <div className="relative flex-[8] overflow-hidden bg-gray-100">
         <img
           src={imgSrc}
           alt={cap.title || ""}
@@ -189,9 +189,13 @@ const ServiceCard = ({ cap }: { cap: any }) => {
         </div>
       </div>
 
-      <div className="relative flex-[4] p-5 flex flex-col justify-start bg-white">
-        <h3 className="text-base font-bold text-gray-900 mb-2">{cap.title}</h3>
-        <p className="text-xs text-gray-500 line-clamp-3">{cap.summary}</p>
+      <div className="relative flex-[2] p-5 flex flex-col justify-center items-center bg-white">
+        <h3 className="text-base text-center font-bold text-gray-900 mb-2">
+          {cap.title}
+        </h3>
+        <p className="text-xs text-center text-gray-500 line-clamp-3">
+          {cap.summary}
+        </p>
       </div>
     </Link>
   );

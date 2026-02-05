@@ -66,5 +66,53 @@
     "badge": "Engagement Models",
     "headline": "Flexible Commercial Structures",
     "subhead": "Tailored to enterprise procurement and delivery requirements."
+  },
+
+  "problemsWeSolve": [
+    {
+      "title": "Fragmented Vendors",
+      "desc": "Multiple suppliers for software, laptops, network and deployment create delays and accountability gaps."
+    },
+    {
+      "title": "Catalog Confusion",
+      "desc": "Public SKU marketplaces push inventory, not architecture-fit."
+    },
+    {
+      "title": "Deployment Risk",
+      "desc": "Hardware delivered without imaging, security hardening or site readiness."
+    }
+  ],
+
+  "valueProposition": [
+    {
+      "title": "Architecture-First Procurement",
+      "desc": "BOM designed by engineers before any vendor quote."
+    },
+    {
+      "title": "Vendor Neutral",
+      "desc": "Dell, HP, Lenovo, Cisco, Fortinet, Microsoft — chosen per workload."
+    },
+    {
+      "title": "On-Site Deployment",
+      "desc": "Imaging, network setup, rack & stack, UAT."
+    },
+    {
+      "title": "Lifecycle Support",
+      "desc": "Warranty, AMC, spares and refresh planning."
+    }
+  ],
+
+  "industriesPreview": [
+    "Manufacturing",
+    "Healthcare",
+    "Startups",
+    "BFSI",
+    "Education"
+  ],
+
+  "cta": {
+    "title": "Plan Your Technology Rollout",
+    "subtitle": "Share objectives — we return architecture + procurement plan.",
+    "action": "/get-proposal"
   }
 }

@@ -8,15 +8,19 @@
       { "label": "About", "href": "/about" },
       { "label": "Contact", "href": "/contact" }
     ],
+
     "categories": [
-      { "label": "Healthcare", "href": "/industries/healthcare" },
-      { "label": "Manufacturing", "href": "/industries/manufacturing" },
-      { "label": "Finance", "href": "/industries/finance" },
-      { "label": "Retail", "href": "/industries/retail" },
-      { "label": "Education", "href": "/industries/education" },
-      { "label": "Logistics", "href": "/industries/logistics" },
-      { "label": "Energy", "href": "/industries/energy" }
+      { "label": "Healthcare", "href": "/industries/healthcare-life-sciences" },
+      {
+        "label": "Manufacturing",
+        "href": "/industries/manufacturing-industry-4"
+      },
+      { "label": "Finance", "href": "/industries/banking-financial-services" },
+      { "label": "Retail & Logistics", "href": "/industries/retail-logistics" },
+      { "label": "Public Sector", "href": "/industries/public-sector" },
+      { "label": "Energy", "href": "/industries/energy-utilities" }
     ],
+
     "solutionsMenu": {
       "software": [
         {
@@ -34,26 +38,40 @@
         {
           "label": "Data Platform Engineering",
           "slug": "data-platform-engineering"
+        },
+        {
+          "label": "Cybersecurity & Governance",
+          "slug": "cybersecurity-governance"
         }
       ],
+
       "infrastructure": [
         {
-          "label": "Cloud & DevOps Fulfillment",
-          "slug": "cloud-devops"
+          "label": "Data Center Turnkey",
+          "slug": "data-center-infrastructure"
         },
         {
-          "label": "Hybrid & Multi-Cloud Architecture",
-          "slug": "hybrid-cloud-architecture"
+          "label": "Industrial Edge & IoT",
+          "slug": "edge-iot-infrastructure"
         },
         {
-          "label": "IT Infrastructure Deployment",
-          "slug": "it-infrastructure-deployment"
+          "label": "Enterprise Networking",
+          "slug": "network-connectivity"
         },
         {
-          "label": "Edge Computing Solutions",
-          "slug": "edge-compute-solutions"
+          "label": "Hybrid Cloud Hardware",
+          "slug": "hybrid-cloud-hardware"
+        },
+        {
+          "label": "Physical Security Systems",
+          "slug": "security-physical"
+        },
+        {
+          "label": "Global Workplace IT",
+          "slug": "workplace-it"
         }
       ],
+
       "managed": [
         {
           "label": "Managed Cloud Operations",
@@ -66,7 +84,6 @@
       ]
     }
   },
-
   "trustBar": {
     "headline": "Trusted by leading enterprises",
     "clients": [
@@ -549,5 +566,31 @@
       { "label": "Terms of Service", "href": "/terms-of-service" },
       { "label": "Cookie Settings", "href": "/cookies" }
     ]
+  },
+
+  "brand": {
+    "name": "InfraTech",
+    "tagline": "One Partner for Software & Infrastructure",
+    "description": "Enterprise technology partner delivering custom software engineering and vendor-neutral IT infrastructure procurement, deployment and lifecycle support.",
+    "geo": "India & APAC"
+  },
+
+  "contact": {
+    "email": "connect@infratech.com",
+    "phone": "+91-XXXXXXXX",
+    "address": "Bangalore, India",
+    "responseSLA": "24 business hours"
+  },
+
+  "trustSignals": {
+    "years": "8+",
+    "projects": "120+",
+    "devicesDeployed": "18,000+",
+    "clients": "40+"
+  },
+
+  "seo": {
+    "defaultTitle": "InfraTech – Software & IT Infrastructure Partner",
+    "defaultDescription": "Quote-driven procurement and software engineering with on-site deployment, logistics and lifecycle support."
   }
 }

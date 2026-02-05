@@ -1,0 +1,30 @@
+{
+  "hero": {
+    "title": "Vendor-Neutral Procurement",
+    "subtitle": "Quote-driven sourcing without public catalog"
+  },
+
+  "principles": [
+    {
+      "title": "No Public SKUs",
+      "desc": "We design BOM after understanding architecture"
+    },
+    {
+      "title": "OEM Sourcing",
+      "desc": "Dell, HP, Lenovo, Cisco, Fortinet, Microsoft partners"
+    },
+    {
+      "title": "End-to-End",
+      "desc": "Sourcing → logistics → installation → warranty"
+    }
+  ],
+
+  "flow": [
+    "Requirements validation",
+    "Architecture BOM",
+    "Multi-vendor quotes",
+    "PO on your behalf",
+    "Delivery & installation",
+    "Asset handover"
+  ]
+}

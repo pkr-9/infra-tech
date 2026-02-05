@@ -1,0 +1,16 @@
+{
+  "items": [
+    {
+      "q": "Do you maintain inventory?",
+      "a": "No. We procure after approved quote to ensure latest models."
+    },
+    {
+      "q": "Can you deploy on-site?",
+      "a": "Yes – imaging, network setup, rack & stack."
+    },
+    {
+      "q": "Do you handle warranty?",
+      "a": "OEM warranty + our deployment SLA."
+    }
+  ]
+}
